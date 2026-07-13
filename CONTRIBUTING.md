@@ -17,6 +17,10 @@ to find.
    redistribution terms are recorded and compatible with the repository.
 7. Add at least one known misuse or integration risk when the part has one.
 
+Use the exact MPN in the record and component ID. In the directory name,
+percent-encode characters that are reserved by filesystems or paths. For
+example, `/` becomes `%2F`; it must not create another directory level.
+
 Run the validator before submitting a change:
 
     python3 -m pip install -r requirements-dev.txt

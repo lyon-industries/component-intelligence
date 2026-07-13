@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from urllib.parse import quote
 
 from jsonschema import Draft202012Validator, FormatChecker
 
@@ -32,6 +33,11 @@ def main() -> int:
     entries = catalog.get("components", [])
     catalog_ids: set[str] = set()
     record_ids: set[str] = set()
+    catalog_paths: set[str] = set()
+
+    sort_keys = [(entry["manufacturer_slug"], entry["mpn"]) for entry in entries]
+    if sort_keys != sorted(sort_keys):
+        errors.append("catalog components are not sorted by manufacturer slug and MPN")
 
     for entry in entries:
         component_id = entry["id"]
@@ -39,10 +45,18 @@ def main() -> int:
             errors.append(f"duplicate catalog id: {component_id}")
         catalog_ids.add(component_id)
 
-        record_path = ROOT / entry["path"]
+        record_relative_path = entry["path"]
+        if record_relative_path in catalog_paths:
+            errors.append(f"duplicate catalog path: {record_relative_path}")
+        catalog_paths.add(record_relative_path)
+
+        record_path = ROOT / record_relative_path
         if not record_path.is_file():
-            errors.append(f"missing component record: {entry['path']}")
+            errors.append(f"missing component record: {record_relative_path}")
             continue
+
+        if not (record_path.parent / "README.md").is_file():
+            errors.append(f"{record_relative_path}: missing component README.md")
 
         record = load_json(record_path)
         for error in sorted(validator.iter_errors(record), key=lambda item: list(item.path)):
@@ -60,6 +74,28 @@ def main() -> int:
             errors.append(f"{entry['path']}: manufacturer slug differs from catalog")
         if identity["mpn"] != entry["mpn"]:
             errors.append(f"{entry['path']}: MPN differs from catalog")
+
+        expected_path = (
+            Path("components")
+            / identity["manufacturer_slug"]
+            / quote(identity["mpn"], safe="")
+            / "component.json"
+        )
+        if Path(record_relative_path) != expected_path:
+            errors.append(
+                f"{record_relative_path}: path does not match manufacturer slug and MPN"
+            )
+        if entry["manufacturer"] != identity["manufacturer"]:
+            errors.append(f"{record_relative_path}: manufacturer differs from catalog")
+
+        orderable = identity.get("orderable")
+        orderable_checked_on = identity.get("orderable_checked_on")
+        if orderable is True and not orderable_checked_on:
+            errors.append(f"{record_relative_path}: orderable part lacks checked date")
+        if orderable is not True and orderable_checked_on:
+            errors.append(
+                f"{record_relative_path}: non-confirmed orderability has a checked date"
+            )
 
         pins = record["electrical"]["pins"]
         pin_numbers = [pin["number"] for pin in pins]
@@ -88,12 +124,27 @@ def main() -> int:
             if pad_numbers != pin_set:
                 errors.append(f"{entry['path']}: pad numbers differ from electrical pins")
 
-        source_ids = {source["id"] for source in record["sources"]}
+        source_id_list = [source["id"] for source in record["sources"]]
+        source_ids = set(source_id_list)
+        if len(source_id_list) != len(source_ids):
+            errors.append(f"{record_relative_path}: duplicate source id")
         for source in record["sources"]:
             if source["retrieval_status"] == "captured-and-hashed" and not source["sha256"]:
                 errors.append(f"{entry['path']}: captured source lacks a hash")
+            if source["retrieval_status"] == "captured-and-hashed" and not source.get("byte_size"):
+                errors.append(f"{entry['path']}: captured source lacks a byte size")
             if source["retrieval_status"] == "browser-reviewed-byte-capture-blocked" and source["sha256"]:
                 errors.append(f"{entry['path']}: blocked byte capture must not claim a hash")
+            if source["retrieval_status"] == "browser-reviewed-byte-capture-blocked" and source.get("byte_size"):
+                errors.append(f"{entry['path']}: blocked byte capture must not claim a byte size")
+            page_count = source.get("page_count")
+            if page_count:
+                for locator in source["locators"]:
+                    if locator["page"] > page_count:
+                        errors.append(
+                            f"{record_relative_path}: source locator page {locator['page']} "
+                            f"exceeds {page_count}-page source {source['id']}"
+                        )
 
         for pin in pins:
             if pin["source_id"] not in source_ids:
@@ -102,6 +153,16 @@ def main() -> int:
             if rating["source_id"] not in source_ids:
                 errors.append(f"{entry['path']}: rating {rating['name']} references an unknown source")
 
+        land_source_id = record["package"]["land_pattern"]["source_id"]
+        if land_source_id not in source_ids:
+            errors.append(f"{record_relative_path}: land pattern references an unknown source")
+        for assembly_field in ("packing", "orientation"):
+            assembly_source_id = record["assembly"][assembly_field].get("source_id")
+            if assembly_source_id and assembly_source_id not in source_ids:
+                errors.append(
+                    f"{record_relative_path}: {assembly_field} references an unknown source"
+                )
+
         for asset_name, asset in record["cad"].items():
             if asset["path"]:
                 asset_path = record_path.parent / asset["path"]
@@ -109,6 +170,12 @@ def main() -> int:
                     errors.append(f"{entry['path']}: missing {asset_name} asset {asset['path']}")
 
         validation = record["validation"]
+        if validation["evidence_state"] != entry["evidence_state"]:
+            errors.append(f"{record_relative_path}: evidence state differs from catalog")
+        if validation["physical_state"] != entry["physical_state"]:
+            errors.append(f"{record_relative_path}: physical state differs from catalog")
+        if not validation["known_issues"]:
+            errors.append(f"{record_relative_path}: no known integration risk is recorded")
         if validation["physical_state"] == "not-tested" and validation["release_state"] == "production-approved":
             errors.append(f"{entry['path']}: untested component cannot be production-approved")
         if validation["evidence_state"] == "physically-verified" and validation["physical_state"] == "not-tested":
@@ -117,6 +184,17 @@ def main() -> int:
     if catalog_ids != record_ids:
         errors.append("catalog and loaded record id sets differ")
 
+    discovered_paths = {
+        str(path.relative_to(ROOT))
+        for path in (ROOT / "components").glob("*/*/component.json")
+    }
+    orphan_paths = discovered_paths - catalog_paths
+    missing_paths = catalog_paths - discovered_paths
+    if orphan_paths:
+        errors.append(f"component records missing from catalog: {sorted(orphan_paths)}")
+    if missing_paths:
+        errors.append(f"catalog paths missing from components tree: {sorted(missing_paths)}")
+
     if errors:
         for error in errors:
             fail(error)
@@ -124,8 +202,11 @@ def main() -> int:
 
     print(f"PASS schema: {SCHEMA_PATH.relative_to(ROOT)}")
     print(f"PASS catalog: {len(entries)} component records")
-    print(f"PASS semantic checks: ids, pins, pads, sources, assets, and release states")
-    print("LIMIT: cross-checked records are not physical qualification")
+    print(
+        "PASS semantic checks: catalog coverage, paths, ids, pins, pads, sources, "
+        "assets, orderability, and release states"
+    )
+    print("LIMIT: extracted and cross-checked records are not physical qualification")
     return 0
 
 

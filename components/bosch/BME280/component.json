@@ -1,0 +1,273 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "0.1.0",
+  "id": "component:bosch:BME280",
+  "identity": {
+    "manufacturer": "Bosch Sensortec",
+    "manufacturer_slug": "bosch",
+    "mpn": "BME280",
+    "series": "BME280",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "environmental-sensor",
+    "function": "digital humidity, pressure, and temperature sensor",
+    "keywords": [
+      "humidity",
+      "pressure",
+      "temperature",
+      "I2C",
+      "SPI",
+      "LGA-8"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:bosch:BST-BME280-DS001-24",
+      "kind": "datasheet",
+      "publisher": "Bosch Sensortec",
+      "title": "BME280 Data Sheet",
+      "url": "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf",
+      "document_number": "BST-BME280-DS001-24",
+      "revision": "1.24",
+      "published_date": null,
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "a2ccdb449fec94380742fe8eec851a11d9bd4142252d332b34682b4deecd7d89",
+      "byte_size": 1663806,
+      "page_count": 60,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 6,
+          "label": "Pin assignment and interface selection"
+        },
+        {
+          "page": 12,
+          "label": "Electrical characteristics"
+        },
+        {
+          "page": 44,
+          "label": "Handling and soldering"
+        },
+        {
+          "page": 48,
+          "label": "Package dimensions and land pattern"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "2",
+        "name": "CSB",
+        "function": "SPI chip select; tie high for I2C operation.",
+        "locator": "page 6, pin assignment and interface selection",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "3",
+        "name": "SDI",
+        "function": "SPI data input or I2C serial data.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "4",
+        "name": "SCK",
+        "function": "SPI clock or I2C serial clock.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "5",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "6",
+        "name": "VDDIO",
+        "function": "Digital-interface supply.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "7",
+        "name": "SDO",
+        "function": "SPI data output or I2C address select.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "number": "8",
+        "name": "VDD",
+        "function": "Analog supply.",
+        "locator": "page 6, pin assignment",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 1.71,
+          "max": 3.6
+        },
+        "unit": "V",
+        "qualifier": "VDD operating range.",
+        "locator": "page 12, electrical characteristics",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "name": "interface supply voltage",
+        "value": {
+          "min": 1.2,
+          "max": 3.6
+        },
+        "unit": "V",
+        "qualifier": "VDDIO operating range.",
+        "locator": "page 12, electrical characteristics",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      },
+      {
+        "name": "pressure range",
+        "value": {
+          "min": 300,
+          "max": 1100
+        },
+        "unit": "hPa",
+        "qualifier": "Specified full-accuracy pressure range.",
+        "locator": "performance specification",
+        "source_id": "source:bosch:BST-BME280-DS001-24"
+      }
+    ],
+    "internally_common_terminal_groups": [
+      [
+        "1",
+        "5"
+      ]
+    ]
+  },
+  "package": {
+    "name": "8-pin metal-lid LGA",
+    "manufacturer_code": null,
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": null,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.5
+      },
+      "width": {
+        "typ": 2.5
+      },
+      "height": {
+        "typ": 0.93
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:bosch:BST-BME280-DS001-24",
+      "locator": "package dimensions and recommended land pattern",
+      "pad_count": 8,
+      "dimensions_mm": {},
+      "coordinate_convention": null
+    }
+  },
+  "cad": {
+    "symbol": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A symbol must be checked against the exact package and source before manufacturing use."
+    },
+    "footprint": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A footprint must be checked against the exact package and source before manufacturing use."
+    },
+    "step_model": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A STEP model must be checked against the exact package and source before manufacturing use."
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:bosch:BST-BME280-DS001-24",
+      "locator": "package dimensions and recommended land pattern"
+    },
+    "notes": [
+      "Keep the sensor opening free of coating, adhesive, and cleaning residue.",
+      "Separate the sensor thermally from regulators and other heat sources."
+    ]
+  },
+  "validation": {
+    "evidence_state": "extracted",
+    "physical_state": "not-tested",
+    "release_state": "reference-only",
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent engineering review",
+        "status": "open",
+        "method": "No second human review, specimen inspection, footprint fit, assembly trial, or electrical qualification belongs to this record yet.",
+        "date": "2026-07-13"
+      }
+    ],
+    "known_issues": [
+      {
+        "severity": "design-risk",
+        "scope": "component",
+        "summary": "The pressure port and humidity opening are mechanically sensitive; flux, cleaning fluid, enclosure pressure gradients, and heat sources can bias or damage the sensor.",
+        "status": "documented"
+      }
+    ]
+  },
+  "rights": {
+    "repository_content_license": "MIT",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

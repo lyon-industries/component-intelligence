@@ -1,0 +1,269 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "0.1.0",
+  "id": "component:analog-devices:MAX3485ESA+",
+  "identity": {
+    "manufacturer": "Analog Devices",
+    "manufacturer_slug": "analog-devices",
+    "mpn": "MAX3485ESA+",
+    "series": "MAX3483/MAX3485/MAX3486/MAX3488/MAX3490/MAX3491",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-13"
+  },
+  "classification": {
+    "category": "interface",
+    "function": "3.3 V half-duplex RS-485 and RS-422 transceiver",
+    "keywords": [
+      "RS-485",
+      "RS-422",
+      "half duplex",
+      "10 Mbps",
+      "SOIC-8"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:adi:MAX3483-MAX3491-rev-2",
+      "kind": "datasheet",
+      "publisher": "Analog Devices",
+      "title": "MAX3483-MAX3491 3.3V RS-485/RS-422 Transceivers",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX3483-MAX3491.pdf",
+      "document_number": null,
+      "revision": "Rev. 2",
+      "published_date": "2021-10-06",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 17,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "MAX3485 pin configuration and function table"
+        },
+        {
+          "page": 3,
+          "label": "Electrical characteristics"
+        },
+        {
+          "page": 12,
+          "label": "Application information"
+        },
+        {
+          "page": 16,
+          "label": "Ordering information"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "RO",
+        "function": "Receiver output.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "2",
+        "name": "RE",
+        "function": "Active-low receiver enable.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "3",
+        "name": "DE",
+        "function": "Active-high driver enable.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "4",
+        "name": "DI",
+        "function": "Driver input.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "5",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "6",
+        "name": "A",
+        "function": "Noninverting RS-485 receiver input and driver output.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "7",
+        "name": "B",
+        "function": "Inverting RS-485 receiver input and driver output.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "number": "8",
+        "name": "VCC",
+        "function": "3.3 V supply.",
+        "locator": "page 1, Pin Configuration and Pin Description",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 3.0,
+          "max": 3.6
+        },
+        "unit": "V",
+        "qualifier": "Specified 3.3 V supply tolerance.",
+        "locator": "electrical characteristics header",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "name": "data rate",
+        "value": {
+          "max": 10
+        },
+        "unit": "Mbps",
+        "qualifier": "MAX3485 maximum signaling rate.",
+        "locator": "page 1, Features",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      },
+      {
+        "name": "bus common-mode range",
+        "value": {
+          "min": -7,
+          "max": 12
+        },
+        "unit": "V",
+        "qualifier": "Receiver input common-mode range.",
+        "locator": "page 3, Electrical Characteristics",
+        "source_id": "source:adi:MAX3483-MAX3491-rev-2"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOIC-8 narrow",
+    "manufacturer_code": "S8",
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": 1.27,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 4.9
+      },
+      "width": {
+        "typ": 3.9
+      },
+      "height": {
+        "max": 1.75
+      },
+      "overall_width": {
+        "typ": 6.0
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:adi:MAX3483-MAX3491-rev-2",
+      "locator": "package code S8 outline 21-0041 and land pattern 90-0096",
+      "pad_count": 8,
+      "dimensions_mm": {},
+      "coordinate_convention": null
+    }
+  },
+  "cad": {
+    "symbol": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A symbol must be checked against the exact package and source before manufacturing use."
+    },
+    "footprint": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A footprint must be checked against the exact package and source before manufacturing use."
+    },
+    "step_model": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A STEP model must be checked against the exact package and source before manufacturing use."
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:adi:MAX3483-MAX3491-rev-2",
+      "locator": "package code S8 outline 21-0041 and land pattern 90-0096"
+    },
+    "notes": [
+      "Design termination and idle bias for the actual network.",
+      "Add application-appropriate transient protection and verify DE/RE turnaround timing."
+    ]
+  },
+  "validation": {
+    "evidence_state": "extracted",
+    "physical_state": "not-tested",
+    "release_state": "reference-only",
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent engineering review",
+        "status": "open",
+        "method": "No second human review, specimen inspection, footprint fit, assembly trial, or electrical qualification belongs to this record yet.",
+        "date": "2026-07-13"
+      }
+    ],
+    "known_issues": [
+      {
+        "severity": "design-risk",
+        "scope": "component",
+        "summary": "The receiver open-circuit fail-safe claim does not replace a defined idle bias for every cable topology, and surge/ESD protection is not established by the base MAX3485 record.",
+        "status": "documented"
+      }
+    ]
+  },
+  "rights": {
+    "repository_content_license": "MIT",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

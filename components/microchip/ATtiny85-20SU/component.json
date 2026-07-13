@@ -1,0 +1,267 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "0.1.0",
+  "id": "component:microchip:ATtiny85-20SU",
+  "identity": {
+    "manufacturer": "Microchip Technology",
+    "manufacturer_slug": "microchip",
+    "mpn": "ATtiny85-20SU",
+    "series": "ATtiny25/45/85",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "microcontroller",
+    "function": "8-bit AVR microcontroller with 8 KB flash",
+    "keywords": [
+      "AVR",
+      "8-bit",
+      "8 KB flash",
+      "ADC",
+      "SOIC-8"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:microchip:2586Q-AVR-08-2013",
+      "kind": "datasheet",
+      "publisher": "Microchip Technology",
+      "title": "ATtiny25/ATtiny45/ATtiny85 Data Sheet",
+      "url": "https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf",
+      "document_number": "2586Q-AVR-08/2013",
+      "revision": "Rev. Q",
+      "published_date": null,
+      "retrieved_at": "2026-07-13T12:16:11Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "0e3fa6a7d608de9b4403cf9fc12867a529cc891ab6a83f9be9ed0db595480837",
+      "byte_size": 3848169,
+      "page_count": 234,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 2,
+          "label": "Pinout and pin descriptions"
+        },
+        {
+          "page": 161,
+          "label": "Electrical characteristics"
+        },
+        {
+          "page": 208,
+          "label": "8S2 EIAJ SOIC package drawing"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "PB5/RESET",
+        "function": "GPIO PB5 or active-low reset/debugWIRE input according to fuse configuration.",
+        "locator": "page 2, Figure 1-1 and Section 1.1",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "2",
+        "name": "PB3",
+        "function": "GPIO PB3 with ADC3 and crystal/clock input functions.",
+        "locator": "page 2, Figure 1-1; page 60, alternate functions",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "3",
+        "name": "PB4",
+        "function": "GPIO PB4 with ADC2 and crystal output functions.",
+        "locator": "page 2, Figure 1-1; page 60, alternate functions",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "4",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 2, Figure 1-1 and Section 1.1",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "5",
+        "name": "PB0",
+        "function": "GPIO PB0 with MOSI/DI/SDA and timer functions.",
+        "locator": "page 2, Figure 1-1; page 60, alternate functions",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "6",
+        "name": "PB1",
+        "function": "GPIO PB1 with MISO/DO and timer functions.",
+        "locator": "page 2, Figure 1-1; page 60, alternate functions",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "7",
+        "name": "PB2",
+        "function": "GPIO PB2 with SCK/USCK/SCL, ADC1, and INT0 functions.",
+        "locator": "page 2, Figure 1-1; page 60, alternate functions",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "number": "8",
+        "name": "VCC",
+        "function": "Supply voltage.",
+        "locator": "page 2, Figure 1-1 and Section 1.1",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 2.7,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Operating range for up to 10 MHz; higher frequency has a higher minimum voltage.",
+        "locator": "page 1, Operating Voltage and Speed Grade; electrical characteristics",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "name": "CPU frequency",
+        "value": {
+          "max": 20
+        },
+        "unit": "MHz",
+        "qualifier": "Maximum speed grade at the required supply voltage.",
+        "locator": "page 1, Speed Grade",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      },
+      {
+        "name": "flash memory",
+        "value": {
+          "typ": 8
+        },
+        "unit": "KB",
+        "qualifier": "ATtiny85 program flash capacity.",
+        "locator": "page 1, Nonvolatile Program and Data Memories",
+        "source_id": "source:microchip:2586Q-AVR-08-2013"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "8S2 EIAJ SOIC-8",
+    "manufacturer_code": "8S2",
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": 1.27,
+    "body_dimensions_mm": {
+      "length": {
+        "min": 5.13,
+        "max": 5.35
+      },
+      "width": {
+        "min": 5.18,
+        "max": 5.4
+      },
+      "overall_width": {
+        "min": 7.7,
+        "max": 8.26
+      },
+      "height": {
+        "max": 2.16
+      }
+    },
+    "land_pattern": {
+      "status": "unknown",
+      "source_id": "source:microchip:2586Q-AVR-08-2013",
+      "locator": "page 208, 8S2 package drawing; no recommended land pattern is provided",
+      "pad_count": 8,
+      "dimensions_mm": {},
+      "coordinate_convention": null
+    }
+  },
+  "cad": {
+    "symbol": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A symbol must be checked against the exact package and source before manufacturing use."
+    },
+    "footprint": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A footprint must be checked against the exact package and source before manufacturing use."
+    },
+    "step_model": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A STEP model must be checked against the exact package and source before manufacturing use."
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:microchip:2586Q-AVR-08-2013",
+      "locator": "page 208, 8S2 package drawing"
+    },
+    "notes": [
+      "Confirm clock, reset, and debugWIRE fuse policy before production programming.",
+      "Place local supply decoupling at VCC and GND."
+    ]
+  },
+  "validation": {
+    "evidence_state": "extracted",
+    "physical_state": "not-tested",
+    "release_state": "reference-only",
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent engineering review",
+        "status": "open",
+        "method": "No second human review, specimen inspection, footprint fit, assembly trial, or electrical qualification belongs to this record yet.",
+        "date": "2026-07-13"
+      }
+    ],
+    "known_issues": [
+      {
+        "severity": "design-risk",
+        "scope": "component",
+        "summary": "Clock and reset fuse choices can remove the expected programming or reset path; the part can appear dead even when the PCB pinout is correct.",
+        "status": "documented"
+      }
+    ]
+  },
+  "rights": {
+    "repository_content_license": "MIT",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

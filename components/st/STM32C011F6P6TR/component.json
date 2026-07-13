@@ -1,0 +1,349 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "0.1.0",
+  "id": "component:st:STM32C011F6P6TR",
+  "identity": {
+    "manufacturer": "STMicroelectronics",
+    "manufacturer_slug": "st",
+    "mpn": "STM32C011F6P6TR",
+    "series": "STM32C011x4/x6",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-13"
+  },
+  "classification": {
+    "category": "microcontroller",
+    "function": "32-bit Arm Cortex-M0+ microcontroller with 32 KB flash",
+    "keywords": [
+      "Arm Cortex-M0+",
+      "32-bit",
+      "32 KB flash",
+      "TSSOP20",
+      "48 MHz"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:st:DS13866-rev-5",
+      "kind": "datasheet",
+      "publisher": "STMicroelectronics",
+      "title": "STM32C011x4/x6 Datasheet",
+      "url": "https://www.st.com/resource/en/datasheet/stm32c011f4.pdf",
+      "document_number": "DS13866",
+      "revision": "Rev 5",
+      "published_date": null,
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 97,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 28,
+          "label": "TSSOP20 pinout"
+        },
+        {
+          "page": 29,
+          "label": "Pin assignment and description"
+        },
+        {
+          "page": 37,
+          "label": "General operating conditions"
+        },
+        {
+          "page": 87,
+          "label": "TSSOP20 package information"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "PB7",
+        "function": "General-purpose I/O with alternate peripheral functions.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "2",
+        "name": "PC14-OSCX_IN",
+        "function": "GPIO PC14 or 32 kHz oscillator input.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "3",
+        "name": "PC15-OSCX_OUT",
+        "function": "GPIO PC15 or 32 kHz oscillator output.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "4",
+        "name": "VDD/VDDA",
+        "function": "Digital and analog supply.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "5",
+        "name": "VSS/VSSA",
+        "function": "Digital and analog ground.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "6",
+        "name": "PF2-NRST",
+        "function": "GPIO PF2 or active-low reset.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "7",
+        "name": "PA0",
+        "function": "GPIO PA0 and ADC input 0.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "8",
+        "name": "PA1",
+        "function": "GPIO PA1 and ADC input 1.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "9",
+        "name": "PA2",
+        "function": "GPIO PA2 and ADC input 2.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "10",
+        "name": "PA3",
+        "function": "GPIO PA3 and ADC input 3.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "11",
+        "name": "PA4",
+        "function": "GPIO PA4 and ADC input 4.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "12",
+        "name": "PA5",
+        "function": "General-purpose I/O with alternate peripheral functions.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "13",
+        "name": "PA6",
+        "function": "General-purpose I/O with alternate peripheral functions.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "14",
+        "name": "PA7",
+        "function": "General-purpose I/O with alternate peripheral functions.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "15",
+        "name": "PA8",
+        "function": "General-purpose I/O with alternate peripheral functions.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "16",
+        "name": "PA11[PA9]",
+        "function": "GPIO PA11 or remapped PA9 function.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "17",
+        "name": "PA12[PA10]",
+        "function": "GPIO PA12 or remapped PA10 function.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "18",
+        "name": "PA13",
+        "function": "GPIO PA13 and SWDIO debug function.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "19",
+        "name": "PA14-BOOT0",
+        "function": "GPIO PA14, SWCLK, and BOOT0 function.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "number": "20",
+        "name": "PB6",
+        "function": "General-purpose I/O with alternate peripheral functions.",
+        "locator": "pages 28-30, Table 12",
+        "source_id": "source:st:DS13866-rev-5"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 2.0,
+          "max": 3.6
+        },
+        "unit": "V",
+        "qualifier": "General operating range.",
+        "locator": "page 37, Table 23",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "name": "CPU frequency",
+        "value": {
+          "max": 48
+        },
+        "unit": "MHz",
+        "qualifier": "Maximum Cortex-M0+ clock.",
+        "locator": "page 1, Features",
+        "source_id": "source:st:DS13866-rev-5"
+      },
+      {
+        "name": "flash memory",
+        "value": {
+          "typ": 32
+        },
+        "unit": "KB",
+        "qualifier": "x6 density variant.",
+        "locator": "pages 1 and 9, device summary",
+        "source_id": "source:st:DS13866-rev-5"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "TSSOP20",
+    "manufacturer_code": "P",
+    "mounting": "surface-mount",
+    "pin_count": 20,
+    "pitch_mm": 0.65,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 6.5
+      },
+      "width": {
+        "typ": 4.4
+      },
+      "height": {
+        "max": 1.2
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:st:DS13866-rev-5",
+      "locator": "pages 87-88, TSSOP20 package outline and footprint",
+      "pad_count": 20,
+      "dimensions_mm": {},
+      "coordinate_convention": null
+    }
+  },
+  "cad": {
+    "symbol": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A symbol must be checked against the exact package and source before manufacturing use."
+    },
+    "footprint": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A footprint must be checked against the exact package and source before manufacturing use."
+    },
+    "step_model": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A STEP model must be checked against the exact package and source before manufacturing use."
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:st:DS13866-rev-5",
+      "locator": "pages 87-88, TSSOP20 package outline and footprint"
+    },
+    "notes": [
+      "Review reset-state and alternate-function mapping before assigning pins.",
+      "Follow the supply decoupling and power-up requirements for the combined VDD/VDDA pin."
+    ]
+  },
+  "validation": {
+    "evidence_state": "extracted",
+    "physical_state": "not-tested",
+    "release_state": "reference-only",
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent engineering review",
+        "status": "open",
+        "method": "No second human review, specimen inspection, footprint fit, assembly trial, or electrical qualification belongs to this record yet.",
+        "date": "2026-07-13"
+      }
+    ],
+    "known_issues": [
+      {
+        "severity": "design-risk",
+        "scope": "component",
+        "summary": "PA14 is also BOOT0 and the serial-wire clock; loading it incorrectly can block the intended boot or debug path.",
+        "status": "documented"
+      }
+    ]
+  },
+  "rights": {
+    "repository_content_license": "MIT",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

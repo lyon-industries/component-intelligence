@@ -1,0 +1,247 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "0.1.0",
+  "id": "component:ti:TLV75533PDBVR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "TLV75533PDBVR",
+    "series": "TLV755P",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "power-management",
+    "function": "fixed 3.3 V low-dropout regulator with enable",
+    "keywords": [
+      "LDO",
+      "3.3 V",
+      "500 mA",
+      "SOT-23-5",
+      "enable"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SBVS320D",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "TLV755P 500mA Low-IQ Low-Dropout Regulator",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv755p.pdf",
+      "document_number": "SBVS320D",
+      "revision": "Rev. D",
+      "published_date": "2024-09-30",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "442ad8f6ae9ac8701a1a747ca6743267fed839c8536a65c26c0151ec12725cfb",
+      "byte_size": 3072292,
+      "page_count": 51,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "DBV pin configuration and functions"
+        },
+        {
+          "page": 4,
+          "label": "Recommended operating conditions"
+        },
+        {
+          "page": 19,
+          "label": "Output capacitor requirements"
+        },
+        {
+          "page": 42,
+          "label": "DBV package drawing and land pattern"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "IN",
+        "function": "Regulator input; requires local input capacitance.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D"
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D"
+      },
+      {
+        "number": "3",
+        "name": "EN",
+        "function": "Active-high enable input.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D"
+      },
+      {
+        "number": "4",
+        "name": "NC",
+        "function": "No internal connection.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D"
+      },
+      {
+        "number": "5",
+        "name": "OUT",
+        "function": "Fixed 3.3 V regulated output; requires local output capacitance.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "input voltage",
+        "value": {
+          "min": 1.45,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range.",
+        "locator": "page 4, Section 5.3",
+        "source_id": "source:ti:SBVS320D"
+      },
+      {
+        "name": "output voltage",
+        "value": {
+          "typ": 3.3
+        },
+        "unit": "V",
+        "qualifier": "Exact fixed-voltage suffix.",
+        "locator": "ordering information",
+        "source_id": "source:ti:SBVS320D"
+      },
+      {
+        "name": "output current",
+        "value": {
+          "max": 0.5
+        },
+        "unit": "A",
+        "qualifier": "Maximum rated output current subject to thermal limits.",
+        "locator": "page 1, Features",
+        "source_id": "source:ti:SBVS320D"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOT-23-5",
+    "manufacturer_code": "DBV",
+    "mounting": "surface-mount",
+    "pin_count": 5,
+    "pitch_mm": 0.95,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.9
+      },
+      "height": {
+        "max": 1.45
+      },
+      "overall_width": {
+        "typ": 2.8
+      },
+      "molded_width": {
+        "typ": 1.6
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:ti:SBVS320D",
+      "locator": "DBV mechanical drawing and land pattern",
+      "pad_count": 5,
+      "dimensions_mm": {},
+      "coordinate_convention": null
+    }
+  },
+  "cad": {
+    "symbol": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A symbol must be checked against the exact package and source before manufacturing use."
+    },
+    "footprint": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A footprint must be checked against the exact package and source before manufacturing use."
+    },
+    "step_model": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "reference": null,
+      "reason": "A STEP model must be checked against the exact package and source before manufacturing use."
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SBVS320D",
+      "locator": "DBV mechanical drawing and land pattern"
+    },
+    "notes": [
+      "Check effective capacitance at bias and temperature.",
+      "Verify junction temperature at the actual input-output differential and load."
+    ]
+  },
+  "validation": {
+    "evidence_state": "extracted",
+    "physical_state": "not-tested",
+    "release_state": "reference-only",
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent engineering review",
+        "status": "open",
+        "method": "No second human review, specimen inspection, footprint fit, assembly trial, or electrical qualification belongs to this record yet.",
+        "date": "2026-07-13"
+      }
+    ],
+    "known_issues": [
+      {
+        "severity": "design-risk",
+        "scope": "component",
+        "summary": "The part requires effective input and output capacitance of at least 0.47 uF after derating; nominal capacitor value alone is not sufficient.",
+        "status": "documented"
+      }
+    ]
+  },
+  "rights": {
+    "repository_content_license": "MIT",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

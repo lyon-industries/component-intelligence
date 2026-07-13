@@ -3,6 +3,33 @@
   "updated_on": "2026-07-13",
   "components": [
     {
+      "id": "component:analog-devices:MAX3485ESA+",
+      "manufacturer_slug": "analog-devices",
+      "manufacturer": "Analog Devices",
+      "mpn": "MAX3485ESA+",
+      "path": "components/analog-devices/MAX3485ESA%2B/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:aos:AO3400A",
+      "manufacturer_slug": "aos",
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "mpn": "AO3400A",
+      "path": "components/aos/AO3400A/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:bosch:BME280",
+      "manufacturer_slug": "bosch",
+      "manufacturer": "Bosch Sensortec",
+      "mpn": "BME280",
+      "path": "components/bosch/BME280/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
       "id": "component:diodes-inc:AP63205WU-7",
       "manufacturer_slug": "diodes-inc",
       "manufacturer": "Diodes Incorporated",
@@ -12,12 +39,147 @@
       "physical_state": "not-tested"
     },
     {
+      "id": "component:espressif:ESP32-C3-WROOM-02-N4",
+      "manufacturer_slug": "espressif",
+      "manufacturer": "Espressif Systems",
+      "mpn": "ESP32-C3-WROOM-02-N4",
+      "path": "components/espressif/ESP32-C3-WROOM-02-N4/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
       "id": "component:littelfuse:PTS815SJM250SMTRLFS",
       "manufacturer_slug": "littelfuse",
       "manufacturer": "Littelfuse / C&K",
       "mpn": "PTS815SJM250SMTRLFS",
       "path": "components/littelfuse/PTS815SJM250SMTRLFS/component.json",
       "evidence_state": "cross-checked",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:microchip:24LC256-I/SN",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "24LC256-I/SN",
+      "path": "components/microchip/24LC256-I%2FSN/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:microchip:ATtiny85-20SU",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "ATtiny85-20SU",
+      "path": "components/microchip/ATtiny85-20SU/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:microchip:MCP73831T-2ACI/OT",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "MCP73831T-2ACI/OT",
+      "path": "components/microchip/MCP73831T-2ACI%2FOT/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:nexperia:BAT54C,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BAT54C,215",
+      "path": "components/nexperia/BAT54C%2C215/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:st:STM32C011F6P6TR",
+      "manufacturer_slug": "st",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "STM32C011F6P6TR",
+      "path": "components/st/STM32C011F6P6TR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:st:USBLC6-2SC6",
+      "manufacturer_slug": "st",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "USBLC6-2SC6",
+      "path": "components/st/USBLC6-2SC6/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:ADS1115IDGSR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "ADS1115IDGSR",
+      "path": "components/ti/ADS1115IDGSR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:INA219AIDCNR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "INA219AIDCNR",
+      "path": "components/ti/INA219AIDCNR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:LM358DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "LM358DR",
+      "path": "components/ti/LM358DR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:NE555DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "NE555DR",
+      "path": "components/ti/NE555DR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:PCA9306DCTR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "PCA9306DCTR",
+      "path": "components/ti/PCA9306DCTR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:SN74LVC1G17DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G17DBVR",
+      "path": "components/ti/SN74LVC1G17DBVR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:TLV75533PDBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV75533PDBVR",
+      "path": "components/ti/TLV75533PDBVR/component.json",
+      "evidence_state": "extracted",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:ti:TPS62162DSGR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TPS62162DSGR",
+      "path": "components/ti/TPS62162DSGR/component.json",
+      "evidence_state": "extracted",
       "physical_state": "not-tested"
     }
   ]
