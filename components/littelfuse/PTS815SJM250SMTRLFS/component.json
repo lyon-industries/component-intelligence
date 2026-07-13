@@ -1,0 +1,315 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "0.1.0",
+  "id": "component:littelfuse:PTS815SJM250SMTRLFS",
+  "identity": {
+    "manufacturer": "Littelfuse / C&K",
+    "manufacturer_slug": "littelfuse",
+    "mpn": "PTS815SJM250SMTRLFS",
+    "series": "PTS815",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-13"
+  },
+  "classification": {
+    "category": "switch",
+    "function": "normally-open momentary tactile switch",
+    "keywords": [
+      "SPST NO",
+      "SMT",
+      "tactile",
+      "top-actuated"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:littelfuse:PTS815-VL-2026-02-03",
+      "kind": "datasheet",
+      "publisher": "Littelfuse / C&K",
+      "title": "PTS815 Series Microminiature SMT Top Actuated Switches",
+      "url": "https://www.littelfuse.com/assetdocs/littelfuse-c-k-tactile-pts815-series-datasheet?assetguid=1c4ee7c5-01fd-4370-a5cc-03ec62685e73",
+      "document_number": null,
+      "revision": "VL 02/03/26",
+      "published_date": "2026-02-03",
+      "retrieved_at": "2026-07-13T11:00:56Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 3,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Specifications, circuit diagram, package drawing, and PCB land dimensions"
+        },
+        {
+          "page": 2,
+          "label": "Reflow profile and tape dimensions"
+        },
+        {
+          "page": 3,
+          "label": "Ordering code and orderable-device table"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "POLE_A",
+        "function": "First terminal of the upper internally common pole.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, circuit diagram and terminal callouts"
+      },
+      {
+        "number": "2",
+        "name": "POLE_A",
+        "function": "Second terminal of the upper internally common pole.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, circuit diagram and terminal callouts"
+      },
+      {
+        "number": "3",
+        "name": "POLE_B",
+        "function": "First terminal of the lower internally common pole.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, circuit diagram and terminal callouts"
+      },
+      {
+        "number": "4",
+        "name": "POLE_B",
+        "function": "Second terminal of the lower internally common pole.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, circuit diagram and terminal callouts"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "maximum voltage",
+        "value": {
+          "max": 12
+        },
+        "unit": "VDC",
+        "qualifier": "Maximum electrical rating in the series specification.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Electrical Characteristics"
+      },
+      {
+        "name": "maximum current",
+        "value": {
+          "max": 50
+        },
+        "unit": "mA",
+        "qualifier": "Maximum DC current in the series specification.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Electrical Characteristics"
+      },
+      {
+        "name": "operating force",
+        "value": {
+          "typ": 1.8,
+          "tolerance": 0.5
+        },
+        "unit": "N",
+        "qualifier": "M-force option in the exact orderable part number.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 3, orderable-device table"
+      },
+      {
+        "name": "operating life",
+        "value": {
+          "typ": 100000
+        },
+        "unit": "operations",
+        "qualifier": "Listed value for the exact orderable part number.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 3, orderable-device table"
+      },
+      {
+        "name": "operating temperature",
+        "value": {
+          "min": -40,
+          "max": 90
+        },
+        "unit": "degC",
+        "qualifier": "Series environmental characteristic.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Environmental Characteristics"
+      }
+    ],
+    "internally_common_terminal_groups": [
+      [
+        "1",
+        "2"
+      ],
+      [
+        "3",
+        "4"
+      ]
+    ]
+  },
+  "package": {
+    "name": "PTS815 J-bend SMT",
+    "manufacturer_code": "J",
+    "mounting": "surface-mount",
+    "pin_count": 4,
+    "pitch_mm": null,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 4.2
+      },
+      "width": {
+        "typ": 3.2
+      },
+      "height_from_pcb": {
+        "typ": 2.5
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+      "locator": "page 1, package drawing, circuit diagram, and PCB land dimension",
+      "pad_count": 4,
+      "dimensions_mm": {
+        "pad_width": 1,
+        "pad_height": 0.7,
+        "x_center": 2.25,
+        "y_center": 1.075
+      },
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -2.25,
+          "y_mm": -1.075,
+          "width_mm": 1,
+          "height_mm": 0.7
+        },
+        {
+          "number": "2",
+          "x_mm": 2.25,
+          "y_mm": -1.075,
+          "width_mm": 1,
+          "height_mm": 0.7
+        },
+        {
+          "number": "3",
+          "x_mm": -2.25,
+          "y_mm": 1.075,
+          "width_mm": 1,
+          "height_mm": 0.7
+        },
+        {
+          "number": "4",
+          "x_mm": 2.25,
+          "y_mm": 1.075,
+          "width_mm": 1,
+          "height_mm": 0.7
+        }
+      ],
+      "coordinate_convention": "Origin at package centre in top view; positive x right and positive y down."
+    }
+  },
+  "cad": {
+    "symbol": {
+      "status": "preview-only",
+      "path": "symbol.svg",
+      "manufacturing_use": false,
+      "provenance": "Original repository preview of the official contact arrangement.",
+      "reference": null,
+      "reason": "The SVG exposes terminal grouping but is not a native EDA symbol."
+    },
+    "footprint": {
+      "status": "preview-only",
+      "path": "footprint.svg",
+      "manufacturing_use": false,
+      "provenance": "Original repository preview of the visually cross-checked four-land drawing.",
+      "reference": null,
+      "reason": "The exact pad data is recorded, but no native footprint is distributed in the seed."
+    },
+    "step_model": {
+      "status": "not-included",
+      "path": null,
+      "manufacturing_use": false,
+      "provenance": "No rights-cleared and dimensionally reviewed STEP model has been registered.",
+      "reference": null,
+      "reason": "A model must be checked for body envelope, actuator travel, seating plane, origin, and rotation before inclusion."
+    }
+  },
+  "assembly": {
+    "process": "infrared reflow soldering",
+    "packing": {
+      "method": "tape and reel",
+      "quantity": 2900,
+      "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+      "locator": "page 2, packaging note"
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Terminal callouts and tape geometry are shown; an assembly rotation convention has not been physically validated.",
+      "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+      "locator": "pages 1-2, package and tape drawings"
+    },
+    "notes": [
+      "The datasheet allows up to two reflow cycles under its stated profile.",
+      "The exact suffix identifies J-bend SMT, 2.5 mm height, tape-and-reel, and RoHS silver-plated terminals."
+    ]
+  },
+  "validation": {
+    "evidence_state": "cross-checked",
+    "physical_state": "not-tested",
+    "release_state": "reference-only",
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "source identity",
+        "status": "pass",
+        "method": "Reviewed the current official three-page datasheet in the browser path; direct byte capture remained blocked.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "contact topology",
+        "status": "pass",
+        "method": "Compared all four terminal callouts with the circuit diagram and retained the two internally common terminal groups.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "land coordinates",
+        "status": "pass",
+        "method": "Cross-checked the four land centres and dimensions against the manufacturer package and PCB-land drawing.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "physical continuity and fit",
+        "status": "open",
+        "method": "No specimen continuity test, paste trial, assembly, actuator-clearance check, or STEP-model fit test belongs to this repository yet.",
+        "date": "2026-07-13"
+      }
+    ],
+    "known_issues": [
+      {
+        "severity": "fabrication-stop",
+        "scope": "integration-example",
+        "summary": "A two-pad abstraction placed each copper land across one terminal from each internally separate pole, which would hold the connected signal shorted even when the button was not pressed.",
+        "status": "resolved-in-example"
+      },
+      {
+        "severity": "design-risk",
+        "scope": "integration-example",
+        "summary": "An initial visual interpretation paired terminals by package side; the official circuit diagram shows that terminals 1-2 and 3-4 are the internally common groups.",
+        "status": "resolved-in-example"
+      },
+      {
+        "severity": "note",
+        "scope": "data-pipeline",
+        "summary": "The official PDF is browser-readable but direct automated byte capture returned HTTP 403, so this seed does not claim a source-file hash.",
+        "status": "documented"
+      }
+    ]
+  },
+  "rights": {
+    "repository_content_license": "MIT",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization and previews based on the linked official source.",
+    "source_rights_status": "linked-only"
+  }
+}

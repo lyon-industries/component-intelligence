@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">PTS815SJM250SMTRLFS footprint preview</title>
+  <desc id="desc">Four-land top-view preview with the correct terminal numbering and common groups.</desc>
+  <rect width="320" height="200" fill="#0b1117"/>
+  <g fill="none" stroke="#647b89" stroke-width="1">
+    <rect x="105" y="58" width="110" height="84" stroke-dasharray="4 3"/>
+    <circle cx="160" cy="100" r="24"/>
+    <path d="M68 48h184M68 152h184M58 58v84M262 58v84"/>
+  </g>
+  <g fill="#ff5a2f" stroke="#ff8b69" stroke-width="1">
+    <rect x="58" y="52" width="48" height="22"/>
+    <rect x="214" y="52" width="48" height="22"/>
+    <rect x="58" y="126" width="48" height="22"/>
+    <rect x="214" y="126" width="48" height="22"/>
+  </g>
+  <g fill="#dce5ea" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">
+    <text x="82" y="67" text-anchor="middle">1 / A</text>
+    <text x="238" y="67" text-anchor="middle">2 / A</text>
+    <text x="82" y="141" text-anchor="middle">3 / B</text>
+    <text x="238" y="141" text-anchor="middle">4 / B</text>
+    <text x="160" y="35" text-anchor="middle">CENTRES X ±2.25 / Y ±1.075 mm</text>
+    <text x="160" y="171" text-anchor="middle">FOUR LANDS / 1.00 × 0.70 mm</text>
+    <text x="12" y="18" fill="#8da3b2">LAND PREVIEW / NOT CAD</text>
+  </g>
+</svg>

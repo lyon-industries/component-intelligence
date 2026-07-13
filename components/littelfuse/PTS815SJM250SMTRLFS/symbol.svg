@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">PTS815SJM250SMTRLFS switch symbol preview</title>
+  <desc id="desc">Normally open momentary switch showing terminals 1 and 2 common and terminals 3 and 4 common.</desc>
+  <rect width="320" height="200" fill="#0b1117"/>
+  <g fill="none" stroke="#dce5ea" stroke-width="2" stroke-linecap="square">
+    <path d="M45 72h55M45 128h55M100 55v90M220 55v90M220 72h55M220 128h55"/>
+    <path d="M100 100h35M185 100h35"/>
+    <circle cx="135" cy="100" r="4" fill="#0b1117"/>
+    <circle cx="185" cy="100" r="4" fill="#0b1117"/>
+    <path d="M139 96l38-23" stroke="#ff5a2f" stroke-width="3"/>
+    <path d="M160 42v24M147 54h26" stroke="#8da3b2"/>
+  </g>
+  <g fill="#dce5ea" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10">
+    <text x="51" y="66">1</text>
+    <text x="51" y="122">2</text>
+    <text x="260" y="66">3</text>
+    <text x="260" y="122">4</text>
+    <text x="100" y="162" text-anchor="middle">1 + 2 COMMON</text>
+    <text x="220" y="162" text-anchor="middle">3 + 4 COMMON</text>
+    <text x="160" y="184" text-anchor="middle" fill="#ff5a2f">SPST / NORMALLY OPEN</text>
+    <text x="12" y="18" fill="#8da3b2">SYMBOL PREVIEW / NOT EDA</text>
+  </g>
+</svg>

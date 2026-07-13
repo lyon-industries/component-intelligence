@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "updated_on": "2026-07-13",
+  "components": [
+    {
+      "id": "component:diodes-inc:AP63205WU-7",
+      "manufacturer_slug": "diodes-inc",
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "AP63205WU-7",
+      "path": "components/diodes-inc/AP63205WU-7/component.json",
+      "evidence_state": "cross-checked",
+      "physical_state": "not-tested"
+    },
+    {
+      "id": "component:littelfuse:PTS815SJM250SMTRLFS",
+      "manufacturer_slug": "littelfuse",
+      "manufacturer": "Littelfuse / C&K",
+      "mpn": "PTS815SJM250SMTRLFS",
+      "path": "components/littelfuse/PTS815SJM250SMTRLFS/component.json",
+      "evidence_state": "cross-checked",
+      "physical_state": "not-tested"
+    }
+  ]
+}
