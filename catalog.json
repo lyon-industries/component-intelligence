@@ -1,6 +1,6 @@
 {
-  "schema_version": "0.1.0",
-  "updated_on": "2026-07-13",
+  "schema_version": "0.2.0",
+  "updated_on": "2026-07-16",
   "components": [
     {
       "id": "component:analog-devices:MAX3485ESA+",
@@ -9,7 +9,8 @@
       "mpn": "MAX3485ESA+",
       "path": "components/analog-devices/MAX3485ESA%2B/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:aos:AO3400A",
@@ -18,7 +19,8 @@
       "mpn": "AO3400A",
       "path": "components/aos/AO3400A/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:bosch:BME280",
@@ -27,7 +29,8 @@
       "mpn": "BME280",
       "path": "components/bosch/BME280/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:diodes-inc:AP63205WU-7",
@@ -36,7 +39,8 @@
       "mpn": "AP63205WU-7",
       "path": "components/diodes-inc/AP63205WU-7/component.json",
       "evidence_state": "cross-checked",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:espressif:ESP32-C3-WROOM-02-N4",
@@ -45,7 +49,8 @@
       "mpn": "ESP32-C3-WROOM-02-N4",
       "path": "components/espressif/ESP32-C3-WROOM-02-N4/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:littelfuse:PTS815SJM250SMTRLFS",
@@ -54,7 +59,8 @@
       "mpn": "PTS815SJM250SMTRLFS",
       "path": "components/littelfuse/PTS815SJM250SMTRLFS/component.json",
       "evidence_state": "cross-checked",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "candidate"
     },
     {
       "id": "component:microchip:24LC256-I/SN",
@@ -63,7 +69,8 @@
       "mpn": "24LC256-I/SN",
       "path": "components/microchip/24LC256-I%2FSN/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:microchip:ATtiny85-20SU",
@@ -72,7 +79,8 @@
       "mpn": "ATtiny85-20SU",
       "path": "components/microchip/ATtiny85-20SU/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:microchip:MCP73831T-2ACI/OT",
@@ -81,7 +89,8 @@
       "mpn": "MCP73831T-2ACI/OT",
       "path": "components/microchip/MCP73831T-2ACI%2FOT/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:nexperia:BAT54C,215",
@@ -90,7 +99,8 @@
       "mpn": "BAT54C,215",
       "path": "components/nexperia/BAT54C%2C215/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:st:STM32C011F6P6TR",
@@ -99,7 +109,8 @@
       "mpn": "STM32C011F6P6TR",
       "path": "components/st/STM32C011F6P6TR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:st:USBLC6-2SC6",
@@ -108,7 +119,8 @@
       "mpn": "USBLC6-2SC6",
       "path": "components/st/USBLC6-2SC6/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:ADS1115IDGSR",
@@ -117,7 +129,8 @@
       "mpn": "ADS1115IDGSR",
       "path": "components/ti/ADS1115IDGSR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:INA219AIDCNR",
@@ -126,7 +139,8 @@
       "mpn": "INA219AIDCNR",
       "path": "components/ti/INA219AIDCNR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:LM358DR",
@@ -135,7 +149,8 @@
       "mpn": "LM358DR",
       "path": "components/ti/LM358DR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:NE555DR",
@@ -144,7 +159,8 @@
       "mpn": "NE555DR",
       "path": "components/ti/NE555DR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:PCA9306DCTR",
@@ -153,7 +169,8 @@
       "mpn": "PCA9306DCTR",
       "path": "components/ti/PCA9306DCTR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:SN74LVC1G17DBVR",
@@ -162,7 +179,8 @@
       "mpn": "SN74LVC1G17DBVR",
       "path": "components/ti/SN74LVC1G17DBVR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:TLV75533PDBVR",
@@ -171,7 +189,8 @@
       "mpn": "TLV75533PDBVR",
       "path": "components/ti/TLV75533PDBVR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     },
     {
       "id": "component:ti:TPS62162DSGR",
@@ -180,7 +199,8 @@
       "mpn": "TPS62162DSGR",
       "path": "components/ti/TPS62162DSGR/component.json",
       "evidence_state": "extracted",
-      "physical_state": "not-tested"
+      "physical_state": "not-tested",
+      "release_state": "reference-only"
     }
   ]
 }

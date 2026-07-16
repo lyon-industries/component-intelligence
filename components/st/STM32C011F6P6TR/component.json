@@ -1,6 +1,6 @@
 {
   "$schema": "../../../schema/component.schema.json",
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "id": "component:st:STM32C011F6P6TR",
   "identity": {
     "manufacturer": "STMicroelectronics",
@@ -341,7 +341,7 @@
     ]
   },
   "rights": {
-    "repository_content_license": "MIT",
+    "repository_content_license": "Apache-2.0",
     "source_files_redistributed": false,
     "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
     "source_rights_status": "linked-only"

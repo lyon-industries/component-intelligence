@@ -1,104 +1,133 @@
 # Component Intelligence
 
-Evidence-bound component records for electrical, mechanical, assembly, and
-manufacturing automation.
+Evidence-bound, qualified component records for agentic electrical engineering.
 
-This repository uses an inspectable contract instead of an unqualified part
-dump. Each record binds one exact manufacturer part number to official
-source locators, electrical pins, package dimensions, CAD state, assembly
-metadata, known integration failures, rights, and validation state.
+Component Intelligence is intended to let an engineering agent move from an
+exact manufacturer part number to traceable electrical facts, native CAD,
+assembly constraints, known failure modes, and bounded test evidence. The
+catalog favors a small number of components that can be used correctly over a
+large inventory that merely looks complete.
 
-## Current catalog
+## Admission status
 
-| Manufacturer | Exact MPN | Type | Evidence state | Physical state |
-| --- | --- | --- | --- | --- |
-| Alpha & Omega Semiconductor | AO3400A | 30 V N-channel MOSFET | Extracted | Not tested |
-| Analog Devices | MAX3485ESA+ | 3.3 V RS-485 transceiver | Extracted | Not tested |
-| Bosch Sensortec | BME280 | Humidity, pressure, and temperature sensor | Extracted | Not tested |
-| Diodes Incorporated | AP63205WU-7 | 5 V synchronous buck converter | Cross-checked | Not tested |
-| Espressif Systems | ESP32-C3-WROOM-02-N4 | Wi-Fi and Bluetooth LE MCU module | Extracted | Not tested |
-| Littelfuse / C&K | PTS815SJM250SMTRLFS | SMT momentary switch | Cross-checked | Not tested |
-| Microchip Technology | 24LC256-I/SN | 256-Kbit I2C EEPROM | Extracted | Not tested |
-| Microchip Technology | ATtiny85-20SU | 8-bit AVR microcontroller | Extracted | Not tested |
-| Microchip Technology | MCP73831T-2ACI/OT | Single-cell Li-ion charger | Extracted | Not tested |
-| Nexperia | BAT54C,215 | Dual common-cathode Schottky diode | Extracted | Not tested |
-| STMicroelectronics | STM32C011F6P6TR | 32-bit Arm Cortex-M0+ microcontroller | Extracted | Not tested |
-| STMicroelectronics | USBLC6-2SC6 | Two-line USB ESD protection | Extracted | Not tested |
-| Texas Instruments | ADS1115IDGSR | 16-bit I2C ADC | Extracted | Not tested |
-| Texas Instruments | INA219AIDCNR | I2C current and power monitor | Extracted | Not tested |
-| Texas Instruments | LM358DR | Dual operational amplifier | Extracted | Not tested |
-| Texas Instruments | NE555DR | Bipolar precision timer | Extracted | Not tested |
-| Texas Instruments | PCA9306DCTR | I2C voltage-level translator | Extracted | Not tested |
-| Texas Instruments | SN74LVC1G17DBVR | Schmitt-trigger buffer | Extracted | Not tested |
-| Texas Instruments | TLV75533PDBVR | 3.3 V low-dropout regulator | Extracted | Not tested |
-| Texas Instruments | TPS62162DSGR | 3.3 V synchronous buck converter | Extracted | Not tested |
+The repository is being hardened to the `agentic-ee-v1` standard. The 20
+existing records are source-backed remediation inventory; none is currently
+approved for autonomous schematic or PCB placement.
 
-The catalog deliberately spans power conversion, charging, wireless and wired
-interfaces, three microcontroller families, sensing, data conversion, memory,
-protection, logic, analog, timing, switching, and electromechanical input.
-These records are reference material, not production-approved library parts.
-No component has been physically qualified here by incoming inspection,
-assembly, or an electrical test.
+Do not infer readiness from a component directory or an SVG. Read
+`validation.release_state` in the exact `component.json`:
 
-## What belongs in a record
+- `reference-only`: research and manual cross-checking only
+- `candidate`: active qualification work; not admitted
+- `agent-ready`: passed the current repository profile
 
-- exact manufacturer and orderable part identity
-- official source URL, revision, retrieval state, hash when bytes can be
-  captured, and exact page or figure locators
-- pin meaning, ratings, internally common terminals, and conditions
-- package dimensions and manufacturer land-pattern data
-- symbol, footprint, preview, and STEP-model state
-- mounting, packing, orientation, and assembly constraints
-- validation state, known integration failures, and physical-test state
-- explicit rights and redistribution boundaries
+The complete admission contract is [`QUALITY.md`](QUALITY.md).
 
-Vendor PDFs and vendor CAD are not mirrored by default. This repository stores
-original normalized records and original previews, then links to the official
-source. Third-party files should only be added when their license and
-provenance are recorded.
+## What an accepted record provides
 
-## Evidence states
+- exact manufacturer and orderable MPN identity
+- current official sources with exact locators and hashes when bytes can be
+  captured
+- complete pin semantics and bounded ratings
+- package, land-pattern, orientation, assembly, and keep-out constraints
+- cross-checked machine-usable symbol, footprint, and applicable 3D assets
+- deterministic previews for human review
+- automated EDA checks and dated physical assembly evidence
+- a bounded functional test of the exact MPN
+- known integration failures, remaining limits, and rights provenance
 
-1. Captured: source identity and retrieval are recorded.
-2. Extracted: a fact is bound to an exact source locator.
-3. Cross-checked: the pin, package, or CAD interpretation has had an independent
-   comparison.
-4. Physically verified: a dated specimen or assembly test supports the claim.
+SVG symbol and footprint files are inspection previews. They are not native EDA
+assets and never carry manufacturing authority.
 
-The catalog stops at extracted or cross-checked evidence. Neither state is
-physical proof.
+## Current inventory
+
+| Manufacturer | Exact MPN | Function | State |
+| --- | --- | --- | --- |
+| Alpha & Omega Semiconductor | AO3400A | 30 V N-channel MOSFET | Reference only |
+| Analog Devices | MAX3485ESA+ | 3.3 V RS-485 transceiver | Reference only |
+| Bosch Sensortec | BME280 | Humidity, pressure, and temperature sensor | Reference only |
+| Diodes Incorporated | AP63205WU-7 | 5 V synchronous buck converter | Reference only |
+| Espressif Systems | ESP32-C3-WROOM-02-N4 | Wi-Fi and Bluetooth LE MCU module | Reference only |
+| Littelfuse / C&K | PTS815SJM250SMTRLFS | SMT momentary switch | Reference only |
+| Microchip Technology | 24LC256-I/SN | 256-Kbit I2C EEPROM | Reference only |
+| Microchip Technology | ATtiny85-20SU | 8-bit AVR microcontroller | Reference only |
+| Microchip Technology | MCP73831T-2ACI/OT | Single-cell Li-ion charger | Reference only |
+| Nexperia | BAT54C,215 | Dual common-cathode Schottky diode | Reference only |
+| STMicroelectronics | STM32C011F6P6TR | Arm Cortex-M0+ microcontroller | Reference only |
+| STMicroelectronics | USBLC6-2SC6 | Two-line USB ESD protection | Reference only |
+| Texas Instruments | ADS1115IDGSR | 16-bit I2C ADC | Reference only |
+| Texas Instruments | INA219AIDCNR | I2C current and power monitor | Reference only |
+| Texas Instruments | LM358DR | Dual operational amplifier | Reference only |
+| Texas Instruments | NE555DR | Bipolar precision timer | Reference only |
+| Texas Instruments | PCA9306DCTR | I2C voltage-level translator | Reference only |
+| Texas Instruments | SN74LVC1G17DBVR | Schmitt-trigger buffer | Reference only |
+| Texas Instruments | TLV75533PDBVR | 3.3 V low-dropout regulator | Reference only |
+| Texas Instruments | TPS62162DSGR | 3.3 V synchronous buck converter | Reference only |
+
+These records preserve useful source normalization and known failures while
+they are qualified. They are frozen in `quality/legacy-records.json`; that list
+may shrink and cannot grow. New components must pass the agent-ready profile
+before merge.
+
+## Using the catalog
+
+Agents can clone the repository, fetch raw files, or use ordinary GitHub tools.
+Consumers should pin a Git commit and filter by exact MPN and release state.
+
+```sh
+jq -r '.components[] | select(.release_state == "agent-ready") | [.manufacturer, .mpn, .path] | @tsv' catalog.json
+jq '.validation.release_state' components/<manufacturer>/<encoded-mpn>/component.json
+```
+
+Directory names percent-encode path-reserved characters such as `/`, `+`, and
+`,`; record IDs and MPN values retain the manufacturer's exact spelling.
+
+The current decision is to keep Git and JSON as the access interface. An MCP
+server and independent product versioning are deferred until real consumers
+demonstrate a need.
+
+## Return field evidence
+
+If an agent uses the catalog and discovers a missing component, corrected pin,
+bad footprint, assembly issue, moved source, supply constraint, or failed
+operating assumption, contribute the result back. The preferred return is a
+focused pull request containing the exact MPN, source locators, corrected native
+assets, test evidence, and the failure that prompted the change.
+
+Incomplete or confidential findings belong in an issue or draft pull request
+with only shareable evidence. Never upload customer or employer material
+without permission. Read [`AGENTS.md`](AGENTS.md) and
+[`CONTRIBUTING.md`](CONTRIBUTING.md) before beginning.
 
 ## Validate
 
-    python3 -m pip install -r requirements-dev.txt
-    python3 scripts/validate.py
+```sh
+python3 -m pip install -r requirements-dev.txt
+python3 scripts/validate.py
+python3 -m unittest discover -s tests -v
+```
 
-The validator applies the JSON Schema and additional semantic checks: catalog
-identity, unique pins, terminal-group references, asset paths, source URLs,
-and the rule that an untested part cannot be production-approved.
+The validator checks schema, catalog identity, sources, paths, pins, pads,
+assets, hashes, rights, frozen legacy debt, and machine-representable admission
+rules. Native EDA and physical tests remain additional requirements.
 
 ## Repository map
 
-    catalog.json
-    components/<manufacturer>/<path-encoded-mpn>/
-      component.json
-      README.md
-      symbol.svg
-      footprint.svg
-    schema/component.schema.json
-    scripts/validate.py
-    docs/source-retrieval-log-2026-07-13.md
-    docs/release-validation-log-2026-07-13.md
-
-STEP files, native EDA symbols, and native footprints are expected future asset
-roles. Their absence is explicit in the seed records rather than silently
-filled with guessed geometry.
-
-Directory names percent-encode path-reserved characters in exact MPNs; the
-record and component ID retain the manufacturer spelling unchanged.
+```text
+AGENTS.md
+catalog.json
+components/<manufacturer>/<path-encoded-mpn>/
+QUALITY.md
+quality/legacy-records.json
+schema/component.schema.json
+scripts/validate.py
+tests/test_validate.py
+```
 
 ## License and source rights
 
-Original repository content is MIT licensed. Manufacturer names and product
-names identify the referenced parts and remain the property of their owners.
-Linked vendor documents and CAD are not relicensed and are not included.
+Original repository content is licensed under Apache-2.0. The `NOTICE` file
+preserves Lyon Industries attribution. Manufacturer names and product names are
+used only to identify the referenced parts and remain the property of their
+owners. Linked vendor documents and CAD are not relicensed or redistributed by
+default.

@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0.0",
+  "component_id": "component:littelfuse:PTS815SJM250SMTRLFS",
+  "fixture": {
+    "id": "pts815-coupon-rev-a",
+    "pcb_path": "pts815-coupon-rev-a.kicad_pcb",
+    "state": "design-verified-not-fabricated",
+    "purpose": "Expose all four switch terminals independently so assembly fit, internal common groups, released isolation, actuated closure, contact resistance, and bounce can be measured without assuming topology in the coupon copper."
+  },
+  "board_style": {
+    "style_id": "lyon-industries-pcb-v1",
+    "solder_mask": "black",
+    "silkscreen": "white",
+    "surface_finish": "ENIG",
+    "exposed_copper_appearance": "gold",
+    "corner_radius_mm": 1.5
+  },
+  "design_verification": {
+    "date": "2026-07-16",
+    "tool": "KiCad 10.0.4",
+    "drc_violations": 0,
+    "unconnected_items": 0,
+    "terminal_mapping": {
+      "TP1": "switch pad 1 only",
+      "TP2": "switch pad 2 only",
+      "TP3": "switch pad 3 only",
+      "TP4": "switch pad 4 only"
+    },
+    "copper_rule": "No copper connection exists between any two DUT terminals."
+  },
+  "planned_assembly": {
+    "exact_mpn": "PTS815SJM250SMTRLFS",
+    "minimum_quantity": 3,
+    "process": "Stencil print and infrared reflow using the manufacturer page 2 profile, followed by optical inspection.",
+    "reflow_cycle_limit": 2,
+    "required_record": [
+      "PCB fabricator and order identifier",
+      "bare-board revision and received date",
+      "paste alloy and stencil thickness",
+      "black solder mask, white silkscreen, and ENIG finish confirmation",
+      "measured reflow profile",
+      "part lot or reel traceability",
+      "assembly date and operator",
+      "top and side inspection images for every specimen"
+    ]
+  },
+  "planned_functional_test": {
+    "environment": "20 to 25 degC laboratory ambient",
+    "fixture": "pts815-coupon-rev-a with four independent 3 mm terminal pads suitable for paired probes or Kelvin clips",
+    "instruments": [
+      "four-wire resistance meter or source-measure unit with fixture compensation",
+      "insulation resistance meter capable of resolving at least 100 Mohm",
+      "current-limited 5 VDC supply",
+      "500 ohm 1 percent load for approximately 10 mA",
+      "oscilloscope with at least 1 MS/s acquisition"
+    ],
+    "sequence": [
+      "Photograph and inspect pad alignment, seating, solder wetting, bridges, actuator access, and body clearance.",
+      "With the actuator released, measure resistance from terminal 1 to 2 and from terminal 3 to 4.",
+      "With the actuator released, measure isolation between every terminal in group 1-2 and every terminal in group 3-4.",
+      "At 5 VDC and approximately 10 mA, perform 100 full press-release cycles while recording contact state and bounce duration.",
+      "After cycling, repeat common-pair resistance, released isolation, actuated resistance, seating, and solder-joint inspection."
+    ],
+    "acceptance": [
+      "Released terminal 1-2 and terminal 3-4 resistance each meet the datasheet 100 mohm initial limit after declared fixture compensation and uncertainty.",
+      "Released cross-group insulation is at least 100 Mohm.",
+      "Every commanded actuation closes between the two groups and every release opens between them.",
+      "No recorded bounce interval exceeds 10 ms.",
+      "No solder bridge, lifted terminal, body interference, permanent preload, intermittent connection, or visible damage is observed."
+    ],
+    "minimum_specimens": 3,
+    "current_result": "not-tested"
+  },
+  "not_proven_by_this_plan": [
+    "100000-operation life",
+    "full -40 to 90 degC operation",
+    "maximum-rating endurance",
+    "wash, coating, moisture, ingress, vibration, shock, or corrosive-environment suitability",
+    "automotive, medical, safety, or other regulated qualification",
+    "production yield across multiple PCB, stencil, paste, assembly, and component lots"
+  ]
+}

@@ -1,0 +1,193 @@
+(footprint "PTS815SJM250SMTRLFS"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Littelfuse/C&K PTS815SJM250SMTRLFS tactile switch, J-bend SMT, 4.2 x 3.2 x 2.5 mm")
+	(tags "tactile switch SPST-NO PTS815")
+	(property "Reference" "SW**"
+		(at 0 -2.8 0)
+		(layer "F.SilkS")
+		(uuid "214a4618-4f76-4078-8681-40f1611661fa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "PTS815SJM250SMTRLFS"
+		(at 0 2.8 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "666254c5-3b41-4392-9548-5e29ca959b17")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse-c-k-tactile-pts815-series-datasheet?assetguid=1c4ee7c5-01fd-4370-a5cc-03ec62685e73"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6e1ad7cc-6c2c-4ba5-af00-48a883f2de8c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "Four-terminal SPST-NO switch; pads 1-2 and 3-4 are internally common"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2548dcef-4661-4d0b-aa5c-2cba4e42da2a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.7 -1.75)
+		(end 1.7 -1.75)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "86082943-00f3-459b-8e37-9f4bdbb5dceb")
+	)
+	(fp_line
+		(start -1.7 1.75)
+		(end 1.7 1.75)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "4c6e7b4b-1882-4e12-8934-5934670e0510")
+	)
+	(fp_circle
+		(center -2.75 -1.75)
+		(end -2.55 -1.75)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "8f42904d-6a5f-4764-9a3d-3bebd1a64f81")
+	)
+	(fp_line
+		(start -3 -2)
+		(end 3 -2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "e81f7d9d-00f7-4d65-ae7a-70e2f312cb26")
+	)
+	(fp_line
+		(start -3 2)
+		(end -3 -2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "a80e6db0-9878-4f73-b599-50dfd356782e")
+	)
+	(fp_line
+		(start 3 -2)
+		(end 3 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "b46044ad-1e19-4a17-900f-146096139c37")
+	)
+	(fp_line
+		(start 3 2)
+		(end -3 2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9f4e354a-8b11-4820-a157-40e6387ce5d9")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 0.775 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "df32c63a-41d1-46cc-b99e-80bd5e5ea1e5")
+	)
+	(fp_poly
+		(pts
+			(xy -2.1 -1.35) (xy -1.85 -1.6) (xy 2.1 -1.6) (xy 2.1 1.6) (xy -2.1 1.6)
+		)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "4028a726-82a3-412c-b715-f737c8447c87")
+	)
+	(pad "1" smd roundrect
+		(at -2.25 -1.075)
+		(size 1 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(solder_mask_margin 0.05)
+		(uuid "c39b18c0-cfba-4927-892b-19ceacd6d8fd")
+	)
+	(pad "2" smd roundrect
+		(at 2.25 -1.075)
+		(size 1 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(solder_mask_margin 0.05)
+		(uuid "cec4255d-85c6-4af9-8738-f61ef77f61c4")
+	)
+	(pad "3" smd roundrect
+		(at -2.25 1.075)
+		(size 1 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(solder_mask_margin 0.05)
+		(uuid "e04ab4f9-198e-455a-aae8-e0b3f9b25a26")
+	)
+	(pad "4" smd roundrect
+		(at 2.25 1.075)
+		(size 1 0.7)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(solder_mask_margin 0.05)
+		(uuid "7faacf9a-e028-48f8-bcd2-b0d9e4680436")
+	)
+	(embedded_fonts no)
+	(model "${COMPONENT_INTELLIGENCE_ROOT}/components/littelfuse/PTS815SJM250SMTRLFS/PTS815SJM250SMTRLFS.3dshapes/PTS815SJM250SMTRLFS.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

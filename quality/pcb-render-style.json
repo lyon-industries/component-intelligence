@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "style_id": "lyon-industries-pcb-v1",
+  "board": {
+    "solder_mask": {
+      "kicad_color": "Black",
+      "render_target_hex": "#05080B"
+    },
+    "silkscreen": {
+      "kicad_color": "White",
+      "render_target_hex": "#FFFFFF"
+    },
+    "surface_finish": {
+      "kicad_name": "ENIG",
+      "visual_result": "gold exposed copper",
+      "render_hex": "#D4AF37"
+    },
+    "corner_radius_mm": 1.5
+  },
+  "render": {
+    "background_hex": "#FFFFFF",
+    "minimum_foreground_alpha": 224,
+    "quality": "basic",
+    "supersample": 2,
+    "preset": "follow_plot_settings",
+    "use_board_stackup_colors": true,
+    "floor": false
+  }
+}

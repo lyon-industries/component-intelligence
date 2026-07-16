@@ -1,6 +1,6 @@
 {
   "$schema": "../../../schema/component.schema.json",
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "id": "component:littelfuse:PTS815SJM250SMTRLFS",
   "identity": {
     "manufacturer": "Littelfuse / C&K",
@@ -58,6 +58,7 @@
         "number": "1",
         "name": "POLE_A",
         "function": "First terminal of the upper internally common pole.",
+        "electrical_type": "passive",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, circuit diagram and terminal callouts"
       },
@@ -65,6 +66,7 @@
         "number": "2",
         "name": "POLE_A",
         "function": "Second terminal of the upper internally common pole.",
+        "electrical_type": "passive",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, circuit diagram and terminal callouts"
       },
@@ -72,6 +74,7 @@
         "number": "3",
         "name": "POLE_B",
         "function": "First terminal of the lower internally common pole.",
+        "electrical_type": "passive",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, circuit diagram and terminal callouts"
       },
@@ -79,6 +82,7 @@
         "number": "4",
         "name": "POLE_B",
         "function": "Second terminal of the lower internally common pole.",
+        "electrical_type": "passive",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, circuit diagram and terminal callouts"
       }
@@ -90,6 +94,7 @@
           "max": 12
         },
         "unit": "VDC",
+        "boundary": "absolute-maximum",
         "qualifier": "Maximum electrical rating in the series specification.",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, Electrical Characteristics"
@@ -100,6 +105,7 @@
           "max": 50
         },
         "unit": "mA",
+        "boundary": "absolute-maximum",
         "qualifier": "Maximum DC current in the series specification.",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, Electrical Characteristics"
@@ -111,6 +117,7 @@
           "tolerance": 0.5
         },
         "unit": "N",
+        "boundary": "characteristic",
         "qualifier": "M-force option in the exact orderable part number.",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 3, orderable-device table"
@@ -121,6 +128,7 @@
           "typ": 100000
         },
         "unit": "operations",
+        "boundary": "characteristic",
         "qualifier": "Listed value for the exact orderable part number.",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 3, orderable-device table"
@@ -132,9 +140,55 @@
           "max": 90
         },
         "unit": "degC",
+        "boundary": "recommended-operating",
         "qualifier": "Series environmental characteristic.",
         "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
         "locator": "page 1, Environmental Characteristics"
+      },
+      {
+        "name": "initial contact resistance",
+        "value": {
+          "max": 100
+        },
+        "unit": "mohm",
+        "boundary": "characteristic",
+        "qualifier": "Initial contact resistance; not a guaranteed post-life value.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Electrical Characteristics"
+      },
+      {
+        "name": "insulation resistance",
+        "value": {
+          "min": 100
+        },
+        "unit": "Mohm",
+        "boundary": "characteristic",
+        "qualifier": "Minimum insulation resistance across the open contact.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Electrical Characteristics"
+      },
+      {
+        "name": "contact bounce time",
+        "value": {
+          "max": 10
+        },
+        "unit": "ms",
+        "boundary": "characteristic",
+        "qualifier": "Maximum bounce time; consuming circuits and firmware must still implement suitable debounce.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Electrical Characteristics"
+      },
+      {
+        "name": "actuator travel",
+        "value": {
+          "typ": 0.2,
+          "tolerance": 0.1
+        },
+        "unit": "mm",
+        "boundary": "characteristic",
+        "qualifier": "Mechanical travel of the standard actuator.",
+        "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
+        "locator": "page 1, Specifications"
       }
     ],
     "internally_common_terminal_groups": [
@@ -211,28 +265,37 @@
   },
   "cad": {
     "symbol": {
-      "status": "preview-only",
-      "path": "symbol.svg",
-      "manufacturing_use": false,
-      "provenance": "Original repository preview of the official contact arrangement.",
-      "reference": null,
-      "reason": "The SVG exposes terminal grouping but is not a native EDA symbol."
+      "status": "cross-checked",
+      "path": "PTS815SJM250SMTRLFS.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "b70751c3beb130edb542a41a63ee9855af519ec733a3dfa491335832aa53d6f2",
+      "tool_version": "KiCad 10.0.4",
+      "manufacturing_use": true,
+      "provenance": "Original Lyon Industries native symbol derived from the official contact arrangement and independently compared with the normalized four-terminal topology.",
+      "reference": "source:littelfuse:PTS815-VL-2026-02-03, page 1 circuit diagram",
+      "reason": null
     },
     "footprint": {
-      "status": "preview-only",
-      "path": "footprint.svg",
-      "manufacturing_use": false,
-      "provenance": "Original repository preview of the visually cross-checked four-land drawing.",
-      "reference": null,
-      "reason": "The exact pad data is recorded, but no native footprint is distributed in the seed."
+      "status": "cross-checked",
+      "path": "PTS815SJM250SMTRLFS.pretty/PTS815SJM250SMTRLFS.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "a0152d83b973b34ea82b0c2da4e07874203f2ad615b9cdef79e37005b2e4108a",
+      "tool_version": "KiCad 10.0.4",
+      "manufacturing_use": true,
+      "provenance": "Original Lyon Industries footprint derived from the official PCB land dimensions and independently compared with the corrected four-pad reference implementation.",
+      "reference": "source:littelfuse:PTS815-VL-2026-02-03, page 1 PCB land dimension",
+      "reason": null
     },
     "step_model": {
-      "status": "not-included",
-      "path": null,
-      "manufacturing_use": false,
-      "provenance": "No rights-cleared and dimensionally reviewed STEP model has been registered.",
-      "reference": null,
-      "reason": "A model must be checked for body envelope, actuator travel, seating plane, origin, and rotation before inclusion."
+      "status": "cross-checked",
+      "path": "PTS815SJM250SMTRLFS.3dshapes/PTS815SJM250SMTRLFS.step",
+      "format": "STEP AP214",
+      "sha256": "09f40058b23ceede62613d0e228fe3d85f09bd77a94c278d4b591528b69c3409",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "manufacturing_use": true,
+      "provenance": "Original Lyon Industries nominal mechanical-clearance model generated from the official body, height, terminal-span, and actuator dimensions.",
+      "reference": "source:littelfuse:PTS815-VL-2026-02-03, page 1 package drawing",
+      "reason": "The model is authoritative for nominal seating and clearance envelope only; it does not reproduce undocumented cosmetic or internal detail."
     }
   },
   "assembly": {
@@ -244,45 +307,60 @@
       "locator": "page 2, packaging note"
     },
     "orientation": {
-      "status": "partial",
-      "description": "Terminal callouts and tape geometry are shown; an assembly rotation convention has not been physically validated.",
+      "status": "documented",
+      "description": "Footprint rotation 0 is the manufacturer top view with the actuator facing up: pad 1 at negative x/negative y, pad 2 at positive x/negative y, pad 3 at negative x/positive y, and pad 4 at positive x/positive y. The filled F.SilkS dot and chamfered F.Fab corner identify pad 1. Confirm feeder rotation from the page 2 tape drawing and the first placed article; the switch is non-polar but terminal grouping is not interchangeable within a two-net implementation.",
       "source_id": "source:littelfuse:PTS815-VL-2026-02-03",
       "locator": "pages 1-2, package and tape drawings"
     },
     "notes": [
-      "The datasheet allows up to two reflow cycles under its stated profile.",
-      "The exact suffix identifies J-bend SMT, 2.5 mm height, tape-and-reel, and RoHS silver-plated terminals."
+      "Use infrared reflow in accordance with IEC 61760-1 and the page 2 profile: ramp up below 3 K/s, ramp down below 6 K/s, approximately 45 to 90 seconds above 220 degC, and no more than two reflow cycles.",
+      "The native footprint uses one-to-one paste apertures and 0.05 mm local solder-mask expansion around each 1.0 mm by 0.7 mm copper land.",
+      "The exact suffix identifies J-bend SMT, 2.5 mm height, tape-and-reel, and RoHS silver-plated terminals; slightly activated flux is suitable for the plated terminals.",
+      "The reviewed datasheet does not establish wash, conformal-coating, moisture-sensitivity, or sealed-enclosure suitability. Do not infer those properties.",
+      "Keep the actuator accessible and prevent an enclosure from preloading it; nominal travel is 0.20 mm with 0.10 mm tolerance."
     ]
   },
   "validation": {
     "evidence_state": "cross-checked",
     "physical_state": "not-tested",
-    "release_state": "reference-only",
-    "reviewed_on": "2026-07-13",
+    "release_state": "candidate",
+    "reviewed_on": "2026-07-16",
     "checks": [
       {
         "name": "source identity",
         "status": "pass",
-        "method": "Reviewed the current official three-page datasheet in the browser path; direct byte capture remained blocked.",
-        "date": "2026-07-13"
+        "method": "Reviewed the current official three-page datasheet and exact orderable-device row for PTS815SJM250SMTRLFS; direct byte capture remained blocked by HTTP 403.",
+        "date": "2026-07-16"
       },
       {
         "name": "contact topology",
         "status": "pass",
-        "method": "Compared all four terminal callouts with the circuit diagram and retained the two internally common terminal groups.",
-        "date": "2026-07-13"
+        "method": "Compared every terminal callout with the official circuit diagram, then independently compared the result with the corrected four-terminal irrigation-controller reference design.",
+        "date": "2026-07-16"
       },
       {
         "name": "land coordinates",
         "status": "pass",
-        "method": "Cross-checked the four land centres and dimensions against the manufacturer package and PCB-land drawing.",
-        "date": "2026-07-13"
+        "method": "Cross-checked all four 1.0 mm by 0.7 mm lands, centres, top-view numbering, and body envelope against the manufacturer drawing and a separate corrected KiCad footprint.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol and footprint",
+        "status": "pass",
+        "method": "KiCad 10.0.4 parsed and rendered the native symbol and footprint. A minimal schematic tying pins 1-2 and 3-4 passed ERC with zero violations. A generated board coupon assigning and routing those two nets passed DRC with zero violations and zero unconnected items. KiCad loaded the STEP model and produced inspected top, side, and perspective renders with the correct origin, rotation, seating plane, terminal positions, and actuator-up orientation.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP geometry",
+        "status": "pass",
+        "method": "CadQuery 2.8.0 generated the original STEP file and Open CASCADE bounded it at x -2.3 to 2.3 mm, y -1.6 to 1.6 mm, and z 0 to 2.5 mm before export. The generator normalizes the STEP metadata timestamp; two consecutive exports produced the same SHA-256.",
+        "date": "2026-07-16"
       },
       {
         "name": "physical continuity and fit",
         "status": "open",
-        "method": "No specimen continuity test, paste trial, assembly, actuator-clearance check, or STEP-model fit test belongs to this repository yet.",
-        "date": "2026-07-13"
+        "method": "Qualification coupon Rev A is designed, rendered, and passes KiCad 10.0.4 DRC with zero violations and zero unconnected items. It keeps all four DUT terminals independent for topology measurement. No coupon has been fabricated, no exact-MPN specimen has been assembled, and no continuity, resistance, bounce, or actuator-clearance measurement exists yet.",
+        "date": "2026-07-16"
       }
     ],
     "known_issues": [
@@ -303,11 +381,23 @@
         "scope": "data-pipeline",
         "summary": "The official PDF is browser-readable but direct automated byte capture returned HTTP 403, so this seed does not claim a source-file hash.",
         "status": "documented"
+      },
+      {
+        "severity": "design-risk",
+        "scope": "component",
+        "summary": "The bundled STEP file is a nominal mechanical-clearance model. It is suitable for seating, orientation, and enclosure-envelope checks, but not for internal, cosmetic, tolerance-stack, or actuator-force simulation.",
+        "status": "documented"
+      },
+      {
+        "severity": "fabrication-stop",
+        "scope": "component",
+        "summary": "The exact footprint and exact MPN have not passed a dated fabrication, assembly, inspection, and continuity coupon. Do not promote this candidate to agent-ready or use it for autonomous PCB release until that evidence exists.",
+        "status": "open"
       }
     ]
   },
   "rights": {
-    "repository_content_license": "MIT",
+    "repository_content_license": "Apache-2.0",
     "source_files_redistributed": false,
     "normalized_record_origin": "Original Lyon Industries normalization and previews based on the linked official source.",
     "source_rights_status": "linked-only"
