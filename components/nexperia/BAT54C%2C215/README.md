@@ -2,15 +2,15 @@
 
 Nexperia dual common-cathode Schottky barrier diode in SOT-23.
 
-## Candidate work
+## Complete package
 
-This directory is incomplete and excluded from the complete catalog. Do not consume it as a finished CAD package.
+This directory is listed in the complete catalog and contains the verified native symbol, footprint, and STEP model.
 
 - Identity verified: `true`
-- Data cross-checked: `false`
-- Native symbol verified: `false`
-- Native footprint verified: `false`
-- STEP model verified: `false`
+- Data cross-checked: `true`
+- Native symbol verified: `true`
+- Native footprint verified: `true`
+- STEP model verified: `true`
 - Physically tested: `false`
 
 ## Integration findings
@@ -20,5 +20,6 @@ This directory is incomplete and excluded from the complete catalog. Do not cons
 ## Official sources
 
 - [BAT54C Schottky Barrier Diode](https://assets.nexperia.com/documents/data-sheet/BAT54C.pdf)
+- [BAT54C,215 product and orderable identity](https://www.nexperia.com/chemical-content/BAT54C.html)
 
 `component.json` is the canonical machine-readable record.

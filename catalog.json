@@ -5,6 +5,76 @@
   "generated_from": "components/*/*/component.json",
   "components": [
     {
+      "id": "component:aos:AO3400A",
+      "manufacturer_slug": "aos",
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "mpn": "AO3400A",
+      "category": "transistor",
+      "function": "30 V N-channel enhancement-mode MOSFET",
+      "keywords": [
+        "MOSFET",
+        "N-channel",
+        "30 V",
+        "SOT-23",
+        "logic-level"
+      ],
+      "package": "SOT-23",
+      "path": "components/aos/AO3400A/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "continuous-drain-current",
+        "drain-source-voltage",
+        "rds-on-at-4-5-v-gate"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:diodes-inc:AP63205WU-7",
+      "manufacturer_slug": "diodes-inc",
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "AP63205WU-7",
+      "category": "power-management",
+      "function": "fixed-output synchronous buck converter",
+      "keywords": [
+        "5 V",
+        "buck",
+        "dc-dc",
+        "synchronous",
+        "TSOT26"
+      ],
+      "package": "TSOT26",
+      "path": "components/diodes-inc/AP63205WU-7/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "continuous-output-current",
+        "fixed-output-voltage",
+        "quiescent-current",
+        "recommended-input-voltage",
+        "switching-frequency"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
       "id": "component:littelfuse:PTS815SJM250SMTRLFS",
       "manufacturer_slug": "littelfuse",
       "manufacturer": "Littelfuse / C&K",
@@ -100,6 +170,108 @@
         "input-voltage",
         "programmable-charge-current",
         "regulated-battery-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BAT54C,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BAT54C,215",
+      "category": "diode",
+      "function": "dual common-cathode Schottky barrier diode",
+      "keywords": [
+        "Schottky",
+        "dual diode",
+        "common cathode",
+        "SOT-23",
+        "clamp"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BAT54C%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "forward-current",
+        "forward-voltage-at-100-ma",
+        "reverse-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:st:STM32C011F6P6TR",
+      "manufacturer_slug": "st",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "STM32C011F6P6TR",
+      "category": "microcontroller",
+      "function": "32-bit Arm Cortex-M0+ microcontroller with 32 KB flash",
+      "keywords": [
+        "Arm Cortex-M0+",
+        "32-bit",
+        "32 KB flash",
+        "TSSOP20",
+        "48 MHz"
+      ],
+      "package": "TSSOP20",
+      "path": "components/st/STM32C011F6P6TR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "cpu-frequency",
+        "flash-memory",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:st:USBLC6-2SC6",
+      "manufacturer_slug": "st",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "USBLC6-2SC6",
+      "category": "protection",
+      "function": "two-line low-capacitance ESD protection array",
+      "keywords": [
+        "ESD",
+        "USB 2.0",
+        "two line",
+        "SOT23-6",
+        "flow-through"
+      ],
+      "package": "SOT23-6L",
+      "path": "components/st/USBLC6-2SC6/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "contact-esd",
+        "line-capacitance",
+        "stand-off-voltage"
       ],
       "capabilities": {
         "identity_verified": true,

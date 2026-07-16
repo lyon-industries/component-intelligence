@@ -7,8 +7,8 @@
     "manufacturer_slug": "aos",
     "mpn": "AO3400A",
     "series": "AO3400A",
-    "orderable": null,
-    "orderable_checked_on": null
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
   },
   "classification": {
     "category": "transistor",
@@ -53,6 +53,50 @@
         {
           "page": 5,
           "label": "Tape and reel information"
+        }
+      ]
+    },
+    {
+      "id": "source:aos:product:AO3400A",
+      "kind": "product-page",
+      "publisher": "www.aosmd.com",
+      "title": "AO3400A product status",
+      "url": "https://www.aosmd.com/products/mosfets/low-voltage-mosfets-12v-30v/ao3400a",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current exact or family identity, package, and product status"
+        }
+      ]
+    },
+    {
+      "id": "source:aos:package:SOT23A-PO-00026",
+      "kind": "product-page",
+      "publisher": "www.aosmd.com",
+      "title": "SOT23A package drawing and recommended land pattern",
+      "url": "https://www.aosmd.com/sites/default/files/res/packaging_information/SOT23A.pdf",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current exact or family identity, package, and product status"
         }
       ]
     }
@@ -135,78 +179,111 @@
         "typ": 2.9
       },
       "height": {
-        "max": 1.3
+        "max": 1.17
       },
       "overall_width": {
-        "typ": 2.8
+        "typ": 2.38
       },
       "molded_width": {
         "typ": 1.3
       }
     },
     "land_pattern": {
-      "status": "manufacturer-dimensioned",
+      "status": "cross-checked",
       "source_id": "source:aos:AO3400A-rev-3-1",
-      "locator": "page 4, SOT23 package dimensions and recommended land pattern",
+      "locator": "PO-00026 Rev G, SOT23A recommended land pattern; 0.80 mm square pads, 0.95 mm pitch, and 2.20 mm row-center spacing",
       "pad_count": 3,
-      "dimensions_mm": {},
-      "coordinate_convention": null,
-      "pads": []
+      "dimensions_mm": {
+        "contact_pitch": 0.95,
+        "contact_pad_spacing": 2.2,
+        "contact_pad_width": 0.8,
+        "contact_pad_length": 0.8
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left unless the manufacturer pin diagram places it lower-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -1.1,
+          "y_mm": -0.475,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        },
+        {
+          "number": "2",
+          "x_mm": -1.1,
+          "y_mm": 0.475,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        },
+        {
+          "number": "3",
+          "x_mm": 1.1,
+          "y_mm": 0,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        }
+      ]
     }
   },
   "cad": {
     "symbol": {
-      "availability": "missing",
-      "path": null,
-      "format": null,
-      "sha256": null,
-      "tool_version": null,
-      "verified": false,
+      "availability": "included",
+      "path": "AO3400A.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "be47bd3ce9770c5739fbb370a4b90ca37f329893fba4755667b4b7b09d616e0b",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
       "intended_use": [
         "schematic"
       ],
-      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
       "source_ids": [
-        "source:aos:AO3400A-rev-3-1"
+        "source:aos:AO3400A-rev-3-1",
+        "source:aos:product:AO3400A",
+        "source:aos:package:SOT23A-PO-00026"
       ],
       "limitations": [
-        "No verified native symbol is included yet."
+        "The single-unit functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
       ]
     },
     "footprint": {
-      "availability": "missing",
-      "path": null,
-      "format": null,
-      "sha256": null,
-      "tool_version": null,
-      "verified": false,
+      "availability": "included",
+      "path": "AO3400A.pretty/AO3400A.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "de536ac8057b1a06f909b2630ea2a5b08da9eb0f59d622f075442100db2e3504",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
       "intended_use": [
         "pcb-layout"
       ],
-      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and explicit reviewed pad coordinates.",
       "source_ids": [
-        "source:aos:AO3400A-rev-3-1"
+        "source:aos:AO3400A-rev-3-1",
+        "source:aos:product:AO3400A",
+        "source:aos:package:SOT23A-PO-00026"
       ],
       "limitations": [
-        "No verified native footprint is included yet."
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
       ]
     },
     "step_model": {
-      "availability": "missing",
-      "path": null,
-      "format": null,
-      "sha256": null,
-      "tool_version": null,
-      "verified": false,
+      "availability": "included",
+      "path": "AO3400A.3dshapes/AO3400A.step",
+      "format": "STEP AP214",
+      "sha256": "db004c77ce495f48bed0cf74312c8a76d2bf896c06fc72b13b0e345b5d3b0078",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
       "intended_use": [
         "mechanical-clearance"
       ],
-      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "provenance": "Original Lyon Industries nominal envelope model generated from the manufacturer body, height, terminal-span, and pad geometry.",
       "source_ids": [
-        "source:aos:AO3400A-rev-3-1"
+        "source:aos:AO3400A-rev-3-1",
+        "source:aos:product:AO3400A",
+        "source:aos:package:SOT23A-PO-00026"
       ],
       "limitations": [
-        "No verified native step model is included yet."
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and lead-form detail."
       ]
     }
   },
@@ -247,12 +324,12 @@
   },
   "verification": {
     "identity_verified": true,
-    "data_cross_checked": false,
-    "symbol_verified": false,
-    "footprint_verified": false,
-    "step_verified": false,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
     "physically_tested": false,
-    "reviewed_on": "2026-07-13",
+    "reviewed_on": "2026-07-16",
     "checks": [
       {
         "name": "official source identity",
@@ -265,6 +342,36 @@
         "status": "pass",
         "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
         "date": "2026-07-13"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against an official product or package page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
       }
     ],
     "physical_test_evidence": []

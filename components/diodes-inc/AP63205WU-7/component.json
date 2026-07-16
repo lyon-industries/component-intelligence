@@ -7,8 +7,8 @@
     "manufacturer_slug": "diodes-inc",
     "mpn": "AP63205WU-7",
     "series": "AP63200/AP63201/AP63203/AP63205",
-    "orderable": null,
-    "orderable_checked_on": null
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
   },
   "classification": {
     "category": "power-management",
@@ -61,6 +61,28 @@
         {
           "page": 17,
           "label": "TSOT26 outline and suggested pad layout"
+        }
+      ]
+    },
+    {
+      "id": "source:diodes:product:AP63205",
+      "kind": "product-page",
+      "publisher": "Diodes Incorporated",
+      "title": "AP63205 product and package status",
+      "url": "https://www.diodes.com/part/view/AP63205",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current family identity, TSOT26 package, specifications, and technical documents"
         }
       ]
     }
@@ -193,87 +215,132 @@
       "length": {
         "min": 2.8,
         "typ": 2.9,
-        "max": 3
-      },
-      "width": 2.8,
-      "molded_width": {
-        "min": 1.5,
-        "typ": 1.6,
-        "max": 1.7
+        "max": 3.0
       },
       "height": {
-        "max": 1
+        "max": 1.0
+      },
+      "overall_width": {
+        "typ": 2.8
+      },
+      "molded_width": {
+        "typ": 1.6
       }
     },
     "land_pattern": {
-      "status": "manufacturer-dimensioned",
+      "status": "cross-checked",
       "source_id": "source:diodes:DS41326-rev-3-2",
-      "locator": "page 17, Suggested Pad Layout",
+      "locator": "page 17, TSOT26 suggested pad layout; X=0.70 mm, Y=1.00 mm, C=0.95 mm, and Y1=3.20 mm",
       "pad_count": 6,
       "dimensions_mm": {
-        "C": 0.95,
-        "X": 0.7,
-        "Y": 1,
-        "Y1": 3.2
+        "contact_pitch": 0.95,
+        "contact_pad_spacing": 3.2,
+        "contact_pad_width": 0.7,
+        "contact_pad_length": 1.0
       },
-      "coordinate_convention": null,
-      "pads": []
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -1.6,
+          "y_mm": -0.95,
+          "width_mm": 1.0,
+          "height_mm": 0.7
+        },
+        {
+          "number": "2",
+          "x_mm": -1.6,
+          "y_mm": 0,
+          "width_mm": 1.0,
+          "height_mm": 0.7
+        },
+        {
+          "number": "3",
+          "x_mm": -1.6,
+          "y_mm": 0.95,
+          "width_mm": 1.0,
+          "height_mm": 0.7
+        },
+        {
+          "number": "4",
+          "x_mm": 1.6,
+          "y_mm": 0.95,
+          "width_mm": 1.0,
+          "height_mm": 0.7
+        },
+        {
+          "number": "5",
+          "x_mm": 1.6,
+          "y_mm": 0,
+          "width_mm": 1.0,
+          "height_mm": 0.7
+        },
+        {
+          "number": "6",
+          "x_mm": 1.6,
+          "y_mm": -0.95,
+          "width_mm": 1.0,
+          "height_mm": 0.7
+        }
+      ]
     }
   },
   "cad": {
     "symbol": {
-      "availability": "missing",
-      "path": null,
-      "format": null,
-      "sha256": null,
-      "tool_version": null,
-      "verified": false,
+      "availability": "included",
+      "path": "AP63205WU-7.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "6e578f1a4bf3e97312e489d5061af9790bc7b86303110752f399d8d6273ebe9a",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
       "intended_use": [
         "schematic"
       ],
-      "provenance": "Original repository preview derived from the official top-view pin table.",
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
       "source_ids": [
-        "source:diodes:DS41326-rev-3-2"
+        "source:diodes:DS41326-rev-3-2",
+        "source:diodes:product:AP63205"
       ],
       "limitations": [
-        "No verified native symbol is included yet."
+        "The single-unit functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
       ]
     },
     "footprint": {
-      "availability": "missing",
-      "path": null,
-      "format": null,
-      "sha256": null,
-      "tool_version": null,
-      "verified": false,
+      "availability": "included",
+      "path": "AP63205WU-7.pretty/AP63205WU-7.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "3b367a609b9b75c8fa400a223b5f519577fc5b049012840f6ca5ee6ba29d83b0",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
       "intended_use": [
         "pcb-layout"
       ],
-      "provenance": "Original repository preview of the manufacturer dimension labels.",
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and explicit reviewed pad coordinates.",
       "source_ids": [
-        "source:diodes:DS41326-rev-3-2"
+        "source:diodes:DS41326-rev-3-2",
+        "source:diodes:product:AP63205"
       ],
       "limitations": [
-        "No verified native footprint is included yet."
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
       ]
     },
     "step_model": {
-      "availability": "referenced",
-      "path": null,
-      "format": null,
-      "sha256": null,
-      "tool_version": null,
-      "verified": false,
+      "availability": "included",
+      "path": "AP63205WU-7.3dshapes/AP63205WU-7.step",
+      "format": "STEP AP214",
+      "sha256": "192a94e5852e4b461b5e353bf537e7e886670d4223f5f3169972ea4bbb48594c",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
       "intended_use": [
         "mechanical-clearance"
       ],
-      "provenance": "A KiCad TSOT-23-6 model was identified during the source case but is not copied here.",
+      "provenance": "Original Lyon Industries nominal envelope model generated from the manufacturer body, height, terminal-span, and pad geometry.",
       "source_ids": [
-        "source:diodes:DS41326-rev-3-2"
+        "source:diodes:DS41326-rev-3-2",
+        "source:diodes:product:AP63205"
       ],
       "limitations": [
-        "License, origin, seating plane, and body-envelope checks must travel with a redistributed model.",
-        "Candidate external reference: KiCad Package_TO_SOT_SMD.3dshapes/TSOT-23-6.step"
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and lead-form detail."
       ]
     }
   },
@@ -302,7 +369,7 @@
         "id": "finding:01",
         "type": "layout",
         "severity": "fabrication-stop",
-        "status": "active",
+        "status": "resolved",
         "scope": "integration",
         "summary": "A generated custom footprint used about 1.9 mm lead pitch where this package requires 0.95 mm pitch; ordinary PCB clearance checks did not detect the package mismatch.",
         "observed_on": "2026-07-13",
@@ -327,11 +394,11 @@
   "verification": {
     "identity_verified": true,
     "data_cross_checked": true,
-    "symbol_verified": false,
-    "footprint_verified": false,
-    "step_verified": false,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
     "physically_tested": false,
-    "reviewed_on": "2026-07-13",
+    "reviewed_on": "2026-07-16",
     "checks": [
       {
         "name": "source identity and hash",
@@ -350,6 +417,36 @@
         "status": "pass",
         "method": "Compared package pitch and suggested-pad labels with the TSOT26 drawing.",
         "date": "2026-07-13"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
       }
     ],
     "physical_test_evidence": []

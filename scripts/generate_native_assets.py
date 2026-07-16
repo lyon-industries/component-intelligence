@@ -36,7 +36,7 @@ def nominal(value: object, *, prefer: str = "typ") -> float:
     if isinstance(value, (int, float)):
         return float(value)
     assert isinstance(value, dict)
-    for key in (prefer, "max", "min"):
+    for key in dict.fromkeys((prefer, "typ", "max", "min")):
         if key in value:
             return float(value[key])
     raise ValueError(f"no usable numeric value in {value!r}")
