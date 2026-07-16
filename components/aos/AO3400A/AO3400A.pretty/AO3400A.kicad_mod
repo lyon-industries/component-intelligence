@@ -4,7 +4,7 @@
 	(layer "F.Cu")
 	(descr "Alpha & Omega Semiconductor AO3400A, source-dimensioned SOT-23 footprint")
 	(tags "SOT-23 AO3400A")
-	(property "Reference" "U**" (at 0 -2.7 0) (layer "F.SilkS") (uuid "44cdfce6-9c14-5085-ab49-b7a3c8e0793e") (effects (font (size 1 1) (thickness 0.15))))
+	(property "Reference" "Q**" (at 0 -2.7 0) (layer "F.SilkS") (uuid "44cdfce6-9c14-5085-ab49-b7a3c8e0793e") (effects (font (size 1 1) (thickness 0.15))))
 	(property "Value" "AO3400A" (at 0 2.7 0) (layer "F.Fab") (hide yes) (uuid "45b1a690-415a-5cf0-b687-f0faff0ffa3b") (effects (font (size 1 1) (thickness 0.15))))
 	(property "Datasheet" "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "07de7500-1726-5cf5-952d-3b6844c1cd33") (effects (font (size 1.27 1.27))))
 	(attr smd)

@@ -1,0 +1,325 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:nexperia:BC847B,215",
+  "identity": {
+    "manufacturer": "Nexperia",
+    "manufacturer_slug": "nexperia",
+    "mpn": "BC847B,215",
+    "series": "BC847B",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
+  },
+  "classification": {
+    "category": "transistor",
+    "function": "NPN general-purpose transistor, gain group B",
+    "keywords": [
+      "NPN",
+      "general purpose",
+      "SOT-23"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:nexperia:BC847X_SER",
+      "kind": "datasheet",
+      "publisher": "Nexperia",
+      "title": "BC847B official data sheet",
+      "url": "https://assets.nexperia.com/documents/data-sheet/BC847X_SER.pdf",
+      "document_number": "BC847X_SER",
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:43:16Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "43634945eddee9221b9bfb8d4f9c0c684b70e5d3526de3340cf327db6a7ef0be",
+      "byte_size": 236620,
+      "page_count": 12,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 2,
+          "label": "Package-specific pin map and functions"
+        },
+        {
+          "page": 9,
+          "label": "Package outline and recommended land pattern"
+        }
+      ]
+    },
+    {
+      "id": "source:nexperia:product:BC847B%2C215",
+      "kind": "product-page",
+      "publisher": "Nexperia",
+      "title": "BC847B,215 product and orderable identity",
+      "url": "https://www.nexperia.com/products/bipolar-transistors/general-purpose-and-low-vcesat-bipolar-transistors/single-bipolar-transistors/single-bipolar-transistors-100-v/serie/bc847x-series",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:43:16Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current exact or family identity, package, and product status"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "B",
+        "function": "Base.",
+        "locator": "page 2, pinning table",
+        "source_id": "source:nexperia:BC847X_SER",
+        "electrical_type": "input"
+      },
+      {
+        "number": "2",
+        "name": "E",
+        "function": "Emitter.",
+        "locator": "page 2, pinning table",
+        "source_id": "source:nexperia:BC847X_SER",
+        "electrical_type": "passive"
+      },
+      {
+        "number": "3",
+        "name": "C",
+        "function": "Collector.",
+        "locator": "page 2, pinning table",
+        "source_id": "source:nexperia:BC847X_SER",
+        "electrical_type": "passive"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "collector-emitter voltage",
+        "value": {
+          "max": 45
+        },
+        "unit": "V",
+        "qualifier": "Open-base collector-emitter limit.",
+        "locator": "quick reference data",
+        "source_id": "source:nexperia:BC847X_SER",
+        "key": "collector-emitter-voltage",
+        "boundary": "absolute-maximum"
+      },
+      {
+        "name": "collector current",
+        "value": {
+          "max": 100
+        },
+        "unit": "mA",
+        "qualifier": "Continuous collector limit.",
+        "locator": "limiting values",
+        "source_id": "source:nexperia:BC847X_SER",
+        "key": "collector-current",
+        "boundary": "absolute-maximum"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOT-23",
+    "manufacturer_code": "SOT23",
+    "mounting": "surface-mount",
+    "pin_count": 3,
+    "pitch_mm": 1.9,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.9
+      },
+      "height": {
+        "typ": 1.0
+      },
+      "overall_width": {
+        "typ": 2.8
+      },
+      "molded_width": {
+        "typ": 1.3
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:nexperia:BC847X_SER",
+      "locator": "page 9, manufacturer reflow soldering footprint; 0.60 x 0.70 mm lands, 1.90 mm same-row pitch, and 1.70 mm row-center spacing independently recomputed",
+      "pad_count": 3,
+      "dimensions_mm": {
+        "contact_pitch": 1.9,
+        "contact_pad_spacing": 1.7,
+        "contact_pad_width": 0.6,
+        "contact_pad_length": 0.7
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is lower-left in the manufacturer top view; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -0.95,
+          "y_mm": 0.85,
+          "width_mm": 0.6,
+          "height_mm": 0.7
+        },
+        {
+          "number": "2",
+          "x_mm": 0.95,
+          "y_mm": 0.85,
+          "width_mm": 0.6,
+          "height_mm": 0.7
+        },
+        {
+          "number": "3",
+          "x_mm": 0.0,
+          "y_mm": -0.85,
+          "width_mm": 0.6,
+          "height_mm": 0.7
+        }
+      ]
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "BC847B%2C215.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "ea5a90e26bb868812ea7f37a4f37f5d4dde99165f4eb351671a1d840907b0f85",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:nexperia:BC847X_SER",
+        "source:nexperia:product:BC847B%2C215"
+      ],
+      "limitations": [
+        "The functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "BC847B%2C215.pretty/BC847B%2C215.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "b9e8c15ebda20ac6ae3e6fb9bd7799ef9b7d960b0a7bbb5718b1eac080f84b89",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and reviewed pad coordinates.",
+      "source_ids": [
+        "source:nexperia:BC847X_SER",
+        "source:nexperia:product:BC847B%2C215"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "BC847B%2C215.3dshapes/BC847B%2C215.step",
+      "format": "STEP AP214",
+      "sha256": "7e18923d18d7a976583ae101c2b314d90465dd8d94d265c41ec034c999af67a2",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from manufacturer body, height, terminal-span, and pad geometry.",
+      "source_ids": [
+        "source:nexperia:BC847X_SER",
+        "source:nexperia:product:BC847B%2C215"
+      ],
+      "limitations": [
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and detailed lead-form features."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:nexperia:BC847X_SER",
+      "locator": "Package outline and land pattern"
+    },
+    "notes": [
+      "Verify supply decoupling, unused-input bias, and thermal limits in the target circuit."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "Current gain spans a production range; design base drive and saturation margin rather than relying on a typical gain.",
+        "observed_on": "2026-07-16",
+        "source_ids": [
+          "source:nexperia:BC847X_SER"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-16",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded package-specific locators and a local byte hash.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the exact or family identity, package code, pin count, and current manufacturer status against the official product page.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number and electrical type with the normalized package-specific pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one feature, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP model, checked solids, board-plane seating, maximum height, body envelope, lead span, and inspected an isometric render.",
+        "date": "2026-07-16"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

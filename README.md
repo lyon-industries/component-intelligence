@@ -12,6 +12,8 @@ improved collaboratively without weakening the complete-package promise.
 ## Remote agent workflow
 
 Consumers do not need to clone this repository or run Python.
+There is intentionally no repository-specific query client or required runtime:
+the versioned JSON files and declared asset paths are the public interface.
 
 1. Fetch `catalog.json` from GitHub at a pinned commit.
 2. Select an exact MPN from that complete-package index.

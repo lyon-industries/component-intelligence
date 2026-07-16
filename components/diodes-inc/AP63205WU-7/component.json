@@ -328,7 +328,7 @@
       "availability": "included",
       "path": "AP63205WU-7.3dshapes/AP63205WU-7.step",
       "format": "STEP AP214",
-      "sha256": "192a94e5852e4b461b5e353bf537e7e886670d4223f5f3169972ea4bbb48594c",
+      "sha256": "15a6e47bfca3884b25f14db36a1a47ddd9832b97d199312ca152435351817e7a",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [

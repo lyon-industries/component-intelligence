@@ -1,0 +1,371 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:SN74LVC1G08DBVR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "SN74LVC1G08DBVR",
+    "series": "SN74LVC1G08",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
+  },
+  "classification": {
+    "category": "logic",
+    "function": "single 2-input AND gate",
+    "keywords": [
+      "logic",
+      "single gate",
+      "SOT-23-5",
+      "CMOS"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SCES217Z",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "SN74LVC1G08 official data sheet",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g08.pdf",
+      "document_number": "SCES217Z",
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:43:16Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "f9048c0c0394bcd100dfcd5e6071a8576cf6e64095205903e02668b9dae5e19e",
+      "byte_size": 2516242,
+      "page_count": 48,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "Package-specific pin map and functions"
+        },
+        {
+          "page": 21,
+          "label": "Package outline and recommended land pattern"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:SN74LVC1G08DBVR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "SN74LVC1G08DBVR product and orderable identity",
+      "url": "https://www.ti.com/product/SN74LVC1G08/part-details/SN74LVC1G08DBVR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:43:16Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current exact or family identity, package, and product status"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "A",
+        "function": "Logic input A.",
+        "locator": "pin-functions table",
+        "source_id": "source:ti:SCES217Z",
+        "electrical_type": "input"
+      },
+      {
+        "number": "2",
+        "name": "B",
+        "function": "Logic input B.",
+        "locator": "pin-functions table",
+        "source_id": "source:ti:SCES217Z",
+        "electrical_type": "input"
+      },
+      {
+        "number": "3",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "pin-functions table",
+        "source_id": "source:ti:SCES217Z",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "4",
+        "name": "Y",
+        "function": "AND output.",
+        "locator": "pin-functions table",
+        "source_id": "source:ti:SCES217Z",
+        "electrical_type": "output"
+      },
+      {
+        "number": "5",
+        "name": "VCC",
+        "function": "Supply.",
+        "locator": "pin-functions table",
+        "source_id": "source:ti:SCES217Z",
+        "electrical_type": "power-input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 1.65,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range.",
+        "locator": "recommended operating conditions",
+        "source_id": "source:ti:SCES217Z",
+        "key": "supply-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "input voltage",
+        "value": {
+          "min": 0,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Input range independent of VCC within stated conditions.",
+        "locator": "recommended operating conditions",
+        "source_id": "source:ti:SCES217Z",
+        "key": "input-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "operating temperature",
+        "value": {
+          "min": -40,
+          "max": 125
+        },
+        "unit": "degC",
+        "qualifier": "Catalog operating range.",
+        "locator": "recommended operating conditions",
+        "source_id": "source:ti:SCES217Z",
+        "key": "operating-temperature",
+        "boundary": "characteristic"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOT-23-5",
+    "manufacturer_code": "DBV",
+    "mounting": "surface-mount",
+    "pin_count": 5,
+    "pitch_mm": 0.95,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.9
+      },
+      "height": {
+        "max": 1.45
+      },
+      "overall_width": {
+        "typ": 2.8
+      },
+      "molded_width": {
+        "typ": 1.6
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:ti:SCES217Z",
+      "locator": "pages 21-22, DBV0005A package outline and land pattern; 0.95 mm pitch and 2.60 mm row spacing independently recomputed",
+      "pad_count": 5,
+      "dimensions_mm": {
+        "contact_pitch": 0.95,
+        "contact_pad_spacing": 2.6,
+        "contact_pad_width": 0.6,
+        "contact_pad_length": 1.1
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -1.3,
+          "y_mm": -0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "2",
+          "x_mm": -1.3,
+          "y_mm": 0.0,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "3",
+          "x_mm": -1.3,
+          "y_mm": 0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "4",
+          "x_mm": 1.3,
+          "y_mm": 0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "5",
+          "x_mm": 1.3,
+          "y_mm": -0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        }
+      ]
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "SN74LVC1G08DBVR.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "718a40be48c0ea28a094a0378ba3ab5ad8afaf0647378a9283625e9d424c38f8",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:ti:SCES217Z",
+        "source:ti:product:SN74LVC1G08DBVR"
+      ],
+      "limitations": [
+        "The functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "SN74LVC1G08DBVR.pretty/SN74LVC1G08DBVR.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "e656ea42e88568a72e37c4dba1a4eb775eebb86f86a50929a9eebcb62b0f01fa",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and reviewed pad coordinates.",
+      "source_ids": [
+        "source:ti:SCES217Z",
+        "source:ti:product:SN74LVC1G08DBVR"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "SN74LVC1G08DBVR.3dshapes/SN74LVC1G08DBVR.step",
+      "format": "STEP AP214",
+      "sha256": "c5c4cf3f9726ef0d927a3107b6ff888295c1225b81fd0e264f59376e048d1add",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from manufacturer body, height, terminal-span, and pad geometry.",
+      "source_ids": [
+        "source:ti:SCES217Z",
+        "source:ti:product:SN74LVC1G08DBVR"
+      ],
+      "limitations": [
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and detailed lead-form features."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SCES217Z",
+      "locator": "Package outline and land pattern"
+    },
+    "notes": [
+      "Verify supply decoupling, unused-input bias, and thermal limits in the target circuit."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "Unused CMOS inputs must not float; define every input during reset and power sequencing.",
+        "observed_on": "2026-07-16",
+        "source_ids": [
+          "source:ti:SCES217Z"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-16",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded package-specific locators and a local byte hash.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the exact or family identity, package code, pin count, and current manufacturer status against the official product page.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number and electrical type with the normalized package-specific pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one feature, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP model, checked solids, board-plane seating, maximum height, body envelope, lead span, and inspected an isometric render.",
+        "date": "2026-07-16"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

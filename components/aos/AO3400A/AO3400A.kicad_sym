@@ -6,7 +6,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(property "Reference" "U" (at 0 6.35 0) (effects (font (size 1.27 1.27))))
+		(property "Reference" "Q" (at 0 6.35 0) (effects (font (size 1.27 1.27))))
 		(property "Value" "AO3400A" (at 0 5.08 0) (effects (font (size 1.016 1.016))))
 		(property "Footprint" "AO3400A:AO3400A" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 		(property "Datasheet" "https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))

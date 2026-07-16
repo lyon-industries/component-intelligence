@@ -1,0 +1,50 @@
+(kicad_symbol_lib
+	(version 20231120)
+	(generator "component-intelligence")
+	(symbol "LP2985-33DBVR"
+		(pin_names (offset 1.016))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
+		(property "Value" "LP2985-33DBVR" (at 0 6.35 0) (effects (font (size 1.016 1.016))))
+		(property "Footprint" "LP2985-33DBVR:LP2985-33DBVR" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lp2985.pdf" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "150 mA, 3.3 V low-dropout regulator" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
+		(symbol "LP2985-33DBVR_0_1"
+			(rectangle (start -5.08 6.35) (end 5.08 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))
+		)
+		(symbol "LP2985-33DBVR_1_1"
+			(pin power_in line
+				(at -7.62 3.81 0)
+				(length 2.54)
+				(name "VIN" (effects (font (size 1.016 1.016))))
+				(number "1" (effects (font (size 1.016 1.016))))
+			)
+			(pin power_in line
+				(at -7.62 1.27 0)
+				(length 2.54)
+				(name "GND" (effects (font (size 1.016 1.016))))
+				(number "2" (effects (font (size 1.016 1.016))))
+			)
+			(pin input line
+				(at -7.62 -1.27 0)
+				(length 2.54)
+				(name "ON/OFF" (effects (font (size 1.016 1.016))))
+				(number "3" (effects (font (size 1.016 1.016))))
+			)
+			(pin passive line
+				(at -7.62 -3.81 0)
+				(length 2.54)
+				(name "BYPASS" (effects (font (size 1.016 1.016))))
+				(number "4" (effects (font (size 1.016 1.016))))
+			)
+			(pin power_out line
+				(at 7.62 0 180)
+				(length 2.54)
+				(name "VOUT" (effects (font (size 1.016 1.016))))
+				(number "5" (effects (font (size 1.016 1.016))))
+			)
+		)
+	)
+)

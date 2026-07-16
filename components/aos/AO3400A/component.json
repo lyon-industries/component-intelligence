@@ -230,7 +230,7 @@
       "availability": "included",
       "path": "AO3400A.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "be47bd3ce9770c5739fbb370a4b90ca37f329893fba4755667b4b7b09d616e0b",
+      "sha256": "8c73b5c6a0f9b0e51c7457fa8d789d4b5b0273ee542c27f177a9cabbb5925b73",
       "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
       "verified": true,
       "intended_use": [
@@ -250,7 +250,7 @@
       "availability": "included",
       "path": "AO3400A.pretty/AO3400A.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "de536ac8057b1a06f909b2630ea2a5b08da9eb0f59d622f075442100db2e3504",
+      "sha256": "93e98753f6f81eead23a3eef6ee67a832cbea871a96285a6948b32d252b4e713",
       "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
       "verified": true,
       "intended_use": [
@@ -270,7 +270,7 @@
       "availability": "included",
       "path": "AO3400A.3dshapes/AO3400A.step",
       "format": "STEP AP214",
-      "sha256": "db004c77ce495f48bed0cf74312c8a76d2bf896c06fc72b13b0e345b5d3b0078",
+      "sha256": "46744d0c625fe16075b13a81698e2506960178bca243c52c72a4384fbce1e44f",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [

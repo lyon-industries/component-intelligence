@@ -58,12 +58,41 @@ def pin_electrical_type(value: str) -> str:
     }[value]
 
 
+def reference_prefix(record: dict[str, object]) -> str:
+    """Return the conventional schematic designator for the component class."""
+    return {
+        "diode": "D",
+        "transistor": "Q",
+    }.get(record["classification"]["category"], "U")
+
+
+def lead_axis(record: dict[str, object]) -> str:
+    """Infer whether gull-wing terminals leave the body along x or y.
+
+    The explicit pad rows are authoritative. Two x rows describe the usual
+    SOIC/DBV left-right arrangement; two y rows describe the rotated SOT-23
+    top-bottom arrangement used by the normalized footprint coordinates.
+    """
+    pads = record["package"]["land_pattern"]["pads"]
+    unique_x = {float(pad["x_mm"]) for pad in pads}
+    unique_y = {float(pad["y_mm"]) for pad in pads}
+    return "x" if len(unique_x) <= len(unique_y) else "y"
+
+
+def oriented_body_dimensions(record: dict[str, object]) -> tuple[float, float]:
+    body = record["package"]["body_dimensions_mm"]
+    length = nominal(body["length"])
+    width = nominal(body.get("width", body.get("molded_width")))
+    return (width, length) if lead_axis(record) == "x" else (length, width)
+
+
 def symbol_text(record: dict[str, object]) -> str:
     identity = record["identity"]
     pins = record["electrical"]["pins"]
     source_url = record["sources"][0]["url"]
     mpn = identity["mpn"]
     library_name = quote_path_component(mpn)
+    reference = reference_prefix(record)
     left = [pin for pin in pins if pin["electrical_type"] not in {"output", "power-output", "open-collector", "open-drain"}]
     right = [pin for pin in pins if pin not in left]
     rows = max(len(left), len(right), 2)
@@ -96,7 +125,7 @@ def symbol_text(record: dict[str, object]) -> str:
 \t\t(exclude_from_sim no)
 \t\t(in_bom yes)
 \t\t(on_board yes)
-\t\t(property "Reference" "U" (at 0 {half_height + 1.27:g} 0) (effects (font (size 1.27 1.27))))
+\t\t(property "Reference" "{reference}" (at 0 {half_height + 1.27:g} 0) (effects (font (size 1.27 1.27))))
 \t\t(property "Value" "{q(mpn)}" (at 0 {half_height:g} 0) (effects (font (size 1.016 1.016))))
 \t\t(property "Footprint" "{q(library_name)}:{q(library_name)}" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
 \t\t(property "Datasheet" "{q(source_url)}" (at 0 0 0) (hide yes) (effects (font (size 1.27 1.27))))
@@ -116,10 +145,9 @@ def footprint_text(record: dict[str, object], area: str) -> str:
     component_id = record["id"]
     mpn = identity["mpn"]
     library_name = quote_path_component(mpn)
+    reference = reference_prefix(record)
     land = record["package"]["land_pattern"]
-    body = record["package"]["body_dimensions_mm"]
-    body_x = nominal(body.get("width", body.get("molded_width")))
-    body_y = nominal(body["length"])
+    body_x, body_y = oriented_body_dimensions(record)
     pad_x = max(abs(float(pad["x_mm"])) + float(pad["width_mm"]) / 2 for pad in land["pads"])
     pad_y = max(abs(float(pad["y_mm"])) + float(pad["height_mm"]) / 2 for pad in land["pads"])
     court_x = max(body_x / 2, pad_x) + 0.25
@@ -158,7 +186,7 @@ def footprint_text(record: dict[str, object], area: str) -> str:
 \t(layer "F.Cu")
 \t(descr "{q(identity["manufacturer"])} {q(mpn)}, source-dimensioned {q(record["package"]["name"])} footprint")
 \t(tags "{q(record["package"]["name"])} {q(mpn)}")
-\t(property "Reference" "U**" (at 0 {-court_y - 1:g} 0) (layer "F.SilkS") (uuid "{uid(component_id, "reference")}") (effects (font (size 1 1) (thickness 0.15))))
+\t(property "Reference" "{reference}**" (at 0 {-court_y - 1:g} 0) (layer "F.SilkS") (uuid "{uid(component_id, "reference")}") (effects (font (size 1 1) (thickness 0.15))))
 \t(property "Value" "{q(mpn)}" (at 0 {court_y + 1:g} 0) (layer "F.Fab") (hide yes) (uuid "{uid(component_id, "value")}") (effects (font (size 1 1) (thickness 0.15))))
 \t(property "Datasheet" "{q(source_url)}" (at 0 0 0) (layer "F.Fab") (hide yes) (uuid "{uid(component_id, "datasheet")}") (effects (font (size 1.27 1.27))))
 \t(attr smd)
@@ -175,8 +203,7 @@ def write_step(record: dict[str, object], target: Path) -> None:
         raise SystemExit("STEP generation requires CadQuery 2.8 or newer") from exc
 
     body = record["package"]["body_dimensions_mm"]
-    body_x = nominal(body.get("width", body.get("molded_width")))
-    body_y = nominal(body["length"])
+    body_x, body_y = oriented_body_dimensions(record)
     body_z = nominal(body["height"], prefer="max")
     standoff = min(0.15, body_z * 0.12)
     body_shape = cq.Workplane("XY").box(body_x, body_y, body_z - standoff).translate((0, 0, standoff + (body_z - standoff) / 2))
@@ -185,20 +212,30 @@ def write_step(record: dict[str, object], target: Path) -> None:
     )
     body_shape = body_shape.cut(marker)
     solids = [body_shape.val()]
-    overall_x = nominal(body.get("overall_width", body.get("width", body.get("molded_width"))))
+    terminal_span = nominal(body.get("overall_width", body.get("width", body.get("molded_width"))))
+    axis = lead_axis(record)
     for pad in record["package"]["land_pattern"]["pads"]:
-        pad_position_x = float(pad["x_mm"])
-        outer_x = overall_x / 2
-        inner_x = body_x * 0.45
-        lead_x = max(0.2, outer_x - inner_x)
-        lead_center_x = 0.0 if pad_position_x == 0 else (outer_x + inner_x) / 2 * (1 if pad_position_x > 0 else -1)
-        lead_y = min(float(pad["height_mm"]) * 0.72, 0.5)
-        solids.append(
-            cq.Workplane("XY")
-            .box(lead_x, lead_y, 0.12)
-            .translate((lead_center_x, float(pad["y_mm"]), 0.06))
-            .val()
-        )
+        if axis == "x":
+            position = float(pad["x_mm"])
+            outer = terminal_span / 2
+            inner = body_x * 0.45
+            lead_length = max(0.2, outer - inner)
+            center = (outer + inner) / 2 * (1 if position > 0 else -1)
+            transverse = min(float(pad["height_mm"]) * 0.72, 0.5)
+            lead = cq.Workplane("XY").box(lead_length, transverse, 0.12).translate(
+                (center, float(pad["y_mm"]), 0.06)
+            )
+        else:
+            position = float(pad["y_mm"])
+            outer = terminal_span / 2
+            inner = body_y * 0.45
+            lead_length = max(0.2, outer - inner)
+            center = (outer + inner) / 2 * (1 if position > 0 else -1)
+            transverse = min(float(pad["width_mm"]) * 0.72, 0.5)
+            lead = cq.Workplane("XY").box(transverse, lead_length, 0.12).translate(
+                (float(pad["x_mm"]), center, 0.06)
+            )
+        solids.append(lead.val())
     target.parent.mkdir(parents=True, exist_ok=True)
     cq.exporters.export(cq.Compound.makeCompound(solids), str(target), exportType="STEP")
     step_text = target.read_text(encoding="utf-8")
@@ -207,6 +244,17 @@ def write_step(record: dict[str, object], target: Path) -> None:
         r"\g<1>1970-01-01T00:00:00\2",
         step_text,
         count=1,
+    )
+    step_text = re.sub(
+        r"Open CASCADE STEP translator [^']+",
+        "Component Intelligence native CAD generator",
+        step_text,
+    )
+    occurrence = iter(range(1, len(record["package"]["land_pattern"]["pads"]) + 2))
+    step_text = re.sub(
+        r"NEXT_ASSEMBLY_USAGE_OCCURRENCE\('[^']*'",
+        lambda _: f"NEXT_ASSEMBLY_USAGE_OCCURRENCE('{next(occurrence)}'",
+        step_text,
     )
     step_text = "\n".join(line.rstrip() for line in step_text.splitlines()) + "\n"
     target.write_text(step_text, encoding="utf-8")

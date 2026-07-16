@@ -208,7 +208,7 @@
       "availability": "included",
       "path": "BAT54C%2C215.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "957cd1ba800aadeb9e6524e5e2a3154f811da3e463316a5d7c0de5115581af63",
+      "sha256": "9398d804c358eeeef3d82427a5fd2ae9335587b048bd849258c165e311a18c05",
       "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
       "verified": true,
       "intended_use": [
@@ -227,7 +227,7 @@
       "availability": "included",
       "path": "BAT54C%2C215.pretty/BAT54C%2C215.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "5f4d687daa27171c98c82e395bdf9b0e4e8d2f54bdb864a1d8cbe72a0e6a7037",
+      "sha256": "8b5efd2361ce125117dd2990fe40c83fa457a72e0f11f7f0a768b69dd07597e3",
       "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
       "verified": true,
       "intended_use": [
@@ -246,7 +246,7 @@
       "availability": "included",
       "path": "BAT54C%2C215.3dshapes/BAT54C%2C215.step",
       "format": "STEP AP214",
-      "sha256": "69effa29bd4fa90b78038d92a426275f4bd8635ad646dcaa66404954c5a20b52",
+      "sha256": "7e18923d18d7a976583ae101c2b314d90465dd8d94d265c41ec034c999af67a2",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [

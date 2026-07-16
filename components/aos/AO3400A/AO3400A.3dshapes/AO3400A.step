@@ -15,8 +15,8 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Open CASCADE STEP translator 7.9 1',
-  'Open CASCADE STEP translator 7.9 1','',(#8));
+#7 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#8));
 #8 = PRODUCT_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = SHAPE_REPRESENTATION('',(#11,#15,#19,#23,#27),#31);
@@ -54,8 +54,8 @@ GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#35)) GLOBAL_UNIT_ASSIGNED_CONTEXT(
 #38 = PRODUCT_DEFINITION_SHAPE('','',#39);
 #39 = PRODUCT_DEFINITION('design','',#40,#43);
 #40 = PRODUCT_DEFINITION_FORMATION('','',#41);
-#41 = PRODUCT('Open CASCADE STEP translator 7.9 1.1',
-  'Open CASCADE STEP translator 7.9 1.1','',(#42));
+#41 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#42));
 #42 = PRODUCT_CONTEXT('',#2,'mechanical');
 #43 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #44 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#45),#473);
@@ -569,8 +569,8 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #485 = PRODUCT_DEFINITION_SHAPE('','',#486);
 #486 = PRODUCT_DEFINITION('design','',#487,#490);
 #487 = PRODUCT_DEFINITION_FORMATION('','',#488);
-#488 = PRODUCT('Open CASCADE STEP translator 7.9 1.2',
-  'Open CASCADE STEP translator 7.9 1.2','',(#489));
+#488 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#489));
 #489 = PRODUCT_CONTEXT('',#2,'mechanical');
 #490 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #491 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#492),#822);
@@ -974,8 +974,8 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #834 = PRODUCT_DEFINITION_SHAPE('','',#835);
 #835 = PRODUCT_DEFINITION('design','',#836,#839);
 #836 = PRODUCT_DEFINITION_FORMATION('','',#837);
-#837 = PRODUCT('Open CASCADE STEP translator 7.9 1.3',
-  'Open CASCADE STEP translator 7.9 1.3','',(#838));
+#837 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#838));
 #838 = PRODUCT_CONTEXT('',#2,'mechanical');
 #839 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #840 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#841),#1171);
@@ -1379,8 +1379,8 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #1183 = PRODUCT_DEFINITION_SHAPE('','',#1184);
 #1184 = PRODUCT_DEFINITION('design','',#1185,#1188);
 #1185 = PRODUCT_DEFINITION_FORMATION('','',#1186);
-#1186 = PRODUCT('Open CASCADE STEP translator 7.9 1.4',
-  'Open CASCADE STEP translator 7.9 1.4','',(#1187));
+#1186 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#1187));
 #1187 = PRODUCT_CONTEXT('',#2,'mechanical');
 #1188 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #1189 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#1190),#1520);

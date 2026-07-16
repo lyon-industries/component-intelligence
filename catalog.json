@@ -148,6 +148,39 @@
       "active_findings": 1
     },
     {
+      "id": "component:microchip:25LC256-I/SN",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "25LC256-I/SN",
+      "category": "memory",
+      "function": "256-Kbit SPI serial EEPROM",
+      "keywords": [
+        "EEPROM",
+        "SPI",
+        "256 Kbit",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8",
+      "path": "components/microchip/25LC256-I%2FSN/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "memory-capacity",
+        "spi-clock-frequency",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
       "id": "component:microchip:MCP73831T-2ACI/OT",
       "manufacturer_slug": "microchip",
       "manufacturer": "Microchip Technology",
@@ -204,6 +237,259 @@
         "forward-current",
         "forward-voltage-at-100-ma",
         "reverse-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BAT54S,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BAT54S,215",
+      "category": "diode",
+      "function": "dual series Schottky barrier diode",
+      "keywords": [
+        "Schottky",
+        "dual diode",
+        "series",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BAT54S%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "forward-current",
+        "reverse-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BAV99,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BAV99,215",
+      "category": "diode",
+      "function": "dual series high-speed switching diode",
+      "keywords": [
+        "switching diode",
+        "dual diode",
+        "series",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BAV99%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "forward-current",
+        "reverse-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BC847B,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BC847B,215",
+      "category": "transistor",
+      "function": "NPN general-purpose transistor, gain group B",
+      "keywords": [
+        "NPN",
+        "general purpose",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BC847B%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "collector-current",
+        "collector-emitter-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BC857B,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BC857B,215",
+      "category": "transistor",
+      "function": "PNP general-purpose transistor, gain group B",
+      "keywords": [
+        "PNP",
+        "general purpose",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BC857B%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "collector-current",
+        "collector-emitter-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BSS138P,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BSS138P,215",
+      "category": "transistor",
+      "function": "60 V N-channel enhancement MOSFET",
+      "keywords": [
+        "N-channel MOSFET",
+        "60 V",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BSS138P%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "drain-current",
+        "drain-source-voltage",
+        "on-resistance"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BZX84-C5V1,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BZX84-C5V1,215",
+      "category": "diode",
+      "function": "5.1 V low-power Zener diode",
+      "keywords": [
+        "Zener",
+        "5.1 V",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/BZX84-C5V1%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "power-dissipation",
+        "zener-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:PDTC114ET,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "PDTC114ET,215",
+      "category": "transistor",
+      "function": "NPN resistor-equipped transistor with 10 kohm input and bias resistors",
+      "keywords": [
+        "digital transistor",
+        "NPN",
+        "resistor equipped",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/PDTC114ET%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "collector-emitter-voltage",
+        "input-resistance",
+        "output-current"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:PMBT3904,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "PMBT3904,215",
+      "category": "transistor",
+      "function": "NPN switching transistor",
+      "keywords": [
+        "NPN",
+        "switching transistor",
+        "SOT-23"
+      ],
+      "package": "SOT-23",
+      "path": "components/nexperia/PMBT3904%2C215/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "collector-current",
+        "collector-emitter-voltage"
       ],
       "capabilities": {
         "identity_verified": true,
@@ -352,6 +638,99 @@
       "active_findings": 1
     },
     {
+      "id": "component:ti:LM393DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "LM393DR",
+      "category": "comparator",
+      "function": "dual differential comparator with open-collector outputs",
+      "keywords": [
+        "comparator",
+        "dual",
+        "open collector",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8",
+      "path": "components/ti/LM393DR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:LMV321IDBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "LMV321IDBVR",
+      "category": "amplifier",
+      "function": "single low-voltage operational amplifier",
+      "keywords": [
+        "op amp",
+        "single",
+        "SOT-23-5"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/LMV321IDBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:LP2985-33DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "LP2985-33DBVR",
+      "category": "power",
+      "function": "150 mA, 3.3 V low-dropout regulator",
+      "keywords": [
+        "LDO",
+        "3.3 V",
+        "150 mA",
+        "SOT-23-5"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/LP2985-33DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "output-current"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
       "id": "component:ti:NE555DR",
       "manufacturer_slug": "ti",
       "manufacturer": "Texas Instruments",
@@ -373,6 +752,37 @@
       "rating_keys": [
         "operating-temperature",
         "output-current",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:OPA333AIDBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "OPA333AIDBVR",
+      "category": "amplifier",
+      "function": "single zero-drift operational amplifier",
+      "keywords": [
+        "op amp",
+        "zero drift",
+        "SOT-23-5"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/OPA333AIDBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "gain-bandwidth",
         "supply-voltage"
       ],
       "capabilities": {
@@ -420,6 +830,236 @@
       "active_findings": 1
     },
     {
+      "id": "component:ti:SN65HVD75DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN65HVD75DR",
+      "category": "interface",
+      "function": "3.3 V, 20 Mbps RS-485 transceiver",
+      "keywords": [
+        "RS-485",
+        "transceiver",
+        "20 Mbps",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8",
+      "path": "components/ti/SN65HVD75DR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "signaling-rate",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G00DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G00DBVR",
+      "category": "logic",
+      "function": "single 2-input NAND gate",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G00DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G04DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G04DBVR",
+      "category": "logic",
+      "function": "single inverter",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G04DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G08DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G08DBVR",
+      "category": "logic",
+      "function": "single 2-input AND gate",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G08DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G125DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G125DBVR",
+      "category": "logic",
+      "function": "single buffer with active-low output enable",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G125DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G126DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G126DBVR",
+      "category": "logic",
+      "function": "single buffer with active-high output enable",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G126DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G14DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G14DBVR",
+      "category": "logic",
+      "function": "single Schmitt-trigger inverter",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G14DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
       "id": "component:ti:SN74LVC1G17DBVR",
       "manufacturer_slug": "ti",
       "manufacturer": "Texas Instruments",
@@ -454,6 +1094,134 @@
       "active_findings": 1
     },
     {
+      "id": "component:ti:SN74LVC1G32DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G32DBVR",
+      "category": "logic",
+      "function": "single 2-input OR gate",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G32DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G86DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G86DBVR",
+      "category": "logic",
+      "function": "single 2-input XOR gate",
+      "keywords": [
+        "logic",
+        "single gate",
+        "SOT-23-5",
+        "CMOS"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/SN74LVC1G86DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:TCAN332DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TCAN332DR",
+      "category": "interface",
+      "function": "3.3 V CAN transceiver",
+      "keywords": [
+        "CAN",
+        "transceiver",
+        "3.3 V",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8",
+      "path": "components/ti/TCAN332DR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:TLV7031DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV7031DBVR",
+      "category": "comparator",
+      "function": "single nanopower push-pull comparator",
+      "keywords": [
+        "comparator",
+        "push pull",
+        "nanopower",
+        "SOT-23-5"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/TLV7031DBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
       "id": "component:ti:TLV75533PDBVR",
       "manufacturer_slug": "ti",
       "manufacturer": "Texas Instruments",
@@ -474,6 +1242,70 @@
       "reviewed_on": "2026-07-16",
       "rating_keys": [
         "input-voltage",
+        "output-current",
+        "output-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:TLV9062IDR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV9062IDR",
+      "category": "amplifier",
+      "function": "dual 10 MHz rail-to-rail input/output operational amplifier",
+      "keywords": [
+        "op amp",
+        "dual",
+        "10 MHz",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8",
+      "path": "components/ti/TLV9062IDR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
+        "gain-bandwidth",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:TPS7A2033PDBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TPS7A2033PDBVR",
+      "category": "power",
+      "function": "300 mA, 3.3 V low-dropout regulator",
+      "keywords": [
+        "LDO",
+        "3.3 V",
+        "300 mA",
+        "SOT-23-5"
+      ],
+      "package": "SOT-23-5",
+      "path": "components/ti/TPS7A2033PDBVR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-16",
+      "reviewed_on": "2026-07-16",
+      "rating_keys": [
         "output-current",
         "output-voltage"
       ],
