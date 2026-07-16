@@ -1,0 +1,467 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:LM358DR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "LM358DR",
+    "series": "LMx58/LM2904",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
+  },
+  "classification": {
+    "category": "amplifier",
+    "function": "dual general-purpose operational amplifier",
+    "keywords": [
+      "op amp",
+      "dual",
+      "single supply",
+      "SOIC-8",
+      "analog"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SLOS068AB",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "Industry-Standard Dual Operational Amplifiers",
+      "url": "https://www.ti.com/lit/ds/symlink/lm358.pdf",
+      "document_number": "SLOS068AB",
+      "revision": "Rev. AB",
+      "published_date": "2024-10-18",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "59b9d771f16172e21fea46d4e29576c608e55646008434bc126f1ca93917dfd3",
+      "byte_size": 4150129,
+      "page_count": 68,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 4,
+          "label": "D package pin configuration and functions"
+        },
+        {
+          "page": 7,
+          "label": "LM358 electrical characteristics"
+        },
+        {
+          "page": 27,
+          "label": "Application information"
+        },
+        {
+          "page": 57,
+          "label": "D package drawing and land pattern"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:LM358DR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "LM358DR product and package status",
+      "url": "https://www.ti.com/product/LM358/part-details/LM358DR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current product status, exact or family identity, package, and pin count"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "OUT1",
+        "function": "Output of amplifier channel 1.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "output"
+      },
+      {
+        "number": "2",
+        "name": "IN1-",
+        "function": "Inverting input of channel 1.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "3",
+        "name": "IN1+",
+        "function": "Noninverting input of channel 1.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "4",
+        "name": "V-",
+        "function": "Negative supply; commonly ground in single-supply use.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "5",
+        "name": "IN2+",
+        "function": "Noninverting input of channel 2.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "6",
+        "name": "IN2-",
+        "function": "Inverting input of channel 2.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "7",
+        "name": "OUT2",
+        "function": "Output of amplifier channel 2.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "output"
+      },
+      {
+        "number": "8",
+        "name": "V+",
+        "function": "Positive supply.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "power-input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 3,
+          "max": 30
+        },
+        "unit": "V",
+        "qualifier": "LM358 total supply range; not the newer B variant.",
+        "locator": "family comparison and recommended operating conditions",
+        "source_id": "source:ti:SLOS068AB",
+        "key": "supply-voltage",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "gain bandwidth",
+        "value": {
+          "typ": 0.7
+        },
+        "unit": "MHz",
+        "qualifier": "LM358 typical gain-bandwidth product.",
+        "locator": "family comparison",
+        "source_id": "source:ti:SLOS068AB",
+        "key": "gain-bandwidth",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "operating temperature",
+        "value": {
+          "min": 0,
+          "max": 70
+        },
+        "unit": "degC",
+        "qualifier": "LM358 commercial-grade range.",
+        "locator": "family comparison",
+        "source_id": "source:ti:SLOS068AB",
+        "key": "operating-temperature",
+        "boundary": "recommended-operating"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOIC-8",
+    "manufacturer_code": "D",
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": 1.27,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 4.9
+      },
+      "width": {
+        "typ": 3.9
+      },
+      "height": {
+        "max": 1.75
+      },
+      "overall_width": {
+        "typ": 6.0
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:ti:SLOS068AB",
+      "locator": "pages 60-61, D0008A package outline and land pattern; pads cross-checked against 1.27 mm pitch and 5.40 mm row spacing",
+      "pad_count": 8,
+      "dimensions_mm": {
+        "contact_pitch": 1.27,
+        "contact_pad_spacing": 5.4,
+        "contact_pad_width": 0.6,
+        "contact_pad_length": 1.55
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -2.7,
+          "y_mm": -1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "2",
+          "x_mm": -2.7,
+          "y_mm": -0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "3",
+          "x_mm": -2.7,
+          "y_mm": 0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "4",
+          "x_mm": -2.7,
+          "y_mm": 1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "5",
+          "x_mm": 2.7,
+          "y_mm": 1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "6",
+          "x_mm": 2.7,
+          "y_mm": 0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "7",
+          "x_mm": 2.7,
+          "y_mm": -0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "8",
+          "x_mm": 2.7,
+          "y_mm": -1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        }
+      ]
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "LM358DR.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "ef65ae663eb8047371d30ca33bd9d6435238d042cf75705283ef45b6ca993893",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:ti:SLOS068AB",
+        "source:ti:product:LM358DR"
+      ],
+      "limitations": [
+        "The single-unit functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "LM358DR.pretty/LM358DR.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "a69528e76e7b908ab0606e9b1998f957f239e9ae90f500d96a18343d9b2f31bb",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and explicit reviewed pad coordinates.",
+      "source_ids": [
+        "source:ti:SLOS068AB",
+        "source:ti:product:LM358DR"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "LM358DR.3dshapes/LM358DR.step",
+      "format": "STEP AP214",
+      "sha256": "7e03df5351be9498c9cd5bdc7fd5d4a8d37f645a5e4cd93732b9d237e6eb1d5f",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from the manufacturer body, height, terminal-span, and pad geometry.",
+      "source_ids": [
+        "source:ti:SLOS068AB",
+        "source:ti:product:LM358DR"
+      ],
+      "limitations": [
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and lead-form detail."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SLOS068AB",
+      "locator": "D package drawing and land pattern"
+    },
+    "notes": [
+      "Check input common-mode and output swing at the actual load and temperature.",
+      "Do not substitute LM358B limits for the LM358 suffix recorded here."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The input common-mode range includes ground but not the positive rail, and the output is not rail-to-rail; a circuit can saturate while all pins remain within absolute maximum ratings.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SLOS068AB"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-16",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

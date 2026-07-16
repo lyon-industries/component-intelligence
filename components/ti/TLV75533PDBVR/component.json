@@ -1,0 +1,421 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:TLV75533PDBVR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "TLV75533PDBVR",
+    "series": "TLV755P",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
+  },
+  "classification": {
+    "category": "power-management",
+    "function": "fixed 3.3 V low-dropout regulator with enable",
+    "keywords": [
+      "LDO",
+      "3.3 V",
+      "500 mA",
+      "SOT-23-5",
+      "enable"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SBVS320D",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "TLV755P 500mA Low-IQ Low-Dropout Regulator",
+      "url": "https://www.ti.com/lit/ds/symlink/tlv755p.pdf",
+      "document_number": "SBVS320D",
+      "revision": "Rev. D",
+      "published_date": "2024-09-30",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "442ad8f6ae9ac8701a1a747ca6743267fed839c8536a65c26c0151ec12725cfb",
+      "byte_size": 3072292,
+      "page_count": 51,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "DBV pin configuration and functions"
+        },
+        {
+          "page": 4,
+          "label": "Recommended operating conditions"
+        },
+        {
+          "page": 19,
+          "label": "Output capacitor requirements"
+        },
+        {
+          "page": 42,
+          "label": "DBV package drawing and land pattern"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:TLV75533PDBVR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "TLV75533PDBVR product and package status",
+      "url": "https://www.ti.com/product/TLV755P/part-details/TLV75533PDBVR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current product status, exact or family identity, package, and pin count"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "IN",
+        "function": "Regulator input; requires local input capacitance.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "2",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "3",
+        "name": "EN",
+        "function": "Active-high enable input.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D",
+        "electrical_type": "input"
+      },
+      {
+        "number": "4",
+        "name": "NC",
+        "function": "No internal connection.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D",
+        "electrical_type": "no-connect"
+      },
+      {
+        "number": "5",
+        "name": "OUT",
+        "function": "Fixed 3.3 V regulated output; requires local output capacitance.",
+        "locator": "page 3, Table 4-1, DBV package",
+        "source_id": "source:ti:SBVS320D",
+        "electrical_type": "power-output"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "input voltage",
+        "value": {
+          "min": 1.45,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range.",
+        "locator": "page 4, Section 5.3",
+        "source_id": "source:ti:SBVS320D",
+        "key": "input-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "output voltage",
+        "value": {
+          "typ": 3.3
+        },
+        "unit": "V",
+        "qualifier": "Exact fixed-voltage suffix.",
+        "locator": "ordering information",
+        "source_id": "source:ti:SBVS320D",
+        "key": "output-voltage",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "output current",
+        "value": {
+          "max": 0.5
+        },
+        "unit": "A",
+        "qualifier": "Maximum rated output current subject to thermal limits.",
+        "locator": "page 1, Features",
+        "source_id": "source:ti:SBVS320D",
+        "key": "output-current",
+        "boundary": "characteristic"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOT-23-5",
+    "manufacturer_code": "DBV",
+    "mounting": "surface-mount",
+    "pin_count": 5,
+    "pitch_mm": 0.95,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.9
+      },
+      "height": {
+        "max": 1.45
+      },
+      "overall_width": {
+        "typ": 2.8
+      },
+      "molded_width": {
+        "typ": 1.6
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:ti:SBVS320D",
+      "locator": "pages 42-43, DBV0005A package outline and land pattern; pads cross-checked against 0.95 mm pitch and 2.60 mm row spacing",
+      "pad_count": 5,
+      "dimensions_mm": {
+        "contact_pitch": 0.95,
+        "contact_pad_spacing": 2.6,
+        "contact_pad_width": 0.6,
+        "contact_pad_length": 1.1
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -1.3,
+          "y_mm": -0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "2",
+          "x_mm": -1.3,
+          "y_mm": 0.0,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "3",
+          "x_mm": -1.3,
+          "y_mm": 0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "4",
+          "x_mm": 1.3,
+          "y_mm": 0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        },
+        {
+          "number": "5",
+          "x_mm": 1.3,
+          "y_mm": -0.95,
+          "width_mm": 1.1,
+          "height_mm": 0.6
+        }
+      ]
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "TLV75533PDBVR.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "9b8226a90a3976287995e73095bb2dee1331c8d84b2779f5aa6debec375ea15d",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:ti:SBVS320D",
+        "source:ti:product:TLV75533PDBVR"
+      ],
+      "limitations": [
+        "The single-unit functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "TLV75533PDBVR.pretty/TLV75533PDBVR.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "b9f011945bb0fe1e870c16cd3cf223e1172dd04970b457c5a026decf5ac875d2",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and explicit reviewed pad coordinates.",
+      "source_ids": [
+        "source:ti:SBVS320D",
+        "source:ti:product:TLV75533PDBVR"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "TLV75533PDBVR.3dshapes/TLV75533PDBVR.step",
+      "format": "STEP AP214",
+      "sha256": "ef0222aa60d6b2484050af87f2bfeb6840a56ec5399515448125fab106eda6ef",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from the manufacturer body, height, terminal-span, and pad geometry.",
+      "source_ids": [
+        "source:ti:SBVS320D",
+        "source:ti:product:TLV75533PDBVR"
+      ],
+      "limitations": [
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and lead-form detail."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SBVS320D",
+      "locator": "DBV mechanical drawing and land pattern"
+    },
+    "notes": [
+      "Check effective capacitance at bias and temperature.",
+      "Verify junction temperature at the actual input-output differential and load."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The part requires effective input and output capacitance of at least 0.47 uF after derating; nominal capacitor value alone is not sufficient.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SBVS320D"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-16",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:NE555DR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "NE555DR",
+    "series": "NA555/NE555/SA555/SE555",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
+  },
+  "classification": {
+    "category": "timer",
+    "function": "single bipolar precision timer",
+    "keywords": [
+      "555 timer",
+      "astable",
+      "monostable",
+      "SOIC-8",
+      "bipolar"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SLFS022K",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "xx555 Precision Timers",
+      "url": "https://www.ti.com/lit/ds/symlink/ne555.pdf",
+      "document_number": "SLFS022K",
+      "revision": "Rev. K",
+      "published_date": "2026-03-04",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "c7c6ababde92bb367579e95105e9a9d2d229b05377f5624ae4184031e6266a89",
+      "byte_size": 2260136,
+      "page_count": 39,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "SOIC pin configuration and functions"
+        },
+        {
+          "page": 4,
+          "label": "Recommended operating conditions"
+        },
+        {
+          "page": 14,
+          "label": "Application circuits"
+        },
+        {
+          "page": 25,
+          "label": "D package drawing and land pattern"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:NE555DR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "NE555DR product and package status",
+      "url": "https://www.ti.com/product/NE555/part-details/NE555DR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current product status, exact or family identity, package, and pin count"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "2",
+        "name": "TRIG",
+        "function": "Trigger input; below half CONT sets the output high.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "input"
+      },
+      {
+        "number": "3",
+        "name": "OUT",
+        "function": "Timer output.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "output"
+      },
+      {
+        "number": "4",
+        "name": "RESET",
+        "function": "Active-low reset input.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "input"
+      },
+      {
+        "number": "5",
+        "name": "CONT",
+        "function": "Control-voltage input for comparator thresholds.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "input"
+      },
+      {
+        "number": "6",
+        "name": "THRES",
+        "function": "Threshold input that ends the timing interval.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "input"
+      },
+      {
+        "number": "7",
+        "name": "DISCH",
+        "function": "Open-collector timing-capacitor discharge output.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "open-collector"
+      },
+      {
+        "number": "8",
+        "name": "VCC",
+        "function": "Supply input.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SLFS022K",
+        "electrical_type": "power-input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 4.5,
+          "max": 16
+        },
+        "unit": "V",
+        "qualifier": "NE555 recommended operating range.",
+        "locator": "page 4, Section 5.3",
+        "source_id": "source:ti:SLFS022K",
+        "key": "supply-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "output current",
+        "value": {
+          "min": -200,
+          "max": 200
+        },
+        "unit": "mA",
+        "qualifier": "Recommended source/sink range subject to output-voltage and thermal limits.",
+        "locator": "page 4, Section 5.3",
+        "source_id": "source:ti:SLFS022K",
+        "key": "output-current",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "operating temperature",
+        "value": {
+          "min": 0,
+          "max": 70
+        },
+        "unit": "degC",
+        "qualifier": "NE555 commercial-grade range.",
+        "locator": "page 4, Section 5.3",
+        "source_id": "source:ti:SLFS022K",
+        "key": "operating-temperature",
+        "boundary": "recommended-operating"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOIC-8",
+    "manufacturer_code": "D",
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": 1.27,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 4.9
+      },
+      "width": {
+        "typ": 3.9
+      },
+      "height": {
+        "max": 1.75
+      },
+      "overall_width": {
+        "typ": 6.0
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:ti:SLFS022K",
+      "locator": "pages 31-32, D0008A package outline and land pattern; pads cross-checked against 1.27 mm pitch and 5.40 mm row spacing",
+      "pad_count": 8,
+      "dimensions_mm": {
+        "contact_pitch": 1.27,
+        "contact_pad_spacing": 5.4,
+        "contact_pad_width": 0.6,
+        "contact_pad_length": 1.55
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -2.7,
+          "y_mm": -1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "2",
+          "x_mm": -2.7,
+          "y_mm": -0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "3",
+          "x_mm": -2.7,
+          "y_mm": 0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "4",
+          "x_mm": -2.7,
+          "y_mm": 1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "5",
+          "x_mm": 2.7,
+          "y_mm": 1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "6",
+          "x_mm": 2.7,
+          "y_mm": 0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "7",
+          "x_mm": 2.7,
+          "y_mm": -0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "8",
+          "x_mm": 2.7,
+          "y_mm": -1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        }
+      ]
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "NE555DR.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "a15e7926f96aa8cda59424f06b27792042a6e6c454a0ed7bc1e71fbb1f9597a6",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:ti:SLFS022K",
+        "source:ti:product:NE555DR"
+      ],
+      "limitations": [
+        "The single-unit functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "NE555DR.pretty/NE555DR.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "277daf2e71f2168afebe36f1db1d55a1ff5d1eaeb59d1cabcc8e9869b414712f",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and explicit reviewed pad coordinates.",
+      "source_ids": [
+        "source:ti:SLFS022K",
+        "source:ti:product:NE555DR"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "NE555DR.3dshapes/NE555DR.step",
+      "format": "STEP AP214",
+      "sha256": "a30bcad809839b62b94d5926f85259ac3941ec61b1f9c4017d4926dfdc377b4d",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from the manufacturer body, height, terminal-span, and pad geometry.",
+      "source_ids": [
+        "source:ti:SLFS022K",
+        "source:ti:product:NE555DR"
+      ],
+      "limitations": [
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and lead-form detail."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SLFS022K",
+      "locator": "D package drawing and land pattern"
+    },
+    "notes": [
+      "Tie RESET to a defined level.",
+      "Place supply decoupling at the device and check timing-capacitor leakage against the selected interval."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "supply",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "RESET must be held at a defined high level when unused, and large charge/discharge currents can disturb the supply and timing threshold without close decoupling.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SLFS022K"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-16",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

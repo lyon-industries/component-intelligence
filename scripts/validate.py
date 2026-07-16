@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
+import re
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
@@ -36,6 +38,46 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def validate_native_asset(record: dict[str, object], name: str, asset_path: Path) -> list[str]:
+    """Check that native CAD structure agrees with the normalized record."""
+    errors: list[str] = []
+    text = asset_path.read_text(encoding="utf-8", errors="replace")
+    expected_pins = {pin["number"] for pin in record["electrical"]["pins"]}
+    expected_pads = {
+        pad["number"]: (float(pad["x_mm"]), float(pad["y_mm"]), float(pad["width_mm"]), float(pad["height_mm"]))
+        for pad in record["package"]["land_pattern"]["pads"]
+    }
+    if name == "symbol":
+        if not text.startswith("(kicad_symbol_lib"):
+            errors.append("symbol is not a KiCad symbol library")
+        actual = set(re.findall(r'\(number\s+"([^"]+)"', text))
+        if actual != expected_pins:
+            errors.append(f"symbol pins {sorted(actual)} differ from record {sorted(expected_pins)}")
+    elif name == "footprint":
+        if not text.startswith("(footprint"):
+            errors.append("footprint is not a KiCad footprint")
+        if '(layer "F.CrtYd")' not in text or '(layer "F.Fab")' not in text:
+            errors.append("footprint lacks F.CrtYd or F.Fab geometry")
+        pattern = re.compile(
+            r'\(pad\s+"([^"]+)"\s+smd\s+\w+\s+\(at\s+([-+\d.eE]+)\s+([-+\d.eE]+)(?:\s+[-+\d.eE]+)?\)\s+\(size\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)'
+        )
+        actual = {number: tuple(float(value) for value in values) for number, *values in pattern.findall(text)}
+        same_pad_geometry = actual.keys() == expected_pads.keys() and all(
+            all(math.isclose(actual[number][index], expected_pads[number][index], abs_tol=1e-6) for index in range(4))
+            for number in expected_pads
+        )
+        if not same_pad_geometry:
+            errors.append("footprint pad coordinates or sizes differ from record")
+        if ".step\"" not in text:
+            errors.append("footprint does not reference its STEP model")
+    elif name == "step_model":
+        if not text.lstrip().startswith("ISO-10303-21;") or "END-ISO-10303-21;" not in text:
+            errors.append("STEP model is not a complete ISO-10303-21 exchange file")
+        if not any(token in text for token in ("MANIFOLD_SOLID_BREP", "FACETED_BREP", "SHELL_BASED_SURFACE_MODEL")):
+            errors.append("STEP model contains no supported solid or shell representation")
+    return errors
 
 
 def complete_package_blockers(record: dict[str, object]) -> list[str]:
@@ -172,6 +214,11 @@ def validate_repository(root: Path = ROOT, *, today: date | None = None) -> tupl
                             errors.append(f"{relative}: missing included {name} {asset['path']}")
                         elif sha256_file(asset_path) != asset["sha256"]:
                             errors.append(f"{relative}: {name} hash differs")
+                        else:
+                            errors.extend(
+                                f"{relative}: {name}: {message}"
+                                for message in validate_native_asset(record, name, asset_path)
+                            )
             elif asset["path"] or asset["format"] or asset["sha256"] or asset["tool_version"]:
                 errors.append(f"{relative}: unavailable {name} carries a local asset claim")
             if asset["availability"] != "included" and asset["verified"]:

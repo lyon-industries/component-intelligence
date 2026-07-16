@@ -1,0 +1,485 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:ADS1115IDGSR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "ADS1115IDGSR",
+    "series": "ADS1115",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-16"
+  },
+  "classification": {
+    "category": "data-converter",
+    "function": "16-bit four-channel delta-sigma ADC with I2C interface",
+    "keywords": [
+      "ADC",
+      "16-bit",
+      "I2C",
+      "four channel",
+      "VSSOP-10"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SBAS444E",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "ADS111x 16-Bit I2C-Compatible ADCs",
+      "url": "https://www.ti.com/lit/ds/symlink/ads1115.pdf",
+      "document_number": "SBAS444E",
+      "revision": "Rev. E",
+      "published_date": null,
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "5fe00cf9509daba7ca311cd0a461debc563dd57598c5de3bf9c31903dc2238da",
+      "byte_size": 2654262,
+      "page_count": 57,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "DGS pin configuration and functions"
+        },
+        {
+          "page": 4,
+          "label": "Recommended operating conditions"
+        },
+        {
+          "page": 28,
+          "label": "Application information"
+        },
+        {
+          "page": 45,
+          "label": "DGS package drawing and land pattern"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:ADS1115IDGSR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "ADS1115IDGSR product and package status",
+      "url": "https://www.ti.com/product/ADS1115/part-details/ADS1115IDGSR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-16T10:00:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Exact orderable status, package code, pin count, temperature range, and reel quantity"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "ADDR",
+        "function": "I2C target-address select.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "2",
+        "name": "ALERT/RDY",
+        "function": "Open-drain comparator or conversion-ready output.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "open-drain"
+      },
+      {
+        "number": "3",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "4",
+        "name": "AIN0",
+        "function": "Analog input 0.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "5",
+        "name": "AIN1",
+        "function": "Analog input 1.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "6",
+        "name": "AIN2",
+        "function": "Analog input 2.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "7",
+        "name": "AIN3",
+        "function": "Analog input 3.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "8",
+        "name": "VDD",
+        "function": "Power supply.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "9",
+        "name": "SDA",
+        "function": "I2C serial data.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "bidirectional"
+      },
+      {
+        "number": "10",
+        "name": "SCL",
+        "function": "I2C serial clock.",
+        "locator": "page 3, Table 4-1",
+        "source_id": "source:ti:SBAS444E",
+        "electrical_type": "input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 2.0,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range.",
+        "locator": "page 4, Section 5.3",
+        "source_id": "source:ti:SBAS444E",
+        "key": "supply-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "resolution",
+        "value": {
+          "typ": 16
+        },
+        "unit": "bit",
+        "qualifier": "ADC nominal resolution.",
+        "locator": "page 1, Features",
+        "source_id": "source:ti:SBAS444E",
+        "key": "resolution",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "data rate",
+        "value": {
+          "min": 8,
+          "max": 860
+        },
+        "unit": "SPS",
+        "qualifier": "Programmable conversion rate.",
+        "locator": "page 1 and data-rate section",
+        "source_id": "source:ti:SBAS444E",
+        "key": "data-rate",
+        "boundary": "characteristic"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "VSSOP-10",
+    "manufacturer_code": "DGS",
+    "mounting": "surface-mount",
+    "pin_count": 10,
+    "pitch_mm": 0.5,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 3.0
+      },
+      "width": {
+        "typ": 3.0
+      },
+      "height": {
+        "max": 1.1
+      },
+      "overall_width": {
+        "typ": 5.05
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:ti:SBAS444E",
+      "locator": "datasheet pages 45-46, DGS0010A drawing 4221984/A; explicit pads cross-checked against 0.50 mm pitch and 4.40 mm row spacing",
+      "pad_count": 10,
+      "dimensions_mm": {
+        "contact_pitch": 0.5,
+        "contact_pad_spacing": 4.4,
+        "contact_pad_width": 0.3,
+        "contact_pad_length": 1.45
+      },
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left; pins increase counter-clockwise.",
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -2.2,
+          "y_mm": -1.0,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "2",
+          "x_mm": -2.2,
+          "y_mm": -0.5,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "3",
+          "x_mm": -2.2,
+          "y_mm": 0.0,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "4",
+          "x_mm": -2.2,
+          "y_mm": 0.5,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "5",
+          "x_mm": -2.2,
+          "y_mm": 1.0,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "6",
+          "x_mm": 2.2,
+          "y_mm": 1.0,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "7",
+          "x_mm": 2.2,
+          "y_mm": 0.5,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "8",
+          "x_mm": 2.2,
+          "y_mm": 0.0,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "9",
+          "x_mm": 2.2,
+          "y_mm": -0.5,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        },
+        {
+          "number": "10",
+          "x_mm": 2.2,
+          "y_mm": -1.0,
+          "width_mm": 1.45,
+          "height_mm": 0.3
+        }
+      ]
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "ADS1115IDGSR.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "79208826c44069e1ed51deaa01e38fe3a6cf0d379f7cbdf3f4bc8989908dccf2",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries native symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:ti:SBAS444E",
+        "source:ti:product:ADS1115IDGSR"
+      ],
+      "limitations": [
+        "The single-unit functional block prioritizes explicit pin names and electrical types over a stylized circuit symbol."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "ADS1115IDGSR.pretty/ADS1115IDGSR.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "822c62d919d7941a83eb97be9e6ea73a495f0a479a103f65404d904e8adb0827",
+      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries native footprint serialized from the manufacturer land pattern and explicit reviewed pad coordinates.",
+      "source_ids": [
+        "source:ti:SBAS444E",
+        "source:ti:product:ADS1115IDGSR"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "ADS1115IDGSR.3dshapes/ADS1115IDGSR.step",
+      "format": "STEP AP214",
+      "sha256": "fc200096f42e20e82c94df1700a4a49b32dd965cdcf4170a6e48cbba5dfed421",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from the manufacturer body, height, terminal-span, and pad geometry.",
+      "source_ids": [
+        "source:ti:SBAS444E",
+        "source:ti:product:ADS1115IDGSR"
+      ],
+      "limitations": [
+        "The model is authoritative for nominal seating and clearance envelope only; it omits undocumented cosmetic, internal, and lead-form detail."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SBAS444E",
+      "locator": "DGS package drawing and land pattern"
+    },
+    "notes": [
+      "Check common-mode and absolute input limits for every multiplexer selection.",
+      "Provide pull-ups and a defined state for ADDR and ALERT/RDY as required."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "supply",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The programmable full-scale range does not permit analog inputs beyond the supply rails; confusing PGA range with absolute input limits can damage the ADC or corrupt readings.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SBAS444E"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-16",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared the normalized exact identity, package code, pin count, and current status against the official exact-part product page independently of the datasheet extraction.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native symbol pin-map verification",
+        "status": "pass",
+        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "native footprint geometry verification",
+        "status": "pass",
+        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
+        "date": "2026-07-16"
+      },
+      {
+        "name": "STEP placement and envelope verification",
+        "status": "pass",
+        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
+        "date": "2026-07-16"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}
