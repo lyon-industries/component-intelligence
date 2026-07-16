@@ -30,6 +30,11 @@ The catalog entry supplies `<record-path>`. Asset paths in `component.json` are
 relative to that record's directory. Pin the commit so every fetched file comes
 from the same accepted dataset state.
 
+Treat catalog paths as repository paths, not pre-encoded URLs. URL-encode each
+path segment before inserting it into a raw GitHub or Contents API URL. A
+literal `%2F` in a repository path represents an encoded MPN character and must
+appear as `%252F` in the request URL. Do not decode the catalog path first.
+
 The GitHub Contents API is also suitable when an agent wants to enumerate or
 download the complete directory:
 
@@ -77,6 +82,7 @@ components/<maker>/<mpn>/    # complete package trust tier
 candidates/<maker>/<mpn>/    # incomplete collaborative tier
 schema/component.schema.json
 scripts/build_catalog.py     # maintainer generation tool
+scripts/generate_native_assets.py # maintainer CAD serialization tool
 scripts/validate.py          # maintainer trust-boundary validator
 ```
 
