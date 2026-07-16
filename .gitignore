@@ -3,4 +3,3 @@ __pycache__/
 .DS_Store
 .venv/
 *.kicad_prl
-components/**/preview/*.kicad_pro

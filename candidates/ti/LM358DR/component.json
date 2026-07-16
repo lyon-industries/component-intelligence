@@ -1,0 +1,320 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:LM358DR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "LM358DR",
+    "series": "LMx58/LM2904",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "amplifier",
+    "function": "dual general-purpose operational amplifier",
+    "keywords": [
+      "op amp",
+      "dual",
+      "single supply",
+      "SOIC-8",
+      "analog"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SLOS068AB",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "Industry-Standard Dual Operational Amplifiers",
+      "url": "https://www.ti.com/lit/ds/symlink/lm358.pdf",
+      "document_number": "SLOS068AB",
+      "revision": "Rev. AB",
+      "published_date": "2024-10-18",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "59b9d771f16172e21fea46d4e29576c608e55646008434bc126f1ca93917dfd3",
+      "byte_size": 4150129,
+      "page_count": 68,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 4,
+          "label": "D package pin configuration and functions"
+        },
+        {
+          "page": 7,
+          "label": "LM358 electrical characteristics"
+        },
+        {
+          "page": 27,
+          "label": "Application information"
+        },
+        {
+          "page": 57,
+          "label": "D package drawing and land pattern"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "OUT1",
+        "function": "Output of amplifier channel 1.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "output"
+      },
+      {
+        "number": "2",
+        "name": "IN1-",
+        "function": "Inverting input of channel 1.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "3",
+        "name": "IN1+",
+        "function": "Noninverting input of channel 1.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "4",
+        "name": "V-",
+        "function": "Negative supply; commonly ground in single-supply use.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "5",
+        "name": "IN2+",
+        "function": "Noninverting input of channel 2.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "6",
+        "name": "IN2-",
+        "function": "Inverting input of channel 2.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "input"
+      },
+      {
+        "number": "7",
+        "name": "OUT2",
+        "function": "Output of amplifier channel 2.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "output"
+      },
+      {
+        "number": "8",
+        "name": "V+",
+        "function": "Positive supply.",
+        "locator": "pin configuration and functions, D package",
+        "source_id": "source:ti:SLOS068AB",
+        "electrical_type": "power-input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 3,
+          "max": 30
+        },
+        "unit": "V",
+        "qualifier": "LM358 total supply range; not the newer B variant.",
+        "locator": "family comparison and recommended operating conditions",
+        "source_id": "source:ti:SLOS068AB",
+        "key": "supply-voltage",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "gain bandwidth",
+        "value": {
+          "typ": 0.7
+        },
+        "unit": "MHz",
+        "qualifier": "LM358 typical gain-bandwidth product.",
+        "locator": "family comparison",
+        "source_id": "source:ti:SLOS068AB",
+        "key": "gain-bandwidth",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "operating temperature",
+        "value": {
+          "min": 0,
+          "max": 70
+        },
+        "unit": "degC",
+        "qualifier": "LM358 commercial-grade range.",
+        "locator": "family comparison",
+        "source_id": "source:ti:SLOS068AB",
+        "key": "operating-temperature",
+        "boundary": "recommended-operating"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOIC-8",
+    "manufacturer_code": "D",
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": 1.27,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 4.9
+      },
+      "width": {
+        "typ": 3.9
+      },
+      "height": {
+        "max": 1.75
+      },
+      "overall_width": {
+        "typ": 6.0
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:ti:SLOS068AB",
+      "locator": "D package drawing and land pattern",
+      "pad_count": 8,
+      "dimensions_mm": {},
+      "coordinate_convention": null,
+      "pads": []
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SLOS068AB"
+      ],
+      "limitations": [
+        "No verified native symbol is included yet."
+      ]
+    },
+    "footprint": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SLOS068AB"
+      ],
+      "limitations": [
+        "No verified native footprint is included yet."
+      ]
+    },
+    "step_model": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SLOS068AB"
+      ],
+      "limitations": [
+        "No verified native step model is included yet."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SLOS068AB",
+      "locator": "D package drawing and land pattern"
+    },
+    "notes": [
+      "Check input common-mode and output swing at the actual load and temperature.",
+      "Do not substitute LM358B limits for the LM358 suffix recorded here."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The input common-mode range includes ground but not the positive rail, and the output is not rail-to-rail; a circuit can saturate while all pins remain within absolute maximum ratings.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SLOS068AB"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": false,
+    "symbol_verified": false,
+    "footprint_verified": false,
+    "step_verified": false,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

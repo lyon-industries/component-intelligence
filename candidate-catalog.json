@@ -1,0 +1,657 @@
+{
+  "schema_version": "1.0.0",
+  "tier": "candidate",
+  "repository": "https://github.com/lyon-industries/component-intelligence",
+  "generated_from": "candidates/*/*/component.json",
+  "components": [
+    {
+      "id": "component:analog-devices:MAX3485ESA+",
+      "manufacturer_slug": "analog-devices",
+      "manufacturer": "Analog Devices",
+      "mpn": "MAX3485ESA+",
+      "category": "interface",
+      "function": "3.3 V half-duplex RS-485 and RS-422 transceiver",
+      "keywords": [
+        "RS-485",
+        "RS-422",
+        "half duplex",
+        "10 Mbps",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8 narrow",
+      "path": "candidates/analog-devices/MAX3485ESA%2B/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-13",
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "bus-common-mode-range",
+        "data-rate",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:aos:AO3400A",
+      "manufacturer_slug": "aos",
+      "manufacturer": "Alpha & Omega Semiconductor",
+      "mpn": "AO3400A",
+      "category": "transistor",
+      "function": "30 V N-channel enhancement-mode MOSFET",
+      "keywords": [
+        "MOSFET",
+        "N-channel",
+        "30 V",
+        "SOT-23",
+        "logic-level"
+      ],
+      "package": "SOT-23",
+      "path": "candidates/aos/AO3400A/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "continuous-drain-current",
+        "drain-source-voltage",
+        "rds-on-at-4-5-v-gate"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:bosch:BME280",
+      "manufacturer_slug": "bosch",
+      "manufacturer": "Bosch Sensortec",
+      "mpn": "BME280",
+      "category": "environmental-sensor",
+      "function": "digital humidity, pressure, and temperature sensor",
+      "keywords": [
+        "humidity",
+        "pressure",
+        "temperature",
+        "I2C",
+        "SPI",
+        "LGA-8"
+      ],
+      "package": "8-pin metal-lid LGA",
+      "path": "candidates/bosch/BME280/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "interface-supply-voltage",
+        "pressure-range",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:diodes-inc:AP63205WU-7",
+      "manufacturer_slug": "diodes-inc",
+      "manufacturer": "Diodes Incorporated",
+      "mpn": "AP63205WU-7",
+      "category": "power-management",
+      "function": "fixed-output synchronous buck converter",
+      "keywords": [
+        "5 V",
+        "buck",
+        "dc-dc",
+        "synchronous",
+        "TSOT26"
+      ],
+      "package": "TSOT26",
+      "path": "candidates/diodes-inc/AP63205WU-7/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "continuous-output-current",
+        "fixed-output-voltage",
+        "quiescent-current",
+        "recommended-input-voltage",
+        "switching-frequency"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 2
+    },
+    {
+      "id": "component:espressif:ESP32-C3-WROOM-02-N4",
+      "manufacturer_slug": "espressif",
+      "manufacturer": "Espressif Systems",
+      "mpn": "ESP32-C3-WROOM-02-N4",
+      "category": "wireless-microcontroller-module",
+      "function": "Wi-Fi and Bluetooth LE microcontroller module",
+      "keywords": [
+        "RISC-V",
+        "Wi-Fi",
+        "Bluetooth LE",
+        "4 MB flash",
+        "module"
+      ],
+      "package": "ESP32-C3-WROOM-02 module",
+      "path": "candidates/espressif/ESP32-C3-WROOM-02-N4/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "ambient-temperature",
+        "cpu-frequency",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:microchip:24LC256-I/SN",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "24LC256-I/SN",
+      "category": "memory",
+      "function": "256-Kbit I2C serial EEPROM",
+      "keywords": [
+        "EEPROM",
+        "I2C",
+        "256 Kbit",
+        "SOIC-8",
+        "nonvolatile"
+      ],
+      "package": "SOIC-8",
+      "path": "candidates/microchip/24LC256-I%2FSN/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "i2c-clock-frequency",
+        "memory-capacity",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:microchip:ATtiny85-20SU",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "ATtiny85-20SU",
+      "category": "microcontroller",
+      "function": "8-bit AVR microcontroller with 8 KB flash",
+      "keywords": [
+        "AVR",
+        "8-bit",
+        "8 KB flash",
+        "ADC",
+        "SOIC-8"
+      ],
+      "package": "8S2 EIAJ SOIC-8",
+      "path": "candidates/microchip/ATtiny85-20SU/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "cpu-frequency",
+        "flash-memory",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:microchip:MCP73831T-2ACI/OT",
+      "manufacturer_slug": "microchip",
+      "manufacturer": "Microchip Technology",
+      "mpn": "MCP73831T-2ACI/OT",
+      "category": "battery-management",
+      "function": "single-cell Li-ion and Li-polymer linear charger",
+      "keywords": [
+        "Li-ion",
+        "charger",
+        "500 mA",
+        "SOT-23-5",
+        "linear"
+      ],
+      "package": "SOT-23-5",
+      "path": "candidates/microchip/MCP73831T-2ACI%2FOT/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "input-voltage",
+        "programmable-charge-current",
+        "regulated-battery-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:nexperia:BAT54C,215",
+      "manufacturer_slug": "nexperia",
+      "manufacturer": "Nexperia",
+      "mpn": "BAT54C,215",
+      "category": "diode",
+      "function": "dual common-cathode Schottky barrier diode",
+      "keywords": [
+        "Schottky",
+        "dual diode",
+        "common cathode",
+        "SOT-23",
+        "clamp"
+      ],
+      "package": "SOT-23",
+      "path": "candidates/nexperia/BAT54C%2C215/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "forward-current",
+        "forward-voltage-at-100-ma",
+        "reverse-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:st:STM32C011F6P6TR",
+      "manufacturer_slug": "st",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "STM32C011F6P6TR",
+      "category": "microcontroller",
+      "function": "32-bit Arm Cortex-M0+ microcontroller with 32 KB flash",
+      "keywords": [
+        "Arm Cortex-M0+",
+        "32-bit",
+        "32 KB flash",
+        "TSSOP20",
+        "48 MHz"
+      ],
+      "package": "TSSOP20",
+      "path": "candidates/st/STM32C011F6P6TR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-13",
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "cpu-frequency",
+        "flash-memory",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:st:USBLC6-2SC6",
+      "manufacturer_slug": "st",
+      "manufacturer": "STMicroelectronics",
+      "mpn": "USBLC6-2SC6",
+      "category": "protection",
+      "function": "two-line low-capacitance ESD protection array",
+      "keywords": [
+        "ESD",
+        "USB 2.0",
+        "two line",
+        "SOT23-6",
+        "flow-through"
+      ],
+      "package": "SOT23-6L",
+      "path": "candidates/st/USBLC6-2SC6/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-13",
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "contact-esd",
+        "line-capacitance",
+        "stand-off-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:ADS1115IDGSR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "ADS1115IDGSR",
+      "category": "data-converter",
+      "function": "16-bit four-channel delta-sigma ADC with I2C interface",
+      "keywords": [
+        "ADC",
+        "16-bit",
+        "I2C",
+        "four channel",
+        "VSSOP-10"
+      ],
+      "package": "VSSOP-10",
+      "path": "candidates/ti/ADS1115IDGSR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "data-rate",
+        "resolution",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:INA219AIDCNR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "INA219AIDCNR",
+      "category": "current-sensor",
+      "function": "bidirectional current and power monitor with I2C interface",
+      "keywords": [
+        "current sense",
+        "power monitor",
+        "I2C",
+        "26 V",
+        "SOT-23-8"
+      ],
+      "package": "SOT-23-8",
+      "path": "candidates/ti/INA219AIDCNR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "bus-voltage",
+        "shunt-full-scale-voltage",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:LM358DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "LM358DR",
+      "category": "amplifier",
+      "function": "dual general-purpose operational amplifier",
+      "keywords": [
+        "op amp",
+        "dual",
+        "single supply",
+        "SOIC-8",
+        "analog"
+      ],
+      "package": "SOIC-8",
+      "path": "candidates/ti/LM358DR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "gain-bandwidth",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:NE555DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "NE555DR",
+      "category": "timer",
+      "function": "single bipolar precision timer",
+      "keywords": [
+        "555 timer",
+        "astable",
+        "monostable",
+        "SOIC-8",
+        "bipolar"
+      ],
+      "package": "SOIC-8",
+      "path": "candidates/ti/NE555DR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "operating-temperature",
+        "output-current",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:PCA9306DCTR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "PCA9306DCTR",
+      "category": "interface",
+      "function": "dual bidirectional I2C and SMBus voltage-level translator",
+      "keywords": [
+        "I2C",
+        "SMBus",
+        "level translator",
+        "bidirectional",
+        "SSOP-8"
+      ],
+      "package": "SSOP-8",
+      "path": "candidates/ti/PCA9306DCTR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "bus-frequency",
+        "vref1",
+        "vref2"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74LVC1G17DBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74LVC1G17DBVR",
+      "category": "logic",
+      "function": "single noninverting Schmitt-trigger buffer",
+      "keywords": [
+        "Schmitt trigger",
+        "buffer",
+        "single gate",
+        "SOT-23-5",
+        "logic"
+      ],
+      "package": "SOT-23-5",
+      "path": "candidates/ti/SN74LVC1G17DBVR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "input-voltage",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:TLV75533PDBVR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TLV75533PDBVR",
+      "category": "power-management",
+      "function": "fixed 3.3 V low-dropout regulator with enable",
+      "keywords": [
+        "LDO",
+        "3.3 V",
+        "500 mA",
+        "SOT-23-5",
+        "enable"
+      ],
+      "package": "SOT-23-5",
+      "path": "candidates/ti/TLV75533PDBVR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "input-voltage",
+        "output-current",
+        "output-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:ti:TPS62162DSGR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "TPS62162DSGR",
+      "category": "power-management",
+      "function": "fixed 3.3 V synchronous buck converter",
+      "keywords": [
+        "buck",
+        "3.3 V",
+        "1 A",
+        "WSON-8",
+        "power good"
+      ],
+      "package": "WSON-8 with exposed pad",
+      "path": "candidates/ti/TPS62162DSGR/component.json",
+      "orderable": null,
+      "orderable_checked_on": null,
+      "reviewed_on": "2026-07-13",
+      "rating_keys": [
+        "input-voltage",
+        "output-current",
+        "output-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": false,
+        "symbol_verified": false,
+        "footprint_verified": false,
+        "step_verified": false,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    }
+  ]
+}

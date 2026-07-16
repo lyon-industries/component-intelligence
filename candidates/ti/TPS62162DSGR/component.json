@@ -1,0 +1,324 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:TPS62162DSGR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "TPS62162DSGR",
+    "series": "TPS6216x",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "power-management",
+    "function": "fixed 3.3 V synchronous buck converter",
+    "keywords": [
+      "buck",
+      "3.3 V",
+      "1 A",
+      "WSON-8",
+      "power good"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SLVSAM2E",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "TPS6216x 3-V to 17-V 1-A Step-Down Converters",
+      "url": "https://www.ti.com/lit/ds/symlink/tps62160.pdf",
+      "document_number": "SLVSAM2E",
+      "revision": "Rev. E",
+      "published_date": "2017-05-10",
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "6c26eb5b607f7af543c24ed99b8ed942e4819326352ae9fb87e8396686d06659",
+      "byte_size": 2784755,
+      "page_count": 42,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 4,
+          "label": "DSG pin configuration and functions"
+        },
+        {
+          "page": 5,
+          "label": "Recommended operating conditions"
+        },
+        {
+          "page": 13,
+          "label": "Application information"
+        },
+        {
+          "page": 34,
+          "label": "DSG package drawing and land pattern"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "PGND",
+        "function": "Power ground.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "2",
+        "name": "VIN",
+        "function": "Input supply.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "3",
+        "name": "EN",
+        "function": "Active-high enable input.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "4",
+        "name": "AGND",
+        "function": "Analog ground.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "5",
+        "name": "FB",
+        "function": "Tie to AGND on fixed-output versions as recommended.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "6",
+        "name": "VOS",
+        "function": "Output-voltage sense input.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "input"
+      },
+      {
+        "number": "7",
+        "name": "SW",
+        "function": "Switch node for the external inductor.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "power-output"
+      },
+      {
+        "number": "8",
+        "name": "PG",
+        "function": "Open-drain power-good output.",
+        "locator": "page 4, Pin Functions",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "open-drain"
+      },
+      {
+        "number": "EP",
+        "name": "EXPOSED_PAD",
+        "function": "Exposed thermal pad; solder to AGND as required by the package guidance.",
+        "locator": "DSG package drawing and thermal-pad land pattern",
+        "source_id": "source:ti:SLVSAM2E",
+        "electrical_type": "ground"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "input voltage",
+        "value": {
+          "min": 3.0,
+          "max": 17.0
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range.",
+        "locator": "page 5, Section 7.3",
+        "source_id": "source:ti:SLVSAM2E",
+        "key": "input-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "output voltage",
+        "value": {
+          "typ": 3.3
+        },
+        "unit": "V",
+        "qualifier": "TPS62162 fixed output option.",
+        "locator": "page 4, Device Voltage Options",
+        "source_id": "source:ti:SLVSAM2E",
+        "key": "output-voltage",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "output current",
+        "value": {
+          "max": 1.0
+        },
+        "unit": "A",
+        "qualifier": "Rated output current subject to layout and thermal conditions.",
+        "locator": "page 1, Features",
+        "source_id": "source:ti:SLVSAM2E",
+        "key": "output-current",
+        "boundary": "characteristic"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "WSON-8 with exposed pad",
+    "manufacturer_code": "DSG",
+    "mounting": "surface-mount",
+    "pin_count": 9,
+    "pitch_mm": 0.5,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.0
+      },
+      "width": {
+        "typ": 2.0
+      },
+      "height": {
+        "max": 0.8
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:ti:SLVSAM2E",
+      "locator": "DSG package drawing and thermal-pad land pattern",
+      "pad_count": 9,
+      "dimensions_mm": {},
+      "coordinate_convention": null,
+      "pads": []
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SLVSAM2E"
+      ],
+      "limitations": [
+        "No verified native symbol is included yet."
+      ]
+    },
+    "footprint": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SLVSAM2E"
+      ],
+      "limitations": [
+        "No verified native footprint is included yet."
+      ]
+    },
+    "step_model": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SLVSAM2E"
+      ],
+      "limitations": [
+        "No verified native step model is included yet."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SLVSAM2E",
+      "locator": "DSG package drawing and thermal-pad land pattern"
+    },
+    "notes": [
+      "Keep the input capacitor, inductor, and output capacitor in the manufacturer layout geometry.",
+      "Do not leave FB floating on the fixed-output variant."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "layout",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The exposed pad must be soldered to AGND, while PGND and AGND current paths still require deliberate placement; a generic 8-pad footprint is unusable.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SLVSAM2E"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": false,
+    "symbol_verified": false,
+    "footprint_verified": false,
+    "step_verified": false,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

@@ -1,44 +1,37 @@
-## Exact component and decision
+## Exact component and change
 
 - Manufacturer:
 - Exact MPN:
-- Package and ordering suffix:
-- Agentic engineering use this record enables:
+- Candidate improvement, complete-package promotion, correction, or demotion:
+- Engineering decision this helps:
 
 ## Evidence
 
-- Official sources, revisions, and retrieval dates:
-- Load-bearing locators added or changed:
-- Conflicts or unknowns:
+- Official sources and exact locators:
+- CAD checks, calculation, or physical-test evidence:
+- Unknowns and limitations that remain:
+
+## Trust tier
+
+- [ ] Candidate work remains under `candidates/` and outside `catalog.json`.
+- [ ] Promotion satisfies every complete-package gate in `QUALITY.md`.
+- [ ] A compromised complete package was corrected or demoted in this change.
 
 ## Native assets
 
-- Symbol format and tool version:
-- Footprint format and tool version:
-- STEP source or not-applicable basis:
-- Preview generation method:
+- Symbol format, hash, tool version, and checks:
+- Footprint format, hash, tool version, and checks:
+- STEP format, hash, tool version, envelope, and checks:
 
-## Verification
+## Shared findings
 
-- Schema and semantic validation:
-- ERC, DRC, render, pin-to-pad, layer, mask, paste, courtyard, origin, rotation, and 3D checks:
-- Exact specimen and assembly evidence:
-- Functional fixture, operating conditions, measurements, limits, and result:
+- Failure or constraint returned to `integration.findings`:
+- Confidential details intentionally excluded:
 
-## Failures and limits
+## Rights and validation
 
-- Failure found and correction made:
-- Known issues that remain:
-- Applications this record does not approve:
-
-## Rights
-
-- [ ] I have the right to submit every included file under Apache-2.0.
-- [ ] Third-party sources and assets retain their required notices and redistribution terms.
-- [ ] No confidential customer, employer, credential, or proprietary workspace material is included.
-
-## Admission
-
-- [ ] The component is `agent-ready` under `QUALITY.md`.
+- [ ] I have the right to submit every included file under its declared terms.
+- [ ] No confidential customer, employer, credential, or proprietary material is included.
+- [ ] `python3 scripts/build_catalog.py --check` passes.
 - [ ] `python3 scripts/validate.py` passes.
 - [ ] `python3 -m unittest discover -s tests -v` passes.

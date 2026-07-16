@@ -23,6 +23,7 @@ class DocumentationTests(unittest.TestCase):
             ROOT / "README.md",
             *sorted((ROOT / "docs").glob("*.md")),
             *sorted((ROOT / "components").glob("*/*/README.md")),
+            *sorted((ROOT / "candidates").glob("*/*/README.md")),
         ]
 
         for markdown_file in markdown_files:

@@ -1,0 +1,363 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:diodes-inc:AP63205WU-7",
+  "identity": {
+    "manufacturer": "Diodes Incorporated",
+    "manufacturer_slug": "diodes-inc",
+    "mpn": "AP63205WU-7",
+    "series": "AP63200/AP63201/AP63203/AP63205",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "power-management",
+    "function": "fixed-output synchronous buck converter",
+    "keywords": [
+      "5 V",
+      "buck",
+      "dc-dc",
+      "synchronous",
+      "TSOT26"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:diodes:DS41326-rev-3-2",
+      "kind": "datasheet",
+      "publisher": "Diodes Incorporated",
+      "title": "AP63200/AP63201/AP63203/AP63205",
+      "url": "https://www.diodes.com/datasheet/download/AP63200-AP63201-AP63203-AP63205.pdf",
+      "document_number": "DS41326",
+      "revision": "Rev. 3 - 2",
+      "published_date": null,
+      "retrieved_at": "2026-07-13T11:00:56Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "ef99daa3789d835bc025dfcb4c605c5c2e6d3e7223e86d40b33e6b497ea5a722",
+      "byte_size": 1226090,
+      "page_count": 18,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Features and top-view pin assignment"
+        },
+        {
+          "page": 2,
+          "label": "Typical application and pin descriptions"
+        },
+        {
+          "page": 13,
+          "label": "Table 3 recommended AP63205 components"
+        },
+        {
+          "page": 15,
+          "label": "PCB layout rules and Figure 25"
+        },
+        {
+          "page": 16,
+          "label": "Ordering information"
+        },
+        {
+          "page": 17,
+          "label": "TSOT26 outline and suggested pad layout"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "FB",
+        "function": "Senses the regulated output; the AP63205 variant regulates this node to the fixed 5 V output.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 2, Pin Descriptions",
+        "electrical_type": "input"
+      },
+      {
+        "number": "2",
+        "name": "EN",
+        "function": "Digital enable and programmable input undervoltage threshold input.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 2, Pin Descriptions",
+        "electrical_type": "input"
+      },
+      {
+        "number": "3",
+        "name": "VIN",
+        "function": "Input supply for the IC and integrated converter switches.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 2, Pin Descriptions",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "4",
+        "name": "GND",
+        "function": "Power ground.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 2, Pin Descriptions",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "5",
+        "name": "SW",
+        "function": "Power switching node feeding the output LC filter.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 2, Pin Descriptions",
+        "electrical_type": "power-output"
+      },
+      {
+        "number": "6",
+        "name": "BST",
+        "function": "Bootstrap supply input for the high-side gate drive.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 2, Pin Descriptions",
+        "electrical_type": "power-input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "recommended input voltage",
+        "value": {
+          "min": 3.8,
+          "max": 32
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range; not the absolute maximum.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 4, Recommended Operating Conditions",
+        "key": "recommended-input-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "fixed output voltage",
+        "value": {
+          "min": 4.95,
+          "typ": 5,
+          "max": 5.05
+        },
+        "unit": "V",
+        "qualifier": "CCM electrical characteristic across the stated datasheet conditions.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 5, Electrical Characteristics",
+        "key": "fixed-output-voltage",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "continuous output current",
+        "value": {
+          "max": 2
+        },
+        "unit": "A",
+        "qualifier": "Device headline rating; board capability still depends on the inductor, copper, thermal path, input conditions, and validation.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 1, Features",
+        "key": "continuous-output-current",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "switching frequency",
+        "value": {
+          "typ": 1100
+        },
+        "unit": "kHz",
+        "qualifier": "AP63203 and AP63205 variants.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 5, Electrical Characteristics",
+        "key": "switching-frequency",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "quiescent current",
+        "value": {
+          "typ": 22
+        },
+        "unit": "uA",
+        "qualifier": "VEN open and VFB at 1.0 V under the stated test condition.",
+        "source_id": "source:diodes:DS41326-rev-3-2",
+        "locator": "page 5, Electrical Characteristics",
+        "key": "quiescent-current",
+        "boundary": "characteristic"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "TSOT26",
+    "manufacturer_code": "WU",
+    "mounting": "surface-mount",
+    "pin_count": 6,
+    "pitch_mm": 0.95,
+    "body_dimensions_mm": {
+      "length": {
+        "min": 2.8,
+        "typ": 2.9,
+        "max": 3
+      },
+      "width": 2.8,
+      "molded_width": {
+        "min": 1.5,
+        "typ": 1.6,
+        "max": 1.7
+      },
+      "height": {
+        "max": 1
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:diodes:DS41326-rev-3-2",
+      "locator": "page 17, Suggested Pad Layout",
+      "pad_count": 6,
+      "dimensions_mm": {
+        "C": 0.95,
+        "X": 0.7,
+        "Y": 1,
+        "Y1": 3.2
+      },
+      "coordinate_convention": null,
+      "pads": []
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original repository preview derived from the official top-view pin table.",
+      "source_ids": [
+        "source:diodes:DS41326-rev-3-2"
+      ],
+      "limitations": [
+        "No verified native symbol is included yet."
+      ]
+    },
+    "footprint": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original repository preview of the manufacturer dimension labels.",
+      "source_ids": [
+        "source:diodes:DS41326-rev-3-2"
+      ],
+      "limitations": [
+        "No verified native footprint is included yet."
+      ]
+    },
+    "step_model": {
+      "availability": "referenced",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "A KiCad TSOT-23-6 model was identified during the source case but is not copied here.",
+      "source_ids": [
+        "source:diodes:DS41326-rev-3-2"
+      ],
+      "limitations": [
+        "License, origin, seating plane, and body-envelope checks must travel with a redistributed model.",
+        "Candidate external reference: KiCad Package_TO_SOT_SMD.3dshapes/TSOT-23-6.step"
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": "7-inch tape and reel",
+      "quantity": 3000,
+      "source_id": "source:diodes:DS41326-rev-3-2",
+      "locator": "page 16, Ordering Information"
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "The top-view pin order and identification mark are documented; tape-pocket orientation requires the current package-orientation source.",
+      "source_id": "source:diodes:DS41326-rev-3-2",
+      "locator": "pages 16-17, marking and package outline"
+    },
+    "notes": [
+      "Moisture sensitivity is listed as Level 1 per J-STD-020.",
+      "The datasheet recommends 2 oz copper and close placement of the input and feedback components for the 2 A layout case."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "layout",
+        "severity": "fabrication-stop",
+        "status": "active",
+        "scope": "integration",
+        "summary": "A generated custom footprint used about 1.9 mm lead pitch where this package requires 0.95 mm pitch; ordinary PCB clearance checks did not detect the package mismatch.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:diodes:DS41326-rev-3-2"
+        ]
+      },
+      {
+        "id": "finding:02",
+        "type": "layout",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "integration",
+        "summary": "A completed route passed native geometry checks while placing the input capacitor and switching paths too far from the converter for the datasheet layout intent.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:diodes:DS41326-rev-3-2"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": false,
+    "footprint_verified": false,
+    "step_verified": false,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "source identity and hash",
+        "status": "pass",
+        "method": "Captured the current official 18-page PDF and recorded its SHA-256.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin map",
+        "status": "pass",
+        "method": "Compared the top-view assignment, pin table, and typical circuit.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "package dimensions",
+        "status": "pass",
+        "method": "Compared package pitch and suggested-pad labels with the TSOT26 drawing.",
+        "date": "2026-07-13"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization and previews based on the linked official source.",
+    "source_rights_status": "linked-only"
+  }
+}

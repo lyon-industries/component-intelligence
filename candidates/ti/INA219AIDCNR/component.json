@@ -1,0 +1,320 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:INA219AIDCNR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "INA219AIDCNR",
+    "series": "INA219",
+    "orderable": null,
+    "orderable_checked_on": null
+  },
+  "classification": {
+    "category": "current-sensor",
+    "function": "bidirectional current and power monitor with I2C interface",
+    "keywords": [
+      "current sense",
+      "power monitor",
+      "I2C",
+      "26 V",
+      "SOT-23-8"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SBOS448G",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "INA219 Zerø-Drift Bidirectional Current/Power Monitor",
+      "url": "https://www.ti.com/lit/ds/symlink/ina219.pdf",
+      "document_number": "SBOS448G",
+      "revision": "Rev. G",
+      "published_date": null,
+      "retrieved_at": "2026-07-13T12:06:17Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "58004eda854d07478e6fc6f4398c114f60a3bcf18d4877471c7c1a306d1fa1cb",
+      "byte_size": 892731,
+      "page_count": 38,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "DCN pin configuration and functions"
+        },
+        {
+          "page": 4,
+          "label": "Recommended operating conditions"
+        },
+        {
+          "page": 25,
+          "label": "Typical application"
+        },
+        {
+          "page": 33,
+          "label": "DCN package drawing and land pattern"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "IN+",
+        "function": "Positive differential shunt input.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "input"
+      },
+      {
+        "number": "2",
+        "name": "IN-",
+        "function": "Negative differential shunt input and bus-voltage sense.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "input"
+      },
+      {
+        "number": "3",
+        "name": "GND",
+        "function": "Ground.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "ground"
+      },
+      {
+        "number": "4",
+        "name": "VS",
+        "function": "3 V to 5.5 V supply.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "power-input"
+      },
+      {
+        "number": "5",
+        "name": "SCL",
+        "function": "I2C/SMBus serial clock.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "input"
+      },
+      {
+        "number": "6",
+        "name": "SDA",
+        "function": "I2C/SMBus serial data.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "bidirectional"
+      },
+      {
+        "number": "7",
+        "name": "A0",
+        "function": "Address select input.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "input"
+      },
+      {
+        "number": "8",
+        "name": "A1",
+        "function": "Address select input.",
+        "locator": "page 3, Pin Functions",
+        "source_id": "source:ti:SBOS448G",
+        "electrical_type": "input"
+      }
+    ],
+    "ratings": [
+      {
+        "name": "supply voltage",
+        "value": {
+          "min": 3.0,
+          "max": 5.5
+        },
+        "unit": "V",
+        "qualifier": "Recommended operating range.",
+        "locator": "page 4, Section 7.3",
+        "source_id": "source:ti:SBOS448G",
+        "key": "supply-voltage",
+        "boundary": "recommended-operating"
+      },
+      {
+        "name": "bus voltage",
+        "value": {
+          "min": 0,
+          "max": 26
+        },
+        "unit": "V",
+        "qualifier": "Measurable bus range, distinct from device supply.",
+        "locator": "page 9, Feature Description",
+        "source_id": "source:ti:SBOS448G",
+        "key": "bus-voltage",
+        "boundary": "characteristic"
+      },
+      {
+        "name": "shunt full-scale voltage",
+        "value": {
+          "max": 320
+        },
+        "unit": "mV",
+        "qualifier": "Maximum programmable PGA range.",
+        "locator": "electrical characteristics and register map",
+        "source_id": "source:ti:SBOS448G",
+        "key": "shunt-full-scale-voltage",
+        "boundary": "characteristic"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOT-23-8",
+    "manufacturer_code": "DCN",
+    "mounting": "surface-mount",
+    "pin_count": 8,
+    "pitch_mm": 0.65,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.9
+      },
+      "height": {
+        "max": 1.45
+      },
+      "overall_width": {
+        "typ": 2.8
+      },
+      "molded_width": {
+        "typ": 1.6
+      }
+    },
+    "land_pattern": {
+      "status": "manufacturer-dimensioned",
+      "source_id": "source:ti:SBOS448G",
+      "locator": "DCN package drawing and land pattern",
+      "pad_count": 8,
+      "dimensions_mm": {},
+      "coordinate_convention": null,
+      "pads": []
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SBOS448G"
+      ],
+      "limitations": [
+        "No verified native symbol is included yet."
+      ]
+    },
+    "footprint": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SBOS448G"
+      ],
+      "limitations": [
+        "No verified native footprint is included yet."
+      ]
+    },
+    "step_model": {
+      "availability": "missing",
+      "path": null,
+      "format": null,
+      "sha256": null,
+      "tool_version": null,
+      "verified": false,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "No rights-cleared and independently reviewed native asset is distributed for this record.",
+      "source_ids": [
+        "source:ti:SBOS448G"
+      ],
+      "limitations": [
+        "No verified native step model is included yet."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": null,
+      "quantity": null,
+      "source_id": null,
+      "locator": null
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
+      "source_id": "source:ti:SBOS448G",
+      "locator": "DCN package drawing and land pattern"
+    },
+    "notes": [
+      "Route IN+ and IN- as a Kelvin pair to the shunt.",
+      "Calculate calibration and shunt dissipation for the actual current envelope."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "layout",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "Current and power register accuracy depends on the external shunt value, Kelvin routing, calibration register, and thermal drift; the IC alone does not establish measurement accuracy.",
+        "observed_on": "2026-07-13",
+        "source_ids": [
+          "source:ti:SBOS448G"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": false,
+    "symbol_verified": false,
+    "footprint_verified": false,
+    "step_verified": false,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-13",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Reviewed the official manufacturer document and recorded its revision, locators, retrieval state, and hash when byte capture succeeded.",
+        "date": "2026-07-13"
+      },
+      {
+        "name": "pin and package extraction",
+        "status": "pass",
+        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
+        "date": "2026-07-13"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on the linked official manufacturer source.",
+    "source_rights_status": "linked-only"
+  }
+}

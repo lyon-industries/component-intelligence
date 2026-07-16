@@ -1,30 +1,17 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://raw.githubusercontent.com/lyon-industries/component-intelligence/main/schema/component.schema.json",
-  "title": "Component intelligence record",
+  "title": "Component Intelligence record",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "schema_version",
-    "id",
-    "identity",
-    "classification",
-    "sources",
-    "electrical",
-    "package",
-    "cad",
-    "assembly",
-    "validation",
-    "rights"
-  ],
+  "required": ["schema_version", "id", "identity", "classification", "sources", "electrical", "package", "cad", "assembly", "integration", "verification", "rights"],
   "properties": {
     "$schema": { "type": "string" },
-    "schema_version": { "const": "0.2.0" },
+    "schema_version": { "const": "1.0.0" },
     "id": { "type": "string", "pattern": "^component:[a-z0-9-]+:.+$" },
     "identity": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["manufacturer", "manufacturer_slug", "mpn", "series"],
+      "type": "object", "additionalProperties": false,
+      "required": ["manufacturer", "manufacturer_slug", "mpn", "series", "orderable", "orderable_checked_on"],
       "properties": {
         "manufacturer": { "type": "string", "minLength": 1 },
         "manufacturer_slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
@@ -35,52 +22,29 @@
       }
     },
     "classification": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["category", "function"],
+      "type": "object", "additionalProperties": false,
+      "required": ["category", "function", "keywords"],
       "properties": {
-        "category": { "type": "string", "minLength": 1 },
+        "category": { "type": "string", "pattern": "^[a-z0-9-]+$" },
         "function": { "type": "string", "minLength": 1 },
-        "keywords": {
-          "type": "array",
-          "items": { "type": "string", "minLength": 1 },
-          "uniqueItems": true
-        }
+        "keywords": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
       }
     },
-    "sources": {
-      "type": "array",
-      "minItems": 1,
-      "items": { "$ref": "#/$defs/source" }
-    },
+    "sources": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } },
     "electrical": {
-      "type": "object",
-      "additionalProperties": false,
+      "type": "object", "additionalProperties": false,
       "required": ["pins", "ratings", "internally_common_terminal_groups"],
       "properties": {
-        "pins": {
-          "type": "array",
-          "minItems": 2,
-          "items": { "$ref": "#/$defs/pin" }
-        },
-        "ratings": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/rating" }
-        },
+        "pins": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/pin" } },
+        "ratings": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/rating" } },
         "internally_common_terminal_groups": {
           "type": "array",
-          "items": {
-            "type": "array",
-            "minItems": 2,
-            "items": { "type": "string", "minLength": 1 },
-            "uniqueItems": true
-          }
+          "items": { "type": "array", "minItems": 2, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
         }
       }
     },
     "package": {
-      "type": "object",
-      "additionalProperties": false,
+      "type": "object", "additionalProperties": false,
       "required": ["name", "mounting", "pin_count", "body_dimensions_mm", "land_pattern"],
       "properties": {
         "name": { "type": "string", "minLength": 1 },
@@ -88,46 +52,24 @@
         "mounting": { "enum": ["surface-mount", "through-hole", "mixed"] },
         "pin_count": { "type": "integer", "minimum": 1 },
         "pitch_mm": { "type": ["number", "null"], "exclusiveMinimum": 0 },
-        "body_dimensions_mm": {
-          "type": "object",
-          "additionalProperties": {
-            "type": ["number", "object"],
-            "properties": {
-              "min": { "type": "number" },
-              "typ": { "type": "number" },
-              "max": { "type": "number" }
-            },
-            "additionalProperties": false,
-            "minProperties": 1
-          }
-        },
+        "body_dimensions_mm": { "type": "object", "additionalProperties": { "$ref": "#/$defs/numericValue" } },
         "land_pattern": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["status", "source_id", "locator", "pad_count"],
+          "type": "object", "additionalProperties": false,
+          "required": ["status", "source_id", "locator", "pad_count", "dimensions_mm", "pads", "coordinate_convention"],
           "properties": {
-            "status": {
-              "enum": ["manufacturer-dimensioned", "cross-checked", "unknown"]
-            },
-            "source_id": { "type": "string", "minLength": 1 },
-            "locator": { "type": "string", "minLength": 1 },
+            "status": { "enum": ["unknown", "manufacturer-dimensioned", "cross-checked"] },
+            "source_id": { "type": ["string", "null"] },
+            "locator": { "type": ["string", "null"] },
             "pad_count": { "type": "integer", "minimum": 1 },
-            "dimensions_mm": {
-              "type": "object",
-              "additionalProperties": { "type": "number" }
-            },
-            "pads": {
-              "type": "array",
-              "items": { "$ref": "#/$defs/pad" }
-            },
+            "dimensions_mm": { "type": "object", "additionalProperties": { "type": "number" } },
+            "pads": { "type": "array", "items": { "$ref": "#/$defs/pad" } },
             "coordinate_convention": { "type": ["string", "null"] }
           }
         }
       }
     },
     "cad": {
-      "type": "object",
-      "additionalProperties": false,
+      "type": "object", "additionalProperties": false,
       "required": ["symbol", "footprint", "step_model"],
       "properties": {
         "symbol": { "$ref": "#/$defs/cadAsset" },
@@ -136,15 +78,13 @@
       }
     },
     "assembly": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["process", "packing", "orientation"],
+      "type": "object", "additionalProperties": false,
+      "required": ["process", "packing", "orientation", "notes"],
       "properties": {
         "process": { "type": "string", "minLength": 1 },
         "packing": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["method", "quantity"],
+          "type": "object", "additionalProperties": false,
+          "required": ["method", "quantity", "source_id", "locator"],
           "properties": {
             "method": { "type": ["string", "null"] },
             "quantity": { "type": ["integer", "null"], "minimum": 1 },
@@ -153,62 +93,40 @@
           }
         },
         "orientation": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": ["status", "description"],
+          "type": "object", "additionalProperties": false,
+          "required": ["status", "description", "source_id", "locator"],
           "properties": {
-            "status": { "enum": ["documented", "partial", "unknown"] },
+            "status": { "enum": ["unknown", "partial", "documented"] },
             "description": { "type": "string", "minLength": 1 },
             "source_id": { "type": ["string", "null"] },
             "locator": { "type": ["string", "null"] }
           }
         },
-        "notes": {
-          "type": "array",
-          "items": { "type": "string", "minLength": 1 }
-        }
+        "notes": { "type": "array", "items": { "type": "string", "minLength": 1 } }
       }
     },
-    "validation": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "evidence_state",
-        "physical_state",
-        "release_state",
-        "reviewed_on",
-        "checks",
-        "known_issues"
-      ],
+    "integration": {
+      "type": "object", "additionalProperties": false, "required": ["findings"],
+      "properties": { "findings": { "type": "array", "items": { "$ref": "#/$defs/finding" } } }
+    },
+    "verification": {
+      "type": "object", "additionalProperties": false,
+      "required": ["identity_verified", "data_cross_checked", "symbol_verified", "footprint_verified", "step_verified", "physically_tested", "reviewed_on", "checks", "physical_test_evidence"],
       "properties": {
-        "evidence_state": {
-          "enum": ["captured", "extracted", "cross-checked", "physically-verified"]
-        },
-        "physical_state": { "enum": ["not-tested", "part-tested", "assembly-tested"] },
-        "release_state": {
-          "enum": ["reference-only", "candidate", "agent-ready", "production-approved"]
-        },
+        "identity_verified": { "type": "boolean" },
+        "data_cross_checked": { "type": "boolean" },
+        "symbol_verified": { "type": "boolean" },
+        "footprint_verified": { "type": "boolean" },
+        "step_verified": { "type": "boolean" },
+        "physically_tested": { "type": "boolean" },
         "reviewed_on": { "type": "string", "format": "date" },
-        "checks": {
-          "type": "array",
-          "minItems": 1,
-          "items": { "$ref": "#/$defs/check" }
-        },
-        "known_issues": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/knownIssue" }
-        }
+        "checks": { "type": "array", "items": { "$ref": "#/$defs/check" } },
+        "physical_test_evidence": { "type": "array", "items": { "$ref": "#/$defs/physicalTest" } }
       }
     },
     "rights": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "repository_content_license",
-        "source_files_redistributed",
-        "normalized_record_origin",
-        "source_rights_status"
-      ],
+      "type": "object", "additionalProperties": false,
+      "required": ["repository_content_license", "source_files_redistributed", "normalized_record_origin", "source_rights_status"],
       "properties": {
         "repository_content_license": { "const": "Apache-2.0" },
         "source_files_redistributed": { "const": false },
@@ -218,37 +136,24 @@
     }
   },
   "$defs": {
+    "numericValue": {
+      "oneOf": [
+        { "type": "number" },
+        {
+          "type": "object", "additionalProperties": false, "minProperties": 1,
+          "properties": {
+            "min": { "type": "number" }, "typ": { "type": "number" },
+            "max": { "type": "number" }, "tolerance": { "type": "number" }
+          }
+        }
+      ]
+    },
     "source": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "id",
-        "kind",
-        "publisher",
-        "title",
-        "url",
-        "published_date",
-        "retrieved_at",
-        "retrieval_status",
-        "sha256",
-        "page_count",
-        "redistributed",
-        "locators"
-      ],
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "kind", "publisher", "title", "url", "published_date", "retrieved_at", "retrieval_status", "sha256", "byte_size", "page_count", "redistributed", "locators"],
       "properties": {
         "id": { "type": "string", "minLength": 1 },
-        "kind": {
-          "enum": [
-            "datasheet",
-            "package-drawing",
-            "product-page",
-            "application-note",
-            "errata",
-            "reference-design",
-            "standard",
-            "test"
-          ]
-        },
+        "kind": { "enum": ["datasheet", "package-drawing", "product-page", "application-note", "errata", "reference-design", "standard", "test"] },
         "publisher": { "type": "string", "minLength": 1 },
         "title": { "type": "string", "minLength": 1 },
         "url": { "type": "string", "format": "uri", "pattern": "^https://" },
@@ -256,153 +161,88 @@
         "revision": { "type": ["string", "null"] },
         "published_date": { "type": ["string", "null"], "format": "date" },
         "retrieved_at": { "type": "string", "format": "date-time" },
-        "retrieval_status": {
-          "enum": ["captured-and-hashed", "browser-reviewed-byte-capture-blocked"]
-        },
-        "sha256": {
-          "type": ["string", "null"],
-          "pattern": "^[0-9a-f]{64}$"
-        },
+        "retrieval_status": { "enum": ["captured-and-hashed", "browser-reviewed-byte-capture-blocked"] },
+        "sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
         "byte_size": { "type": ["integer", "null"], "minimum": 1 },
         "page_count": { "type": ["integer", "null"], "minimum": 1 },
         "redistributed": { "const": false },
         "locators": {
-          "type": "array",
-          "minItems": 1,
+          "type": "array", "minItems": 1,
           "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["page", "label"],
-            "properties": {
-              "page": { "type": "integer", "minimum": 1 },
-              "label": { "type": "string", "minLength": 1 }
-            }
+            "type": "object", "additionalProperties": false, "required": ["page", "label"],
+            "properties": { "page": { "type": "integer", "minimum": 1 }, "label": { "type": "string", "minLength": 1 } }
           }
         }
       }
     },
     "pin": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["number", "name", "function", "source_id", "locator"],
+      "type": "object", "additionalProperties": false,
+      "required": ["number", "name", "function", "electrical_type", "source_id", "locator"],
       "properties": {
-        "number": { "type": "string", "minLength": 1 },
-        "name": { "type": "string", "minLength": 1 },
+        "number": { "type": "string", "minLength": 1 }, "name": { "type": "string", "minLength": 1 },
         "function": { "type": "string", "minLength": 1 },
-        "electrical_type": {
-          "enum": [
-            "input",
-            "output",
-            "bidirectional",
-            "power-input",
-            "power-output",
-            "ground",
-            "passive",
-            "open-collector",
-            "open-drain",
-            "no-connect",
-            "mechanical"
-          ]
-        },
-        "source_id": { "type": "string", "minLength": 1 },
-        "locator": { "type": "string", "minLength": 1 }
+        "electrical_type": { "enum": ["input", "output", "bidirectional", "power-input", "power-output", "ground", "passive", "open-collector", "open-drain", "no-connect", "mechanical"] },
+        "source_id": { "type": "string", "minLength": 1 }, "locator": { "type": "string", "minLength": 1 }
       }
     },
     "rating": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["name", "value", "unit", "qualifier", "source_id", "locator"],
+      "type": "object", "additionalProperties": false,
+      "required": ["key", "name", "value", "unit", "boundary", "qualifier", "source_id", "locator"],
       "properties": {
-        "name": { "type": "string", "minLength": 1 },
-        "value": {
-          "oneOf": [
-            { "type": "number" },
-            {
-              "type": "object",
-              "additionalProperties": false,
-              "properties": {
-                "min": { "type": "number" },
-                "typ": { "type": "number" },
-                "max": { "type": "number" },
-                "tolerance": { "type": "number" }
-              },
-              "minProperties": 1
-            }
-          ]
-        },
-        "unit": { "type": "string", "minLength": 1 },
-        "boundary": {
-          "enum": [
-            "absolute-maximum",
-            "recommended-operating",
-            "characteristic",
-            "application-dependent"
-          ]
-        },
-        "qualifier": { "type": "string", "minLength": 1 },
-        "source_id": { "type": "string", "minLength": 1 },
+        "key": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "name": { "type": "string", "minLength": 1 },
+        "value": { "$ref": "#/$defs/numericValue" }, "unit": { "type": "string", "minLength": 1 },
+        "boundary": { "enum": ["absolute-maximum", "recommended-operating", "characteristic", "application-dependent"] },
+        "qualifier": { "type": "string", "minLength": 1 }, "source_id": { "type": "string", "minLength": 1 },
         "locator": { "type": "string", "minLength": 1 }
       }
     },
     "pad": {
-      "type": "object",
-      "additionalProperties": false,
+      "type": "object", "additionalProperties": false,
       "required": ["number", "x_mm", "y_mm", "width_mm", "height_mm"],
       "properties": {
-        "number": { "type": "string", "minLength": 1 },
-        "x_mm": { "type": "number" },
-        "y_mm": { "type": "number" },
-        "width_mm": { "type": "number", "exclusiveMinimum": 0 },
-        "height_mm": { "type": "number", "exclusiveMinimum": 0 }
+        "number": { "type": "string", "minLength": 1 }, "x_mm": { "type": "number" }, "y_mm": { "type": "number" },
+        "width_mm": { "type": "number", "exclusiveMinimum": 0 }, "height_mm": { "type": "number", "exclusiveMinimum": 0 }
       }
     },
     "cadAsset": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["status", "path", "manufacturing_use", "provenance"],
+      "type": "object", "additionalProperties": false,
+      "required": ["availability", "path", "format", "sha256", "tool_version", "verified", "intended_use", "provenance", "source_ids", "limitations"],
       "properties": {
-        "status": {
-          "enum": [
-            "preview-only",
-            "reference-identified",
-            "not-included",
-            "not-applicable",
-            "cross-checked"
-          ]
-        },
-        "path": { "type": ["string", "null"] },
-        "format": { "type": ["string", "null"], "minLength": 1 },
-        "sha256": {
-          "type": ["string", "null"],
-          "pattern": "^[0-9a-f]{64}$"
-        },
-        "tool_version": { "type": ["string", "null"], "minLength": 1 },
-        "manufacturing_use": { "type": "boolean" },
+        "availability": { "enum": ["included", "referenced", "missing"] },
+        "path": { "type": ["string", "null"] }, "format": { "type": ["string", "null"] },
+        "sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+        "tool_version": { "type": ["string", "null"] }, "verified": { "type": "boolean" },
+        "intended_use": { "type": "array", "items": { "enum": ["schematic", "pcb-layout", "mechanical-clearance", "visualization"] }, "uniqueItems": true },
         "provenance": { "type": "string", "minLength": 1 },
-        "reference": { "type": ["string", "null"] },
-        "reason": { "type": ["string", "null"] }
+        "source_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+        "limitations": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "finding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "type", "severity", "status", "scope", "summary", "observed_on", "source_ids"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^finding:[a-z0-9-]+$" },
+        "type": { "enum": ["electrical", "layout", "assembly", "mechanical", "firmware", "supply", "source", "asset", "thermal", "correction", "other"] },
+        "severity": { "enum": ["note", "design-risk", "fabrication-stop"] }, "status": { "enum": ["active", "resolved"] },
+        "scope": { "enum": ["component", "integration", "data-pipeline"] }, "summary": { "type": "string", "minLength": 1 },
+        "observed_on": { "type": "string", "format": "date" },
+        "source_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
       }
     },
     "check": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["name", "status", "method", "date"],
+      "type": "object", "additionalProperties": false, "required": ["name", "status", "method", "date"],
       "properties": {
-        "name": { "type": "string", "minLength": 1 },
-        "status": { "enum": ["pass", "open", "not-applicable"] },
-        "method": { "type": "string", "minLength": 1 },
-        "date": { "type": "string", "format": "date" }
+        "name": { "type": "string", "minLength": 1 }, "status": { "enum": ["pass", "not-applicable"] },
+        "method": { "type": "string", "minLength": 1 }, "date": { "type": "string", "format": "date" }
       }
     },
-    "knownIssue": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["severity", "scope", "summary", "status"],
+    "physicalTest": {
+      "type": "object", "additionalProperties": false, "required": ["date", "exact_mpn", "scope", "result", "evidence"],
       "properties": {
-        "severity": { "enum": ["note", "design-risk", "fabrication-stop"] },
-        "scope": { "enum": ["component", "integration-example", "data-pipeline"] },
-        "summary": { "type": "string", "minLength": 1 },
-        "status": { "enum": ["documented", "open", "resolved-in-example"] }
+        "date": { "type": "string", "format": "date" }, "exact_mpn": { "type": "string", "minLength": 1 },
+        "scope": { "type": "string", "minLength": 1 }, "result": { "enum": ["pass", "fail", "mixed"] },
+        "evidence": { "type": "string", "minLength": 1 }
       }
     }
   }
