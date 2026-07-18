@@ -1,11 +1,36 @@
 # Contributing
 
 Contribute the smallest evidence-backed improvement that makes the next design
-safer or faster. Partial candidate work is welcome. Incomplete work must never
-enter the complete catalog.
+safer or faster. Partial candidate work and well-supported corrections are
+welcome. Incomplete work must never enter the complete catalog.
 
-Read [`AGENTS.md`](AGENTS.md), [`QUALITY.md`](QUALITY.md), and the target
-`component.json` before editing.
+Start with [`QUALITY.md`](QUALITY.md) and the target `component.json`.
+`AGENTS.md` contains repository instructions for automated contributors; human
+contributors do not need agent tooling.
+
+For a wrong pin, land pattern, source locator, model envelope, or assembly
+result, the fastest route is the
+[component error form](https://github.com/lyon-industries/component-intelligence/issues/new?template=component-error.yml).
+For a new part, use the
+[exact-MPN request form](https://github.com/lyon-industries/component-intelligence/issues/new?template=component-request.yml).
+
+## Evidence first
+
+Every contribution should identify:
+
+- one exact, orderable manufacturer MPN and package suffix
+- current official sources with page, table, figure, or section locators
+- the design decision or failure the change informs
+- EDA/CAD version and fabrication or assembly context when relevant
+- rights for any redistributed asset
+
+Prefer manufacturer datasheets, package drawings, errata, application notes,
+reference designs, standards, and actual test artifacts. Distributor pages may
+support dated availability but do not override manufacturer technical data.
+
+Do not submit family-level guesses, scraped distributor dumps, decorative
+previews as engineering evidence, speculative test projects, confidential work,
+or third-party CAD without compatible redistribution rights.
 
 ## Candidate contributions
 
@@ -15,78 +40,55 @@ Add or improve a directory under:
 candidates/<manufacturer-slug>/<path-encoded-mpn>/
 ```
 
-Useful candidate contributions include:
-
-- source-backed exact-MPN identity and pin data
-- a corrected locator, rating, or package fact
-- one native symbol, footprint, or STEP model
-- an independent comparison of existing data or CAD
-- a real layout, electrical, assembly, firmware, thermal, supply, or mechanical
-  finding
-- dated exact-MPN physical evidence
-
-A contributor does not need to finish all three CAD assets before a useful
-candidate improvement can merge. Unknowns and missing assets must remain
-explicit.
-
-Do not submit family-level guesses, scraped distributor dumps, decorative
-previews, speculative test projects, or third-party CAD without compatible
-redistribution rights.
+Useful candidate contributions include source-backed identity and pin data, a
+corrected rating or package fact, one compatible native asset, a reproducible
+comparison, a field finding, or dated exact-MPN physical evidence. Unknowns and
+missing capabilities must remain explicit.
 
 ## Complete-package promotion
 
-Promote a candidate by completing the full gate in `QUALITY.md`, moving its
-directory from `candidates/` to `components/`, regenerating both catalogs, and
-running all validation.
+Promote a candidate only after completing the full gate in `QUALITY.md`, moving
+the directory to `components/`, regenerating outputs including the component
+graph, and running validation.
 
-The pull request must identify:
+A promotion pull request must identify:
 
-- exact MPN and intended agent use
-- official sources and locators
-- symbol, footprint, and STEP formats, hashes, tool versions, and provenance
-- pin-to-symbol and pin-to-pad checks
-- footprint origin, orientation, layers, mask, paste, courtyard, and keep-outs
-- STEP origin, seating, orientation, envelope, and limitations
+- exact MPN, package, intended use, official sources, and locators
+- symbol-pin and footprint-pad comparisons
+- footprint origin, orientation, layers, mask, paste, courtyard, and applicable
+  process assumptions
+- STEP seating, orientation, nominal envelope, and limitations
+- asset hashes, tool versions, provenance, and rights
 - resolved and remaining findings
-- rights for every included asset
 
-Do not promote a directory merely because all filenames exist. The assets must
-be mutually consistent and verified against the normalized record.
+Existing filenames are not evidence. The assets must be mutually consistent
+with the canonical record.
 
-## Demotion
+## Demotion and returned findings
 
 If a complete package develops an unresolved fabrication-stop finding or loses
 source, asset, hash, or verification integrity, fix it immediately or move the
 whole directory to `candidates/`. Never leave a misleading entry in
 `catalog.json` while work continues elsewhere.
 
-## Returning a finding
+Add returned results to `integration.findings` with type, severity, status,
+scope, date, concise mechanism, and supporting sources. Share only evidence you
+have permission to publish.
 
-Add the result to `integration.findings` with its type, severity, status, scope,
-date, concise mechanism, and supporting sources. Share only evidence you have
-permission to publish. Never upload confidential customer, employer, credential,
-or proprietary project material.
-
-## Sources and rights
-
-Prefer manufacturer datasheets, package drawings, errata, application notes,
-reference designs, standards, and actual test results. Distributor pages may
-support dated availability but do not override manufacturer technical data.
-
-Do not redistribute vendor PDFs, images, symbols, footprints, or STEP files
-unless their terms are recorded and compatible. Original contributions are
-submitted under Apache-2.0 unless explicitly stated otherwise.
-
-## Validate
+## Local validation
 
 ```sh
-python3 -m pip install -r requirements-dev.txt
-python3 scripts/build_catalog.py
-python3 scripts/build_catalog.py --check
-python3 scripts/validate.py
-python3 -m unittest discover -s tests -v
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements-dev.txt
+python scripts/build_catalog.py
+python scripts/build_catalog.py --check
+python scripts/validate.py
+python -m unittest discover -s tests -v
 ```
 
-Inspect the generated `catalog.json` and `candidate-catalog.json` changes before
-submission. The default catalog must change only through a complete-package
-promotion, correction, or demotion.
+Inspect generated `catalog.json`, `candidate-catalog.json`, `CATALOG.md`, KiCad
+library tables, component summaries, and
+`assets/component-catalog-graph.svg` before submission. Every complete exact
+MPN must appear once under its canonical category; candidate devices must stay
+outside the graph.

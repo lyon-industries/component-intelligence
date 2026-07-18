@@ -230,8 +230,8 @@
       "availability": "included",
       "path": "AO3400A.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "8c73b5c6a0f9b0e51c7457fa8d789d4b5b0273ee542c27f177a9cabbb5925b73",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "52c8f7247fd5c54e0de33481e5911075d0a38f611e34faf17a3881f2403a35b5",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -250,8 +250,8 @@
       "availability": "included",
       "path": "AO3400A.pretty/AO3400A.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "93e98753f6f81eead23a3eef6ee67a832cbea871a96285a6948b32d252b4e713",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "ea0d6a9bb49c26d51d122361cc92fd7365a867beaa0819beff21231e90f261a1",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

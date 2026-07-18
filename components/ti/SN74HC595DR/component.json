@@ -1,0 +1,578 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:ti:SN74HC595DR",
+  "identity": {
+    "manufacturer": "Texas Instruments",
+    "manufacturer_slug": "ti",
+    "mpn": "SN74HC595DR",
+    "series": "SN74HC595",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-18"
+  },
+  "classification": {
+    "category": "logic",
+    "function": "8-bit serial-in parallel-out shift register with 3-state output register",
+    "keywords": [
+      "shift register",
+      "serial-in",
+      "parallel-out",
+      "3-state",
+      "SOIC-16",
+      "74HC595"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:ti:SCLS041J",
+      "kind": "datasheet",
+      "publisher": "Texas Instruments",
+      "title": "SNx4HC595 8-Bit Shift Registers With 3-State Output Registers",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74hc595.pdf",
+      "document_number": "SCLS041J",
+      "revision": "Rev. J",
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:25:00Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "0bd24136aa769a7b653f1cf70b422882e0b7fc8519c4ce3b4a6bc9f4a3fff2e3",
+      "byte_size": 2710685,
+      "page_count": 41,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 3,
+          "label": "16-pin D-package pin configuration and functions"
+        },
+        {
+          "page": 4,
+          "label": "Absolute maximum and recommended operating conditions"
+        },
+        {
+          "page": 15,
+          "label": "Layout guidance and bypass recommendation"
+        },
+        {
+          "page": 17,
+          "label": "Current SN74HC595DR active orderable and packaging addendum"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:D0016A",
+      "kind": "package-drawing",
+      "publisher": "Texas Instruments",
+      "title": "D0016A SOIC package outline and example board layout",
+      "url": "https://www.ti.com/lit/pdf/mpds432",
+      "document_number": "MPDS432 / D0016A",
+      "revision": "4214828/B",
+      "published_date": "2021-08-01",
+      "retrieved_at": "2026-07-18T10:25:00Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "322df13e3522508db6d364f5e3d0923994be41f1cd1b21cee2928fa8ee2bb1ce",
+      "byte_size": 259014,
+      "page_count": 4,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "D0016A outline dimensions and pin-one area"
+        },
+        {
+          "page": 2,
+          "label": "D0016A example board layout and solder-mask details"
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:SN74HC595DR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "SN74HC595DR current exact-part status",
+      "url": "https://www.ti.com/product/SN74HC595/part-details/SN74HC595DR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:25:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Active exact MPN, SOIC D package, temperature range, MSL, and 2500-piece large tape-and-reel quantity"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "QB",
+        "function": "Parallel output B.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "2",
+        "name": "QC",
+        "function": "Parallel output C.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "3",
+        "name": "QD",
+        "function": "Parallel output D.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "4",
+        "name": "QE",
+        "function": "Parallel output E.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "5",
+        "name": "QF",
+        "function": "Parallel output F.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "6",
+        "name": "QG",
+        "function": "Parallel output G.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "7",
+        "name": "QH",
+        "function": "Parallel output H.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "8",
+        "name": "GND",
+        "function": "Ground.",
+        "electrical_type": "ground",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "9",
+        "name": "QH'",
+        "function": "Serial output from the final shift-register stage.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "10",
+        "name": "/SRCLR",
+        "function": "Active-low shift-register clear input.",
+        "electrical_type": "input",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, SRCLR pin function"
+      },
+      {
+        "number": "11",
+        "name": "SRCLK",
+        "function": "Shift-register clock input.",
+        "electrical_type": "input",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "12",
+        "name": "RCLK",
+        "function": "Storage-register clock input.",
+        "electrical_type": "input",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "13",
+        "name": "/OE",
+        "function": "Active-low output-enable input.",
+        "electrical_type": "input",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, OE pin function"
+      },
+      {
+        "number": "14",
+        "name": "SER",
+        "function": "Serial data input.",
+        "electrical_type": "input",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "15",
+        "name": "QA",
+        "function": "Parallel output A.",
+        "electrical_type": "output",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, pin functions"
+      },
+      {
+        "number": "16",
+        "name": "VCC",
+        "function": "Positive supply.",
+        "electrical_type": "power-input",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 3, D-package top view"
+      }
+    ],
+    "ratings": [
+      {
+        "key": "supply-voltage",
+        "name": "recommended supply voltage",
+        "value": {
+          "min": 2,
+          "typ": 5,
+          "max": 6
+        },
+        "unit": "V",
+        "boundary": "recommended-operating",
+        "qualifier": "SN74HC595 operating range over the specified free-air temperature range.",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 4, recommended operating conditions"
+      },
+      {
+        "key": "continuous-output-current",
+        "name": "continuous output current",
+        "value": {
+          "min": -35,
+          "max": 35
+        },
+        "unit": "mA",
+        "boundary": "absolute-maximum",
+        "qualifier": "Stress limit per output; guaranteed logic levels use lower test currents and total package-current limits also apply.",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 4, absolute maximum ratings"
+      },
+      {
+        "key": "operating-temperature",
+        "name": "operating free-air temperature",
+        "value": {
+          "min": -40,
+          "max": 85
+        },
+        "unit": "°C",
+        "boundary": "recommended-operating",
+        "qualifier": "SN74 grade.",
+        "source_id": "source:ti:SCLS041J",
+        "locator": "page 4, recommended operating conditions"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "SOIC-16",
+    "manufacturer_code": "D",
+    "mounting": "surface-mount",
+    "pin_count": 16,
+    "pitch_mm": 1.27,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 9.9
+      },
+      "width": {
+        "typ": 3.9
+      },
+      "height": {
+        "max": 1.75
+      },
+      "overall_width": {
+        "typ": 6.0
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:ti:D0016A",
+      "locator": "page 2, D0016A; 1.55 x 0.60 mm pads, 1.27 mm pitch, and 5.40 mm row-center spacing independently recomputed",
+      "pad_count": 16,
+      "dimensions_mm": {
+        "contact_pitch": 1.27,
+        "row_center_spacing": 5.4,
+        "pad_length": 1.55,
+        "pad_width": 0.6
+      },
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -2.7,
+          "y_mm": -4.445,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "2",
+          "x_mm": -2.7,
+          "y_mm": -3.175,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "3",
+          "x_mm": -2.7,
+          "y_mm": -1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "4",
+          "x_mm": -2.7,
+          "y_mm": -0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "5",
+          "x_mm": -2.7,
+          "y_mm": 0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "6",
+          "x_mm": -2.7,
+          "y_mm": 1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "7",
+          "x_mm": -2.7,
+          "y_mm": 3.175,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "8",
+          "x_mm": -2.7,
+          "y_mm": 4.445,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "9",
+          "x_mm": 2.7,
+          "y_mm": 4.445,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "10",
+          "x_mm": 2.7,
+          "y_mm": 3.175,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "11",
+          "x_mm": 2.7,
+          "y_mm": 1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "12",
+          "x_mm": 2.7,
+          "y_mm": 0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "13",
+          "x_mm": 2.7,
+          "y_mm": -0.635,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "14",
+          "x_mm": 2.7,
+          "y_mm": -1.905,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "15",
+          "x_mm": 2.7,
+          "y_mm": -3.175,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        },
+        {
+          "number": "16",
+          "x_mm": 2.7,
+          "y_mm": -4.445,
+          "width_mm": 1.55,
+          "height_mm": 0.6
+        }
+      ],
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top-view footprint; pin 1 is upper-left and pins increase counter-clockwise."
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "SN74HC595DR.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "28269663caaed286003577196ae36bfcb774e89d09a6f9a4c996e5fdd280e066",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries functional symbol serialized from the reviewed D-package pin map.",
+      "source_ids": [
+        "source:ti:SCLS041J",
+        "source:ti:product:SN74HC595DR"
+      ],
+      "limitations": [
+        "Single-unit functional block; it does not replace timing, fanout, output-drive, or power-integrity analysis."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "SN74HC595DR.pretty/SN74HC595DR.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "5996d6afbe23bb99c4af44dfbfdf2302de4bdbd8c79414da11bca3095e7d5da5",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries footprint serialized from TI D0016A land-pattern dimensions.",
+      "source_ids": [
+        "source:ti:D0016A"
+      ],
+      "limitations": [
+        "Assembly-process solder-paste adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "SN74HC595DR.3dshapes/SN74HC595DR.step",
+      "format": "STEP AP214",
+      "sha256": "37428efb8c6df02eb4ab0ce3e86c067f10aa5cc0d7a8ca74357b53614376b60d",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal envelope model generated from TI D0016A dimensions and land pattern.",
+      "source_ids": [
+        "source:ti:D0016A"
+      ],
+      "limitations": [
+        "Nominal seating and clearance envelope only; package tolerances, markings, cosmetic and internal details, and detailed lead form are omitted."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": "large tape and reel",
+      "quantity": 2500,
+      "source_id": "source:ti:product:SN74HC595DR",
+      "locator": "exact-part packaging information"
+    },
+    "orientation": {
+      "status": "partial",
+      "description": "SOIC pin-one orientation is documented; tape-pocket rotation and machine convention are not normalized in this record.",
+      "source_id": "source:ti:D0016A",
+      "locator": "page 1, pin-one ID area"
+    },
+    "notes": [
+      "Place a local bypass capacitor close to VCC and GND.",
+      "Tie every unused CMOS input to a defined logic level."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "Unused CMOS inputs must not float; undefined SRCLR, SRCLK, RCLK, SER, or OE states can cause excess current, spurious clocks, or unintended outputs.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:ti:SCLS041J"
+        ]
+      },
+      {
+        "id": "finding:02",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The ±35 mA output-current figure is an absolute stress limit, not a guaranteed drive point; logic-level, package-current, switching, and thermal limits govern the usable load.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:ti:SCLS041J"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-18",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Captured and hashed the official data sheet and D0016A package drawing and recorded exact page locators.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared exact MPN, active status, SOIC D package, pin count, temperature range, MSL, and reel quantity against the official exact-part page and orderable addendum.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Converted TI D0016A pad size, pitch, and row spacing into explicit centroids, then independently checked symmetry, numbering, and count.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "native CAD replay and geometry gate",
+        "status": "pass",
+        "method": "Replayed the KiCad 10 symbol and footprint from the record, parsed pin and pad semantics, checked silk and courtyard rules, reopened STEP, and measured seating and envelope.",
+        "date": "2026-07-18"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on linked official manufacturer sources.",
+    "source_rights_status": "linked-only"
+  }
+}

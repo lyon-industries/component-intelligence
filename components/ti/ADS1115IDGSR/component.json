@@ -315,8 +315,8 @@
       "availability": "included",
       "path": "ADS1115IDGSR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "79208826c44069e1ed51deaa01e38fe3a6cf0d379f7cbdf3f4bc8989908dccf2",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "e462e8b604049fa4571b2b1eaa6f06203dd090f865e33ad3f7bc2d1748d3fedc",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -334,8 +334,8 @@
       "availability": "included",
       "path": "ADS1115IDGSR.pretty/ADS1115IDGSR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "822c62d919d7941a83eb97be9e6ea73a495f0a479a103f65404d904e8adb0827",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "0d6f2871d089aa5173973b45312463083538f80d8a1c9e383a4fb3c305f61acd",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -353,7 +353,7 @@
       "availability": "included",
       "path": "ADS1115IDGSR.3dshapes/ADS1115IDGSR.step",
       "format": "STEP AP214",
-      "sha256": "fc200096f42e20e82c94df1700a4a49b32dd965cdcf4170a6e48cbba5dfed421",
+      "sha256": "b57a2a3939965ba1dc5ac1f39da8510c122f4d9376a1323b6b678670227e9f51",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [
@@ -435,24 +435,6 @@
         "name": "explicit land-pattern arithmetic",
         "status": "pass",
         "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "native symbol pin-map verification",
-        "status": "pass",
-        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "native footprint geometry verification",
-        "status": "pass",
-        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "STEP placement and envelope verification",
-        "status": "pass",
-        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
         "date": "2026-07-16"
       },
       {

@@ -277,8 +277,8 @@
       "availability": "included",
       "path": "PTS815SJM250SMTRLFS.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "b70751c3beb130edb542a41a63ee9855af519ec733a3dfa491335832aa53d6f2",
-      "tool_version": "KiCad 10.0.4",
+      "sha256": "d594c0c458d95841648fb704731aacbbfb4413ccde04fc7f0a436a79272e482b",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -293,8 +293,8 @@
       "availability": "included",
       "path": "PTS815SJM250SMTRLFS.pretty/PTS815SJM250SMTRLFS.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "a0152d83b973b34ea82b0c2da4e07874203f2ad615b9cdef79e37005b2e4108a",
-      "tool_version": "KiCad 10.0.4",
+      "sha256": "cd8c6f31fd6560111920affa7127e4c7539748e2daeadeba863f430db5ac1349",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -309,7 +309,7 @@
       "availability": "included",
       "path": "PTS815SJM250SMTRLFS.3dshapes/PTS815SJM250SMTRLFS.step",
       "format": "STEP AP214",
-      "sha256": "09f40058b23ceede62613d0e228fe3d85f09bd77a94c278d4b591528b69c3409",
+      "sha256": "f1b7ab94fa931bd9f5a18993c1cdbb6b26a38a269a3d48ac63c7070935b6a44d",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [

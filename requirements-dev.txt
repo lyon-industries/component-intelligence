@@ -1,1 +1,2 @@
+cadquery==2.8.0
 jsonschema>=4.23,<5

@@ -251,8 +251,8 @@
       "availability": "included",
       "path": "TCAN332DR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "d7a234d1b29d46df48947b180625dfa201c2718aeb58f53a0b0f46244c365c87",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "d58c8e846634d56e86ca774b80c0094ca173f1075617a910152dd68a96ebe1e4",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -270,8 +270,8 @@
       "availability": "included",
       "path": "TCAN332DR.pretty/TCAN332DR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "839280c089614e6176b0f479df28e49171cc3fa99896863f6c5e0744d3e03590",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "bf6e8e214b777ae6eae7fa1a2919ce3d238910dd2e4147ddda274377ffb3d335",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

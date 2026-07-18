@@ -464,8 +464,8 @@
       "availability": "included",
       "path": "STM32C011F6P6TR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "125ffcb08e974b0f6068854f2cbca518ca5fafce57ce5598787a502f3591d116",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "473b3d5686a73924ec9961ffafbecfa5a4a903318fee003e9521612d348212e7",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -483,8 +483,8 @@
       "availability": "included",
       "path": "STM32C011F6P6TR.pretty/STM32C011F6P6TR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "818bbc04d77e6d0c43dbbb42bc32edd78ed3aca85dc3322d83ae4e0fbbe04e2e",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "95c57d1c9e6766237543c890fe1e927a905a1dcbcf13b5cb402f3a5a5b426f28",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -502,7 +502,7 @@
       "availability": "included",
       "path": "STM32C011F6P6TR.3dshapes/STM32C011F6P6TR.step",
       "format": "STEP AP214",
-      "sha256": "bff2fc682ebf8b1495e228eb444cfd0d41c772b902fc93f4f43460ebe9678a34",
+      "sha256": "0a9f97d155a440a90c89eb5f64082c1ff2aa359c8cd79c8de8a4cf2efbef0cf2",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [

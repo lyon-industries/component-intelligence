@@ -232,8 +232,8 @@
       "availability": "included",
       "path": "SN74LVC1G86DBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "32778563f865084ff73f2eed09ef2f7c3f5cea2f72a6f8e4be2c3d56aaf0e5d2",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "e426becf5861ea8a517fd6cd30a6c865be3612bef4d17dc84d8105e0d45f0c75",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -251,8 +251,8 @@
       "availability": "included",
       "path": "SN74LVC1G86DBVR.pretty/SN74LVC1G86DBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "f59aef923a8cdddfb0e4a55bb81cf9a9f8f778b2861e1a0577c6308b1c000f86",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "66c393539e5c7f92f302b0919b8b9f6242d73ac1166495808b21c1a7e2d53545",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

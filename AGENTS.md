@@ -53,10 +53,39 @@ Before moving a directory into `components/`:
 - check symbol pins, footprint pads, layers, origin, orientation, and STEP
   placement against the normalized record
 - resolve every fabrication-stop finding
-- regenerate catalogs and pass all validation
+- regenerate catalogs, summaries, KiCad tables, and the component graph, then
+  pass all validation
 
 Native assets own engineering authority. SVG and PNG previews may assist review
 but are never substitutes for the symbol, footprint, or STEP file.
+
+## Generated catalog graph
+
+`assets/component-catalog-graph.svg` is the 1600 × 900 README overview. It is
+generated from canonical records by `scripts/build_catalog.py`; never edit the
+SVG by hand.
+
+- Every complete exact MPN must appear exactly once as a device node.
+- Candidate devices must never appear as device nodes.
+- Category labels come from the canonical `classification.category` field.
+- Higher-level engineering domains are a maintained presentation taxonomy, not
+  additional canonical component metadata.
+- A new complete-tier category must be placed explicitly in `DOMAINS` inside
+  `scripts/generate_component_graph.py`. Generation must fail on an unmapped
+  category rather than guess a branch.
+- The 16:9 renderer must not truncate an MPN or shrink device text below its
+  declared minimum. Revise the layout when its capacity is reached.
+- Follow the current Lyon Industries visual contract: Deep-Space/Abyssal field,
+  Contrail and Atmosphere type, Helvetica Neue plus the mono data layer, and
+  one Propellant ignition. Do not reintroduce multicolour domains, glow, a
+  decorative grid, dashboard cards, or capsule labels.
+- The graph is a metadata artifact, not generated imagery. Do not add stock or
+  AI-generated technical decoration.
+
+Before opening a pull request that changes complete-tier metadata, run
+`python3 scripts/build_catalog.py`, inspect the graph, and then run the checks
+below. Candidate-only changes update the staged count but remain outside the
+device graph.
 
 ## Candidate contributions
 
@@ -112,6 +141,7 @@ Do not commit unbuilt coupons or placeholder test projects.
 
 ```sh
 python3 -m pip install -r requirements-dev.txt
+python3 scripts/build_catalog.py
 python3 scripts/build_catalog.py --check
 python3 scripts/validate.py
 python3 -m unittest discover -s tests -v

@@ -604,6 +604,41 @@
       "active_findings": 1
     },
     {
+      "id": "component:ti:INA219AIDR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "INA219AIDR",
+      "category": "current-sensor",
+      "function": "26 V 12-bit bidirectional current and power monitor with I2C interface",
+      "keywords": [
+        "current sense",
+        "power monitor",
+        "I2C",
+        "26 V",
+        "SOIC-8"
+      ],
+      "package": "SOIC-8",
+      "path": "components/ti/INA219AIDR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
+      "rating_keys": [
+        "bus-voltage",
+        "resolution",
+        "shunt-full-scale-voltage",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 2
+    },
+    {
       "id": "component:ti:LM358DR",
       "manufacturer_slug": "ti",
       "manufacturer": "Texas Instruments",
@@ -860,6 +895,41 @@
         "physically_tested": false
       },
       "active_findings": 1
+    },
+    {
+      "id": "component:ti:SN74HC595DR",
+      "manufacturer_slug": "ti",
+      "manufacturer": "Texas Instruments",
+      "mpn": "SN74HC595DR",
+      "category": "logic",
+      "function": "8-bit serial-in parallel-out shift register with 3-state output register",
+      "keywords": [
+        "shift register",
+        "serial-in",
+        "parallel-out",
+        "3-state",
+        "SOIC-16",
+        "74HC595"
+      ],
+      "package": "SOIC-16",
+      "path": "components/ti/SN74HC595DR/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
+      "rating_keys": [
+        "continuous-output-current",
+        "operating-temperature",
+        "supply-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 2
     },
     {
       "id": "component:ti:SN74LVC1G00DBVR",
@@ -1308,6 +1378,145 @@
       "rating_keys": [
         "output-current",
         "output-voltage"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:wurth-elektronik:150060RS75003",
+      "manufacturer_slug": "wurth-elektronik",
+      "manufacturer": "Würth Elektronik eiSos",
+      "mpn": "150060RS75003",
+      "category": "diode",
+      "function": "red water-clear 0603 light-emitting diode",
+      "keywords": [
+        "LED",
+        "red",
+        "625 nm",
+        "0603",
+        "water-clear"
+      ],
+      "package": "0603 (1608 metric)",
+      "path": "components/wurth-elektronik/150060RS75003/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
+      "rating_keys": [
+        "continuous-forward-current",
+        "dominant-wavelength",
+        "forward-voltage",
+        "luminous-intensity"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:wurth-elektronik:560112116005",
+      "manufacturer_slug": "wurth-elektronik",
+      "manufacturer": "Würth Elektronik eiSos",
+      "mpn": "560112116005",
+      "category": "resistor",
+      "function": "10 kΩ 1% 0.1 W anti-sulfur thick-film resistor",
+      "keywords": [
+        "resistor",
+        "10 kΩ",
+        "1%",
+        "0603",
+        "anti-sulfur"
+      ],
+      "package": "0603 (1608 metric)",
+      "path": "components/wurth-elektronik/560112116005/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
+      "rating_keys": [
+        "limiting-element-voltage",
+        "rated-power",
+        "resistance"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:wurth-elektronik:74404024100",
+      "manufacturer_slug": "wurth-elektronik",
+      "manufacturer": "Würth Elektronik eiSos",
+      "mpn": "74404024100",
+      "category": "inductor",
+      "function": "10 µH 0.65 A semi-shielded power inductor",
+      "keywords": [
+        "inductor",
+        "10 µH",
+        "power inductor",
+        "semi-shielded",
+        "2512"
+      ],
+      "package": "2512 (2520 metric)",
+      "path": "components/wurth-elektronik/74404024100/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
+      "rating_keys": [
+        "dc-resistance",
+        "inductance",
+        "rated-current",
+        "saturation-current"
+      ],
+      "capabilities": {
+        "identity_verified": true,
+        "data_cross_checked": true,
+        "symbol_verified": true,
+        "footprint_verified": true,
+        "step_verified": true,
+        "physically_tested": false
+      },
+      "active_findings": 1
+    },
+    {
+      "id": "component:wurth-elektronik:885382206004",
+      "manufacturer_slug": "wurth-elektronik",
+      "manufacturer": "Würth Elektronik eiSos",
+      "mpn": "885382206004",
+      "category": "capacitor",
+      "function": "100 nF 50 V X7R ±10% soft-termination MLCC",
+      "keywords": [
+        "capacitor",
+        "100 nF",
+        "50 V",
+        "X7R",
+        "0603",
+        "soft termination"
+      ],
+      "package": "0603 (1608 metric)",
+      "path": "components/wurth-elektronik/885382206004/component.json",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
+      "rating_keys": [
+        "capacitance",
+        "operating-temperature",
+        "rated-voltage"
       ],
       "capabilities": {
         "identity_verified": true,

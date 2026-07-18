@@ -206,8 +206,8 @@
       "availability": "included",
       "path": "TLV7031DBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "a518f52c3c0fdbeacb24445077577be1365413540f9e0325aa7137bd7dc5e367",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "caffe35088a052f50a8355732ee7f999ee50e809dae75fa53b0dbbc0af503bb8",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -225,8 +225,8 @@
       "availability": "included",
       "path": "TLV7031DBVR.pretty/TLV7031DBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "4e94e61243764b2bf2ec393632eb46dd88be06c4adadfcb759b8c2d3bc9d91d5",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "fb7216afacb38418b10c93d3d9922e02ab6639e8cb4050151a618bd136d1f67c",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

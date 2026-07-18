@@ -1,0 +1,106 @@
+name: Component request
+description: Request a source-backed exact-MPN candidate or complete package.
+title: "[component request]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request one exact manufacturer part number, not a family or distributor search. A request does not promise catalog admission: official sources, exact package identity, native CAD, rights, and validation still control promotion. Do not submit confidential project or sourcing data.
+
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Manufacturer
+      placeholder: Würth Elektronik
+    validations:
+      required: true
+
+  - type: input
+    id: exact_mpn
+    attributes:
+      label: Exact manufacturer part number
+      description: Include the complete orderable suffix and preserve punctuation.
+      placeholder: 885382206004
+    validations:
+      required: true
+
+  - type: input
+    id: package
+    attributes:
+      label: Exact package or case
+      description: Use the manufacturer's package designator and dimensions where known. Do not infer geometry from a generic family name.
+      placeholder: 0603 / 1608 metric, manufacturer package code ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Engineering use and decision
+      description: Explain what this component would enable and why this exact MPN is a useful standard addition rather than merely an interesting part.
+      placeholder: Used as ...; the catalog entry would help engineers decide or verify ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: official_sources
+    attributes:
+      label: Official sources and exact locators
+      description: Link the manufacturer product page, datasheet, package drawing, errata, or application note. Add page, table, figure, drawing, section, and revision where relevant. Distributor links may supplement but not replace manufacturer evidence.
+      placeholder: |
+        - Product page URL
+        - Datasheet URL, revision/date, page and table
+        - Package drawing URL, page and land-pattern figure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: needed_assets
+    attributes:
+      label: Needed record and assets
+      description: Select the capabilities that matter to the use case.
+      multiple: true
+      options:
+        - Source-backed identity, pins, ratings, and package data
+        - Native KiCad symbol
+        - Native KiCad footprint
+        - Nominal STEP model for mechanical clearance
+        - Assembly, thermal, or manufacturing data
+        - Physical-test finding
+    validations:
+      required: true
+
+  - type: input
+    id: tool_versions
+    attributes:
+      label: Target EDA and CAD versions
+      description: State the KiCad and mechanical-CAD or STEP-viewer versions that must consume the assets. Enter `No preference` if unconstrained.
+      placeholder: KiCad 10; STEP AP214 in FreeCAD 1.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: process_context
+    attributes:
+      label: Fabrication, assembly, and application context
+      description: "State only public or sanitized constraints that affect the package: fab rules, soldering process, stencil, voltage/current, temperature, clearance, enclosure, or lifecycle need."
+      placeholder: Optional; do not attach proprietary board files, fab data, customer information, or employer material.
+
+  - type: textarea
+    id: existing_assets
+    attributes:
+      label: Existing public artifacts or contribution offer
+      description: Link compatible-rights CAD, calculations, tests, or prior art. Say which source-backed candidate work you can contribute. Third-party CAD is not accepted without recorded redistribution rights.
+      placeholder: Optional links and contribution scope
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched the complete catalog, candidate catalog, and open issues for this exact MPN.
+          required: true
+        - label: This request identifies one exact orderable MPN and package, not a component family.
+          required: true
+        - label: I removed confidential, proprietary, credential, sourcing, and customer-identifying material.
+          required: true

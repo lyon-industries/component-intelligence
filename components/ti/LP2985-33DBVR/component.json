@@ -218,8 +218,8 @@
       "availability": "included",
       "path": "LP2985-33DBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "5e59105cc7c2ab6aeb09dc308e9c960dbbce5912c961e99cf580479418a13d95",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "7cb4df277211f8902e65688ada5bc6398c0a1427d54c39d6a863b984e3522b56",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -237,8 +237,8 @@
       "availability": "included",
       "path": "LP2985-33DBVR.pretty/LP2985-33DBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "0a2bb16cdcc690c645382d9ee8d2e99c2e4d144fc7a997741ef900f99938b5ce",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "5782679fbddcdef5a1a6fba637c02ac17aad80effaa9b84b2a0c88cd5ccb5179",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

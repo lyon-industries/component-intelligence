@@ -21,6 +21,7 @@ class DocumentationTests(unittest.TestCase):
             ROOT / "CONTRIBUTING.md",
             ROOT / "QUALITY.md",
             ROOT / "README.md",
+            ROOT / "assets" / "README.md",
             *sorted((ROOT / "docs").glob("*.md")),
             *sorted((ROOT / "components").glob("*/*/README.md")),
             *sorted((ROOT / "candidates").glob("*/*/README.md")),
@@ -40,6 +41,13 @@ class DocumentationTests(unittest.TestCase):
                     )
 
         self.assertEqual([], missing)
+
+    def test_generated_component_graph_is_prominent_in_readme(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        graph_reference = 'src="assets/component-catalog-graph.svg"'
+        self.assertIn(graph_reference, readme)
+        self.assertLess(readme.index(graph_reference), readme.index("## Audited state"))
+        self.assertTrue((ROOT / "assets" / "component-catalog-graph.svg").is_file())
 
 
 if __name__ == "__main__":

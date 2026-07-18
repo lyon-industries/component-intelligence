@@ -263,8 +263,8 @@
       "availability": "included",
       "path": "SN65HVD75DR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "660399d111c3b937fa5e31c8dbae324d1db0a60f7fc48e3c9434d165a980717d",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "3199ab9d368b4766a3398998f3c49d27ee62a8a6e29ac6c93c56deaebc82cff3",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -282,8 +282,8 @@
       "availability": "included",
       "path": "SN65HVD75DR.pretty/SN65HVD75DR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "a1cbc33c261df27148c34ffac48dacdda168b5a898c231d8bcb9f7eae8448c51",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "2ff9d7b78ff108c70311996c6312324993813d6224863bcf8b8c84e7e5699e66",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

@@ -8,6 +8,7 @@ import json
 import math
 import re
 import sys
+from collections import Counter
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
 from pathlib import Path
@@ -17,8 +18,24 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 try:
     from scripts.build_catalog import CATALOGS, build_catalog, load_records, render_readme
+    from scripts.generate_native_assets import (
+        body_height,
+        footprint_text,
+        native_asset_name,
+        oriented_body_dimensions,
+        pin_electrical_type,
+        symbol_text,
+    )
 except ModuleNotFoundError:
     from build_catalog import CATALOGS, build_catalog, load_records, render_readme
+    from generate_native_assets import (
+        body_height,
+        footprint_text,
+        native_asset_name,
+        oriented_body_dimensions,
+        pin_electrical_type,
+        symbol_text,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,43 +57,145 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def validate_native_asset(record: dict[str, object], name: str, asset_path: Path) -> list[str]:
+def _on_grid(value: float, grid: float = 0.05) -> bool:
+    return math.isclose(value / grid, round(value / grid), abs_tol=1e-7)
+
+
+def _silk_line_hits_pad(
+    line: tuple[float, float, float, float, float],
+    pad: tuple[float, float, float, float],
+    clearance: float = 0.2,
+) -> bool:
+    x1, y1, x2, y2, width = line
+    px, py, pw, ph = pad
+    margin = clearance + width / 2
+    xmin, xmax = px - pw / 2 - margin, px + pw / 2 + margin
+    ymin, ymax = py - ph / 2 - margin, py + ph / 2 + margin
+    if math.isclose(y1, y2):
+        return ymin <= y1 <= ymax and max(min(x1, x2), xmin) <= min(max(x1, x2), xmax)
+    if math.isclose(x1, x2):
+        return xmin <= x1 <= xmax and max(min(y1, y2), ymin) <= min(max(y1, y2), ymax)
+    return False
+
+
+def _validate_step_geometry(record: dict[str, object], asset_path: Path) -> list[str]:
+    errors: list[str] = []
+    try:
+        import cadquery as cq
+    except ImportError:
+        return ["CadQuery is required to reopen and measure included STEP models"]
+    try:
+        model = cq.importers.importStep(str(asset_path))
+        solid_count = model.solids().size()
+        bounds = model.val().BoundingBox()
+    except Exception as exc:  # pragma: no cover - backend error text varies
+        return [f"STEP model could not be reopened: {exc}"]
+    if solid_count < 1:
+        errors.append("STEP model contains no reopenable solid")
+        return errors
+    expected_x, expected_y = oriented_body_dimensions(record)
+    expected_z = body_height(record)
+    if not math.isclose(bounds.zmin, 0, abs_tol=0.02):
+        errors.append(f"STEP seating plane is z={bounds.zmin:g} mm, expected 0 mm")
+    if not math.isclose(bounds.zmax, expected_z, abs_tol=0.05):
+        errors.append(f"STEP height is {bounds.zmax:g} mm, expected {expected_z:g} mm")
+    if bounds.xlen + 0.05 < expected_x or bounds.ylen + 0.05 < expected_y:
+        errors.append("STEP body envelope is smaller than the normalized body dimensions")
+    pads = record["package"]["land_pattern"]["pads"]
+    pad_span_x = 2 * max(abs(float(pad["x_mm"])) + float(pad["width_mm"]) / 2 for pad in pads)
+    pad_span_y = 2 * max(abs(float(pad["y_mm"])) + float(pad["height_mm"]) / 2 for pad in pads)
+    if bounds.xlen > max(expected_x, pad_span_x) + 0.5 or bounds.ylen > max(expected_y, pad_span_y) + 0.5:
+        errors.append("STEP envelope exceeds the normalized body and land-pattern envelope")
+    return errors
+
+
+def validate_native_asset(record: dict[str, object], name: str, asset_path: Path, area: str) -> list[str]:
     """Check that native CAD structure agrees with the normalized record."""
     errors: list[str] = []
     text = asset_path.read_text(encoding="utf-8", errors="replace")
     expected_pins = {pin["number"] for pin in record["electrical"]["pins"]}
-    expected_pads = {
-        pad["number"]: (float(pad["x_mm"]), float(pad["y_mm"]), float(pad["width_mm"]), float(pad["height_mm"]))
+    expected_pads = [
+        (pad["number"], float(pad["x_mm"]), float(pad["y_mm"]), float(pad["width_mm"]), float(pad["height_mm"]))
         for pad in record["package"]["land_pattern"]["pads"]
-    }
+    ]
     if name == "symbol":
         if not text.startswith("(kicad_symbol_lib"):
             errors.append("symbol is not a KiCad symbol library")
-        actual = set(re.findall(r'\(number\s+"([^"]+)"', text))
-        if actual != expected_pins:
-            errors.append(f"symbol pins {sorted(actual)} differ from record {sorted(expected_pins)}")
+        if text != symbol_text(record):
+            errors.append("symbol is not reproducible from the current reviewed record and generator")
+        pattern = re.compile(
+            r'\(pin\s+([a-z_]+)\s+\w+.*?\(name\s+"([^"]*)".*?\(number\s+"([^"]+)"',
+            re.DOTALL,
+        )
+        parsed = pattern.findall(text)
+        actual = {number: (pin_name, electrical_type) for electrical_type, pin_name, number in parsed}
+        expected = {
+            pin["number"]: (pin["name"], pin_electrical_type(pin["electrical_type"]))
+            for pin in record["electrical"]["pins"]
+        }
+        if len(parsed) != len(actual):
+            errors.append("symbol contains duplicate pin numbers")
+        if actual != expected:
+            errors.append("symbol pin numbers, names, or electrical types differ from record")
     elif name == "footprint":
         if not text.startswith("(footprint"):
             errors.append("footprint is not a KiCad footprint")
+        if text != footprint_text(record, area):
+            errors.append("footprint is not reproducible from the current reviewed record and generator")
         if '(layer "F.CrtYd")' not in text or '(layer "F.Fab")' not in text:
             errors.append("footprint lacks F.CrtYd or F.Fab geometry")
         pattern = re.compile(
-            r'\(pad\s+"([^"]+)"\s+smd\s+\w+\s+\(at\s+([-+\d.eE]+)\s+([-+\d.eE]+)(?:\s+[-+\d.eE]+)?\)\s+\(size\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)'
+            r'\(pad\s+"([^"]+)"\s+smd\s+\w+\s+\(at\s+([-+\d.eE]+)\s+([-+\d.eE]+)(?:\s+[-+\d.eE]+)?\)\s+\(size\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)\s+\(layers\s+([^\)]+)\)'
         )
-        actual = {number: tuple(float(value) for value in values) for number, *values in pattern.findall(text)}
-        same_pad_geometry = actual.keys() == expected_pads.keys() and all(
-            all(math.isclose(actual[number][index], expected_pads[number][index], abs_tol=1e-6) for index in range(4))
-            for number in expected_pads
-        )
-        if not same_pad_geometry:
+        parsed_pads = pattern.findall(text)
+        actual_pads = [
+            (number, float(x), float(y), float(width), float(height))
+            for number, x, y, width, height, _ in parsed_pads
+        ]
+        rounded_actual = Counter((number, *(round(value, 6) for value in values)) for number, *values in actual_pads)
+        rounded_expected = Counter((number, *(round(value, 6) for value in values)) for number, *values in expected_pads)
+        if rounded_actual != rounded_expected:
             errors.append("footprint pad coordinates or sizes differ from record")
-        if ".step\"" not in text:
-            errors.append("footprint does not reference its STEP model")
+        for number, *_, layers in parsed_pads:
+            if not {'"F.Cu"', '"F.Paste"', '"F.Mask"'}.issubset(set(layers.split())):
+                errors.append(f"footprint pad {number} lacks F.Cu, F.Paste, or F.Mask")
+        if {pad[0] for pad in expected_pads} != expected_pins:
+            errors.append("footprint pad numbers differ from the electrical pin map")
+        if not re.search(r'\(property\s+"Reference"\s+"REF\*\*"', text):
+            errors.append("footprint reference field is not REF**")
+        if f'(property "Value" "{native_asset_name(record["identity"]["mpn"])}"' not in text:
+            errors.append("footprint value does not match its KiCad-safe native name")
+        if not re.search(r'\(fp_text\s+user\s+"\$\{REFERENCE\}".*?\(layer\s+"F\.Fab"\)', text, re.DOTALL):
+            errors.append("footprint lacks the F.Fab reference text")
+        pin_names = {str(pin["name"]).strip().lower() for pin in record["electrical"]["pins"]}
+        needs_pin_one_marker = len(record["electrical"]["pins"]) > 2 or bool(
+            pin_names & {"a", "k", "anode", "cathode", "+", "-"}
+        )
+        if needs_pin_one_marker and not re.search(r'\(fp_circle.*?\(layer\s+"F\.SilkS"\)', text, re.DOTALL):
+            errors.append("footprint lacks a silkscreen pin-one marker")
+        courtyard_pattern = re.compile(
+            r'\(fp_line\s+\(start\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)\s+\(end\s+([-+\d.eE]+)\s+([-+\d.eE]+)\).*?\(layer\s+"F\.CrtYd"\)',
+            re.DOTALL,
+        )
+        courtyard = [tuple(float(value) for value in match) for match in courtyard_pattern.findall(text)]
+        if len(courtyard) != 4 or any(not _on_grid(value) for line in courtyard for value in line):
+            errors.append("footprint courtyard is not a four-line rectangle on the 0.05 mm grid")
+        silk_pattern = re.compile(
+            r'\(fp_line\s+\(start\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)\s+\(end\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)\s+\(stroke\s+\(width\s+([-+\d.eE]+)\)[^\n]*?\(layer\s+"F\.SilkS"\)',
+        )
+        silk_lines = [tuple(float(value) for value in match) for match in silk_pattern.findall(text)]
+        pad_rects = [(x, y, width, height) for _, x, y, width, height in expected_pads]
+        if any(_silk_line_hits_pad(line, pad) for line in silk_lines for pad in pad_rects):
+            errors.append("footprint silkscreen violates the 0.20 mm pad clearance")
+        expected_model = f'${{COMPONENT_INTELLIGENCE_ROOT}}/{area}/{record["identity"]["manufacturer_slug"]}/{quote(record["identity"]["mpn"], safe="-._~")}/{record["cad"]["step_model"]["path"]}'
+        if f'(model "{expected_model}"' not in text:
+            errors.append("footprint STEP path does not match the record and repository layout")
     elif name == "step_model":
         if not text.lstrip().startswith("ISO-10303-21;") or "END-ISO-10303-21;" not in text:
             errors.append("STEP model is not a complete ISO-10303-21 exchange file")
         if not any(token in text for token in ("MANIFOLD_SOLID_BREP", "FACETED_BREP", "SHELL_BASED_SURFACE_MODEL")):
             errors.append("STEP model contains no supported solid or shell representation")
+        errors.extend(_validate_step_geometry(record, asset_path))
     return errors
 
 
@@ -197,6 +316,10 @@ def validate_repository(root: Path = ROOT, *, today: date | None = None) -> tupl
             errors.append(f"{relative}: land pattern references unknown source")
         if land["pads"] and len(land["pads"]) != land["pad_count"]:
             errors.append(f"{relative}: explicit pad count differs from land pattern")
+        for dimension, value in record["package"]["body_dimensions_mm"].items():
+            candidates = [value] if isinstance(value, (int, float)) else value.values()
+            if any(float(candidate) <= 0 for candidate in candidates):
+                errors.append(f"{relative}: body dimension {dimension} must be positive")
 
         verification = record["verification"]
         for name, asset in record["cad"].items():
@@ -217,7 +340,7 @@ def validate_repository(root: Path = ROOT, *, today: date | None = None) -> tupl
                         else:
                             errors.extend(
                                 f"{relative}: {name}: {message}"
-                                for message in validate_native_asset(record, name, asset_path)
+                                for message in validate_native_asset(record, name, asset_path, area)
                             )
             elif asset["path"] or asset["format"] or asset["sha256"] or asset["tool_version"]:
                 errors.append(f"{relative}: unavailable {name} carries a local asset claim")
@@ -235,6 +358,9 @@ def validate_repository(root: Path = ROOT, *, today: date | None = None) -> tupl
         if any(test["exact_mpn"] != identity["mpn"] for test in evidence):
             errors.append(f"{relative}: physical test exact MPN differs")
         counts["tested"] += int(verification["physically_tested"])
+        check_names = [check["name"] for check in verification["checks"]]
+        if len(check_names) != len(set(check_names)):
+            errors.append(f"{relative}: duplicate verification check name")
 
         finding_ids = [finding["id"] for finding in record["integration"]["findings"]]
         if len(finding_ids) != len(set(finding_ids)):

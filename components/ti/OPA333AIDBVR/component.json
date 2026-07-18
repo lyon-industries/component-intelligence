@@ -217,8 +217,8 @@
       "availability": "included",
       "path": "OPA333AIDBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "562df3ee623edf5a2c63ba725acb43f68c6c791bcf5a98e2187949fecd00ca33",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "c7f3fab228243a927312e192d1e9210a921e1d26ff91050b34b7613ca6414dbd",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -236,8 +236,8 @@
       "availability": "included",
       "path": "OPA333AIDBVR.pretty/OPA333AIDBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "827e2a8e8787914440a6040f8b9532d0cb474a75cfd8a74418304fbd69ca2f77",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "f3514c0d91d0b5f0ec46e62338663b14a3bfb1c3d3f6e83def43c6bb7ab484c9",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

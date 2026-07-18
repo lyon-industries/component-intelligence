@@ -241,8 +241,8 @@
       "availability": "included",
       "path": "SN74LVC1G17DBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "9d4be6e3348b77ea19ea62f53ce66a556ac293057cfa47323ae1a4d43fc177bb",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "f5da8c1e65612f42027fe1b6264c7f73035cae31dc094b5fb13030b50a50773d",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -260,8 +260,8 @@
       "availability": "included",
       "path": "SN74LVC1G17DBVR.pretty/SN74LVC1G17DBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "fc64c77ae804b91ad4768f18c04c7d4c7189baf2bd928721a049d5e8296f4f28",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "02c2dc2e71ec90a946329c77c50eab94a99bf8196e8177d7712182f4d9e8bcaf",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -279,7 +279,7 @@
       "availability": "included",
       "path": "SN74LVC1G17DBVR.3dshapes/SN74LVC1G17DBVR.step",
       "format": "STEP AP214",
-      "sha256": "673da4f7f4d2370bfef7d9ad8f571ed9824176bc6aa570c5e2a0a10c03a01910",
+      "sha256": "c5c4cf3f9726ef0d927a3107b6ff888295c1225b81fd0e264f59376e048d1add",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [
@@ -361,36 +361,6 @@
         "name": "explicit land-pattern arithmetic",
         "status": "pass",
         "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "independent product and package cross-check",
-        "status": "pass",
-        "method": "Compared the normalized exact or family identity, package code, pin count, and current manufacturer status against the official product page independently of the datasheet extraction.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "explicit land-pattern arithmetic",
-        "status": "pass",
-        "method": "Converted the manufacturer contact pitch, row spacing, pad width, and pad length into centroid coordinates, then independently recomputed adjacent pitch, symmetry, and pad count.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "native symbol pin-map verification",
-        "status": "pass",
-        "method": "Parsed the generated KiCad symbol and compared every pin number, name, and electrical type with the normalized exact-MPN pin map.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "native footprint geometry verification",
-        "status": "pass",
-        "method": "Parsed every KiCad pad number, centroid, and size; compared them with the explicit manufacturer-derived land-pattern record; inspected the top-view pad plot, pin-one mark, fabrication outline, and courtyard.",
-        "date": "2026-07-16"
-      },
-      {
-        "name": "STEP placement and envelope verification",
-        "status": "pass",
-        "method": "Reopened the STEP file with CadQuery/Open CASCADE, confirmed solid count, board-plane seating at z=0, manufacturer maximum height, body envelope, lead span, pin-one feature, and visually inspected an isometric tessellation.",
         "date": "2026-07-16"
       },
       {

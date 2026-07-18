@@ -1,0 +1,149 @@
+name: Component error or correction
+description: Report an exact-MPN data, source, symbol, footprint, STEP, or integration problem.
+title: "[component error]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the catalog fabrication-safe. Use the exact manufacturer MPN, preserve punctuation and suffixes, and cite inspectable evidence. Do not include confidential customer, employer, board, credential, or proprietary manufacturing data. Security vulnerabilities belong in the private process described in `SECURITY.md`.
+
+  - type: dropdown
+    id: trust_tier
+    attributes:
+      label: Affected trust tier
+      description: Where is the affected record now?
+      options:
+        - Complete catalog (`components/` or `catalog.json`)
+        - Candidate catalog (`candidates/` or `candidate-catalog.json`)
+        - Repository tooling or generated catalog
+        - Unsure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Engineering severity
+      description: Choose the highest consequence supported by the evidence.
+      options:
+        - fabrication-stop — can invalidate manufacture or assembly
+        - design-risk — requires an explicit downstream engineering decision
+        - note — changes evidence, asset scope, or documentation interpretation
+    validations:
+      required: true
+
+  - type: input
+    id: manufacturer
+    attributes:
+      label: Manufacturer
+      placeholder: Texas Instruments
+    validations:
+      required: true
+
+  - type: input
+    id: exact_mpn
+    attributes:
+      label: Exact manufacturer part number
+      description: Include the complete orderable suffix and preserve punctuation.
+      placeholder: SN74HC595DR
+    validations:
+      required: true
+
+  - type: input
+    id: record
+    attributes:
+      label: Record or asset path
+      description: Link to the affected `component.json`, symbol, footprint, STEP model, or catalog entry at a pinned commit when possible.
+      placeholder: https://github.com/lyon-industries/component-intelligence/blob/<commit>/components/...
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected area
+      description: Select every area that needs review.
+      multiple: true
+      options:
+        - Exact-MPN identity or package
+        - Source, locator, or provenance
+        - Pin data or electrical rating
+        - KiCad symbol
+        - KiCad footprint or land pattern
+        - STEP model or mechanical envelope
+        - Assembly, thermal, or manufacturing data
+        - Catalog, schema, generator, or validator
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed_expected
+    attributes:
+      label: Observed problem and expected correction
+      description: State the mismatch precisely and explain its engineering consequence. Keep unknowns explicit if you cannot yet propose a correction.
+      placeholder: |
+        Observed: pad 1 is ...
+        Expected: the manufacturer's land pattern shows ...
+        Consequence: this could ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Evidence and exact locators
+      description: Link primary sources and give page, table, figure, drawing, section, or revision. If no manufacturer source covers the problem, provide an inspectable calculation or artifact and explain the gap.
+      placeholder: |
+        - Manufacturer datasheet URL, revision/date, page 12, Figure 8-1
+        - Package drawing URL, page 2, recommended land pattern
+        - Calculation, measurement, or public test artifact
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and review artifacts
+      description: Give the smallest reproducible check. Drag in sanitized screenshots, annotated plots, DRC output, measurements, or before/after renders when relevant.
+      placeholder: |
+        1. Open ... in KiCad ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: upload
+    id: review_files
+    attributes:
+      label: Sanitized screenshots, DRC output, or evidence files
+      description: Attach only the minimum public artifact needed to inspect the claim. Zip unsupported EDA files and remove confidential board, customer, employer, credential, and fab data first.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.svg,.webp,.pdf,.json,.log,.txt,.csv,.zip"
+
+  - type: input
+    id: tool_versions
+    attributes:
+      label: EDA, CAD, and operating-system versions
+      description: Include KiCad, STEP viewer/CAD, DRC engine, generator, and OS versions that affect the result. Enter `Not applicable` for a source-only correction.
+      placeholder: KiCad 10.0.0 on macOS 15.5; FreeCAD 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: process_context
+    attributes:
+      label: Fabrication, assembly, or application context
+      description: If relevant, state sanitized process constraints such as minimum mask sliver, courtyard policy, stencil method, assembly process, voltage/current, temperature, or clearance requirement.
+      placeholder: Optional; omit proprietary stackups, board files, fab quotations, and customer details.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched for an existing issue about this exact MPN and problem.
+          required: true
+        - label: The MPN, suffix, package, and evidence above refer to the same orderable component.
+          required: true
+        - label: I removed confidential, proprietary, credential, and customer-identifying material.
+          required: true

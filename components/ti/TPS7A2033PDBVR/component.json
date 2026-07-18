@@ -217,8 +217,8 @@
       "availability": "included",
       "path": "TPS7A2033PDBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "5fa04a6a6881a6ca72583bb80dadf66d0befcd7d4fbc731b219a628a10f6654d",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "66065dd5dd5dbfa09de700bb0de8698dbf074509ac74bb22965bb692b8b50ed2",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -236,8 +236,8 @@
       "availability": "included",
       "path": "TPS7A2033PDBVR.pretty/TPS7A2033PDBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "db111960af83e9db08adde8a863c92dc0f4c3de41a65738edc956d4862fa38bb",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "c820ce2843e50f2802c986445bd7f572718d1b2d509162e3b1c810806ada5cd4",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

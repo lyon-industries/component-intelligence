@@ -1,0 +1,332 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:wurth-elektronik:74404024100",
+  "identity": {
+    "manufacturer": "Würth Elektronik eiSos",
+    "manufacturer_slug": "wurth-elektronik",
+    "mpn": "74404024100",
+    "series": "WE-LQS",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-18"
+  },
+  "classification": {
+    "category": "inductor",
+    "function": "10 µH 0.65 A semi-shielded power inductor",
+    "keywords": [
+      "inductor",
+      "10 µH",
+      "power inductor",
+      "semi-shielded",
+      "2512"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:wurth:74404024100",
+      "kind": "datasheet",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "74404024100 WE-LQS technical data sheet",
+      "url": "https://www.we-online.com/components/products/datasheet/74404024100.pdf",
+      "document_number": null,
+      "revision": "002.001",
+      "published_date": "2022-02-17",
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "b139ece8bdbdffb92f41d54baf2b79bdcf7ec486d785424d9316b840673e22c6",
+      "byte_size": 659078,
+      "page_count": 6,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Exact order code, electrical values, body dimensions, and recommended land pattern"
+        },
+        {
+          "page": 3,
+          "label": "Tape-and-reel dimensions and 2000-piece packaging quantity"
+        }
+      ]
+    },
+    {
+      "id": "source:wurth:product:WE-LQS",
+      "kind": "product-page",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "WE-LQS current product family",
+      "url": "https://www.we-online.com/en/components/products/WE-LQS",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current active family status and exact order-code electrical listing"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "function": "Non-polarized inductor terminal.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:74404024100",
+        "locator": "page 1, schematic"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "function": "Non-polarized inductor terminal.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:74404024100",
+        "locator": "page 1, schematic"
+      }
+    ],
+    "ratings": [
+      {
+        "key": "inductance",
+        "name": "nominal inductance",
+        "value": {
+          "typ": 10
+        },
+        "unit": "µH",
+        "boundary": "characteristic",
+        "qualifier": "Measured at 1 MHz and 1 V; tolerance ±20%.",
+        "source_id": "source:wurth:74404024100",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "rated-current",
+        "name": "rated current",
+        "value": {
+          "max": 0.65
+        },
+        "unit": "A",
+        "boundary": "recommended-operating",
+        "qualifier": "Current producing a 40 K temperature rise under manufacturer conditions.",
+        "source_id": "source:wurth:74404024100",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "saturation-current",
+        "name": "saturation current",
+        "value": {
+          "typ": 0.8
+        },
+        "unit": "A",
+        "boundary": "characteristic",
+        "qualifier": "Typical current for less than 30% inductance change; not a thermal rating.",
+        "source_id": "source:wurth:74404024100",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "dc-resistance",
+        "name": "DC resistance",
+        "value": {
+          "typ": 430,
+          "tolerance": 20
+        },
+        "unit": "mΩ",
+        "boundary": "characteristic",
+        "qualifier": "At 20 °C; tolerance ±20%.",
+        "source_id": "source:wurth:74404024100",
+        "locator": "page 1, electrical properties"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "2512 (2520 metric)",
+    "manufacturer_code": "2512",
+    "mounting": "surface-mount",
+    "pin_count": 2,
+    "pitch_mm": null,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 2.5,
+        "tolerance": 0.2
+      },
+      "width": {
+        "typ": 2.0,
+        "tolerance": 0.2
+      },
+      "height": {
+        "max": 1.2
+      },
+      "end_termination": {
+        "typ": 0.8,
+        "tolerance": 0.2
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:wurth:74404024100",
+      "locator": "page 1, recommended land pattern; 1.10 x 2.00 mm pads and 0.80 mm gap independently recomputed to ±0.95 mm pad centers",
+      "pad_count": 2,
+      "dimensions_mm": {
+        "pad_length": 1.1,
+        "pad_width": 2.0,
+        "gap": 0.8,
+        "overall_span": 3.0
+      },
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -0.95,
+          "y_mm": 0,
+          "width_mm": 1.1,
+          "height_mm": 2.0
+        },
+        {
+          "number": "2",
+          "x_mm": 0.95,
+          "y_mm": 0,
+          "width_mm": 1.1,
+          "height_mm": 2.0
+        }
+      ],
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top view; terminal numbering is arbitrary because the inductor is non-polarized."
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "74404024100.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "078a8631e21f57eb42d0050fc86ae6ff3b436acd4de4adbf8bdf56f5799a5952",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries conventional inductor symbol serialized from the reviewed exact-MPN record.",
+      "source_ids": [
+        "source:wurth:74404024100",
+        "source:wurth:product:WE-LQS"
+      ],
+      "limitations": [
+        "The schematic symbol does not encode current, saturation, DCR, SRF, tolerance, or thermal limits; read the record before use."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "74404024100.pretty/74404024100.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "18524dfa4eb7bae7e4d5801ba0d78aa94891e43f299c0d5248b8d5b63da13b2c",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries footprint serialized from the manufacturer-recommended land pattern.",
+      "source_ids": [
+        "source:wurth:74404024100"
+      ],
+      "limitations": [
+        "Stencil, copper heat spreading, solder volume, and process-specific land adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "74404024100.3dshapes/74404024100.step",
+      "format": "STEP AP214",
+      "sha256": "a0fa0d588fe7ea4513f87bfe847707fa6319e72e2088e5d9017dbd2960a71c30",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal chip-envelope model generated from manufacturer dimensions.",
+      "source_ids": [
+        "source:wurth:74404024100"
+      ],
+      "limitations": [
+        "Nominal seating and clearance envelope only; winding, magnetic material, tolerances, markings, and detailed terminals are omitted."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": "8 mm embossed tape on 178 mm reel",
+      "quantity": 2000,
+      "source_id": "source:wurth:74404024100",
+      "locator": "page 3, packaging specification"
+    },
+    "orientation": {
+      "status": "documented",
+      "description": "The inductor is non-polarized; either 180-degree placement orientation is electrically equivalent.",
+      "source_id": "source:wurth:74404024100",
+      "locator": "page 1, schematic and symmetric package drawing"
+    },
+    "notes": [
+      "Check both thermal rated current and inductance-loss saturation current for the actual ripple waveform and ambient."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "thermal",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "Rated current and saturation current use different criteria: 0.65 A is a 40 K temperature-rise limit, while 0.8 A is a typical 30% inductance-drop point.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:wurth:74404024100"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-18",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Captured and hashed the official exact-order-code data sheet and recorded page locators.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared exact identity, package, inductance, currents, resistance, and current active family status against the official product catalog.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Recomputed pad centers from manufacturer pad length and inter-pad gap and checked symmetry, size, and count.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "native CAD replay and geometry gate",
+        "status": "pass",
+        "method": "Replayed the KiCad 10 symbol and footprint from the record, parsed pin and pad semantics, checked silk and courtyard rules, reopened STEP, and measured seating and envelope.",
+        "date": "2026-07-18"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on linked official manufacturer sources.",
+    "source_rights_status": "linked-only"
+  }
+}

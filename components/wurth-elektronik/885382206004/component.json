@@ -1,0 +1,322 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:wurth-elektronik:885382206004",
+  "identity": {
+    "manufacturer": "Würth Elektronik eiSos",
+    "manufacturer_slug": "wurth-elektronik",
+    "mpn": "885382206004",
+    "series": "WCAP-CSST",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-18"
+  },
+  "classification": {
+    "category": "capacitor",
+    "function": "100 nF 50 V X7R ±10% soft-termination MLCC",
+    "keywords": [
+      "capacitor",
+      "100 nF",
+      "50 V",
+      "X7R",
+      "0603",
+      "soft termination"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:wurth:885382206004",
+      "kind": "datasheet",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "885382206004 WCAP-CSST technical data sheet",
+      "url": "https://www.we-online.com/components/products/datasheet/885382206004.pdf",
+      "document_number": "X7R0603104K050DFCT1S000",
+      "revision": "001.000",
+      "published_date": "2018-11-12",
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "f54ce8ba0bb6049cb08593b13586f5b0003e9468a5c44fd0cc2e854579549a3b",
+      "byte_size": 576012,
+      "page_count": 7,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Exact order code, electrical values, body dimensions, and recommended reflow land pattern"
+        },
+        {
+          "page": 3,
+          "label": "Tape-and-reel dimensions and 4000-piece packaging quantity"
+        }
+      ]
+    },
+    {
+      "id": "source:wurth:product:WCAP-CSST",
+      "kind": "product-page",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "WCAP-CSST current product family",
+      "url": "https://www.we-online.com/en/components/products/WCAP-CSST",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current family status and exact order-code listing"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "function": "Non-polarized capacitor terminal.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:885382206004",
+        "locator": "page 1, schematic"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "function": "Non-polarized capacitor terminal.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:885382206004",
+        "locator": "page 1, schematic"
+      }
+    ],
+    "ratings": [
+      {
+        "key": "capacitance",
+        "name": "nominal capacitance",
+        "value": {
+          "typ": 100
+        },
+        "unit": "nF",
+        "boundary": "characteristic",
+        "qualifier": "Measured at 1 kHz, 1 ±0.2 VRMS, 25 °C; tolerance ±10% after the specified preconditioning.",
+        "source_id": "source:wurth:885382206004",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "rated-voltage",
+        "name": "rated DC voltage",
+        "value": {
+          "max": 50
+        },
+        "unit": "V",
+        "boundary": "recommended-operating",
+        "qualifier": "DC rating; effective capacitance depends on applied bias and temperature.",
+        "source_id": "source:wurth:885382206004",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "operating-temperature",
+        "name": "operating temperature",
+        "value": {
+          "min": -55,
+          "max": 125
+        },
+        "unit": "°C",
+        "boundary": "recommended-operating",
+        "qualifier": "X7R dielectric temperature range.",
+        "source_id": "source:wurth:885382206004",
+        "locator": "page 1, general information"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "0603 (1608 metric)",
+    "manufacturer_code": "0603",
+    "mounting": "surface-mount",
+    "pin_count": 2,
+    "pitch_mm": null,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 1.6,
+        "tolerance": 0.3
+      },
+      "width": {
+        "typ": 0.8,
+        "tolerance": 0.3
+      },
+      "height": {
+        "typ": 0.8,
+        "tolerance": 0.3
+      },
+      "end_termination": {
+        "typ": 0.4,
+        "tolerance": 0.15
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:wurth:885382206004",
+      "locator": "page 1, recommended reflow land pattern; 0.80 x 0.80 mm pads and 0.70 mm gap independently recomputed to ±0.75 mm pad centers",
+      "pad_count": 2,
+      "dimensions_mm": {
+        "pad_length": 0.8,
+        "pad_width": 0.8,
+        "gap": 0.7,
+        "overall_span": 2.3
+      },
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -0.75,
+          "y_mm": 0,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        },
+        {
+          "number": "2",
+          "x_mm": 0.75,
+          "y_mm": 0,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        }
+      ],
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top view; terminal numbering is arbitrary because the MLCC is non-polarized."
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "885382206004.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "f196d201dbb5ae4063dadcf160a31944543642e11e3a2f386e5774aacf3c54e8",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries conventional capacitor symbol serialized from the reviewed exact-MPN record.",
+      "source_ids": [
+        "source:wurth:885382206004",
+        "source:wurth:product:WCAP-CSST"
+      ],
+      "limitations": [
+        "The schematic symbol does not encode voltage, dielectric, tolerance, aging, or DC-bias derating; read the record before use."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "885382206004.pretty/885382206004.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "4ac528bbfe41a32789c756d6c2d81f9e0d56dc9eadd27ca57610dbd5b30af870",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries footprint serialized from the manufacturer-recommended reflow land pattern.",
+      "source_ids": [
+        "source:wurth:885382206004"
+      ],
+      "limitations": [
+        "Stencil, solder volume, flex stress, and process-specific land adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "885382206004.3dshapes/885382206004.step",
+      "format": "STEP AP214",
+      "sha256": "5827ec7a8072a4efc1a5779fa32a7b9dba09affedfe9a24a875437d151e254b5",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal chip-envelope model generated from manufacturer dimensions.",
+      "source_ids": [
+        "source:wurth:885382206004"
+      ],
+      "limitations": [
+        "Nominal seating and clearance envelope only; termination finish, tolerances, markings, and internal construction are omitted."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": "8 mm paper tape on 178 mm reel",
+      "quantity": 4000,
+      "source_id": "source:wurth:885382206004",
+      "locator": "page 3, packaging specification"
+    },
+    "orientation": {
+      "status": "documented",
+      "description": "The MLCC is non-polarized; either 180-degree placement orientation is electrically equivalent.",
+      "source_id": "source:wurth:885382206004",
+      "locator": "page 1, schematic and symmetric package drawing"
+    },
+    "notes": [
+      "Check effective capacitance under the actual DC bias, temperature, tolerance, and aging conditions."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The 100 nF marking is a test-condition value; X7R temperature behavior, DC-bias derating, tolerance, and aging can materially reduce effective in-circuit capacitance.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:wurth:885382206004"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-18",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Captured and hashed the official exact-order-code data sheet and recorded page locators.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared exact identity, series, size, value, voltage, dielectric, and current family status against the official product catalog.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Recomputed pad centers from manufacturer pad length and inter-pad gap and checked symmetry, size, and count.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "native CAD replay and geometry gate",
+        "status": "pass",
+        "method": "Replayed the KiCad 10 symbol and footprint from the record, parsed pin and pad semantics, checked silk and courtyard rules, reopened STEP, and measured seating and envelope.",
+        "date": "2026-07-18"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on linked official manufacturer sources.",
+    "source_rights_status": "linked-only"
+  }
+}

@@ -32,6 +32,8 @@
 
 - [ ] I have the right to submit every included file under its declared terms.
 - [ ] No confidential customer, employer, credential, or proprietary material is included.
+- [ ] `python3 scripts/build_catalog.py` regenerated indexes, summaries, KiCad tables, and the component graph.
+- [ ] Complete exact MPNs appear under the correct category; candidates remain outside the graph's device nodes.
 - [ ] `python3 scripts/build_catalog.py --check` passes.
 - [ ] `python3 scripts/validate.py` passes.
 - [ ] `python3 -m unittest discover -s tests -v` passes.

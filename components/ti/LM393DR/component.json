@@ -251,8 +251,8 @@
       "availability": "included",
       "path": "LM393DR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "66ee543a82e2a0e2ee0b7803a966a993b0a3a719c248a8e62a412ab5a75d4024",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "24b39b6655d0d92efed3335623e9d718da650fc015bc11f6a17e520068a546ed",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -270,8 +270,8 @@
       "availability": "included",
       "path": "LM393DR.pretty/LM393DR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "95fd2abf9b52963c4d39fc61d0b5e72ec7de1c7c2cf74339f7a5ca7781ca41eb",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "0b686144a4cb52f33d8602536736371e61b8da52d60256295a5ad56471469d85",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

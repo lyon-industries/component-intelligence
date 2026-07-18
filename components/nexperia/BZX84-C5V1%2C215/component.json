@@ -184,10 +184,10 @@
   "cad": {
     "symbol": {
       "availability": "included",
-      "path": "BZX84-C5V1%2C215.kicad_sym",
+      "path": "BZX84-C5V1_215.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "2a25bfdacc094c4ec36bb40b714ca74fdb7d1f53e03494cec7d2a6f6309e7b7f",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "c6f1c7d22ef330b83da3826ea10add3a452b1b2ff06a1d5a789f19c6e84948d7",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -203,10 +203,10 @@
     },
     "footprint": {
       "availability": "included",
-      "path": "BZX84-C5V1%2C215.pretty/BZX84-C5V1%2C215.kicad_mod",
+      "path": "BZX84-C5V1_215.pretty/BZX84-C5V1_215.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "7954be99142a50af535f99865c54e142cc3d63985e30c21888148d07e1dc8aa0",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "81ecbadae788261450c5e78db95ce9ad8592d7afcd93deb4336f4a09a29f36bb",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -222,7 +222,7 @@
     },
     "step_model": {
       "availability": "included",
-      "path": "BZX84-C5V1%2C215.3dshapes/BZX84-C5V1%2C215.step",
+      "path": "BZX84-C5V1_215.3dshapes/BZX84-C5V1_215.step",
       "format": "STEP AP214",
       "sha256": "7e18923d18d7a976583ae101c2b314d90465dd8d94d265c41ec034c999af67a2",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",

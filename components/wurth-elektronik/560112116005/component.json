@@ -1,0 +1,320 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:wurth-elektronik:560112116005",
+  "identity": {
+    "manufacturer": "Würth Elektronik eiSos",
+    "manufacturer_slug": "wurth-elektronik",
+    "mpn": "560112116005",
+    "series": "WRIS-RSKS",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-18"
+  },
+  "classification": {
+    "category": "resistor",
+    "function": "10 kΩ 1% 0.1 W anti-sulfur thick-film resistor",
+    "keywords": [
+      "resistor",
+      "10 kΩ",
+      "1%",
+      "0603",
+      "anti-sulfur"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:wurth:560112116005",
+      "kind": "datasheet",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "560112116005 WRIS-RSKS technical data sheet",
+      "url": "https://www.we-online.com/components/products/datasheet/560112116005.pdf",
+      "document_number": "KS06031002F110KAATP0000",
+      "revision": "001.001",
+      "published_date": "2025-10-28",
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "a27af995e821bbab9a8a56574f530f9e85d60f76ef83a7937df5c592b85a355a",
+      "byte_size": 938229,
+      "page_count": 9,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Exact order code, electrical values, body dimensions, and recommended reflow land pattern"
+        },
+        {
+          "page": 3,
+          "label": "Tape-and-reel dimensions and 5000-piece packaging quantity"
+        }
+      ]
+    },
+    {
+      "id": "source:wurth:product:WRIS-RSKS",
+      "kind": "product-page",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "WRIS-RSKS current product family",
+      "url": "https://www.we-online.com/en/components/products/WRIS-RSKS",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current family status and exact order-code listing"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "1",
+        "function": "Non-polarized resistor terminal.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:560112116005",
+        "locator": "page 1, schematic"
+      },
+      {
+        "number": "2",
+        "name": "2",
+        "function": "Non-polarized resistor terminal.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:560112116005",
+        "locator": "page 1, schematic"
+      }
+    ],
+    "ratings": [
+      {
+        "key": "resistance",
+        "name": "nominal resistance",
+        "value": {
+          "typ": 10
+        },
+        "unit": "kΩ",
+        "boundary": "characteristic",
+        "qualifier": "At the data-sheet test conditions; tolerance ±1%.",
+        "source_id": "source:wurth:560112116005",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "rated-power",
+        "name": "rated power",
+        "value": {
+          "max": 0.1
+        },
+        "unit": "W",
+        "boundary": "recommended-operating",
+        "qualifier": "Rated at 70 °C and subject to the manufacturer derating curve.",
+        "source_id": "source:wurth:560112116005",
+        "locator": "page 1, electrical properties"
+      },
+      {
+        "key": "limiting-element-voltage",
+        "name": "limiting element voltage",
+        "value": {
+          "max": 75
+        },
+        "unit": "V",
+        "boundary": "absolute-maximum",
+        "qualifier": "The lower of the calculated rated voltage and limiting element voltage applies.",
+        "source_id": "source:wurth:560112116005",
+        "locator": "page 1, electrical properties"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "0603 (1608 metric)",
+    "manufacturer_code": "0603",
+    "mounting": "surface-mount",
+    "pin_count": 2,
+    "pitch_mm": null,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 1.6,
+        "tolerance": 0.1
+      },
+      "width": {
+        "typ": 0.8,
+        "tolerance": 0.1
+      },
+      "height": {
+        "typ": 0.45,
+        "tolerance": 0.15
+      },
+      "end_termination": {
+        "typ": 0.3,
+        "tolerance": 0.1
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:wurth:560112116005",
+      "locator": "page 1, recommended reflow land pattern; 0.60 x 0.90 mm pads and 0.90 mm gap independently recomputed to ±0.75 mm pad centers",
+      "pad_count": 2,
+      "dimensions_mm": {
+        "pad_length": 0.6,
+        "pad_width": 0.9,
+        "gap": 0.9,
+        "overall_span": 2.1
+      },
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -0.75,
+          "y_mm": 0,
+          "width_mm": 0.6,
+          "height_mm": 0.9
+        },
+        {
+          "number": "2",
+          "x_mm": 0.75,
+          "y_mm": 0,
+          "width_mm": 0.6,
+          "height_mm": 0.9
+        }
+      ],
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top view; terminal numbering is arbitrary because the device is non-polarized."
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "560112116005.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "84bc5ee57d185dc38208f5e44d254f7dfe8b3b3ff878f2a2383ecd0eb284cea9",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries conventional resistor symbol serialized from the reviewed exact-MPN record.",
+      "source_ids": [
+        "source:wurth:560112116005",
+        "source:wurth:product:WRIS-RSKS"
+      ],
+      "limitations": [
+        "The schematic symbol does not encode tolerance, pulse-loading, voltage, or derating limits; read the record before use."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "560112116005.pretty/560112116005.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "9a0b01dc67e2691c5aff772d55f9faac44a688884538eb29e5619f16928a4b98",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries footprint serialized from the manufacturer-recommended reflow land pattern.",
+      "source_ids": [
+        "source:wurth:560112116005"
+      ],
+      "limitations": [
+        "Stencil, solder volume, and process-specific land adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "560112116005.3dshapes/560112116005.step",
+      "format": "STEP AP214",
+      "sha256": "6314f5478197f8da6dd1220b9eaa67509216313f56bf6e35538651ecb70e3434",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal chip-envelope model generated from manufacturer dimensions.",
+      "source_ids": [
+        "source:wurth:560112116005"
+      ],
+      "limitations": [
+        "Nominal seating and clearance envelope only; termination finish, tolerances, markings, and internal construction are omitted."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": "8 mm paper tape on 178 mm reel",
+      "quantity": 5000,
+      "source_id": "source:wurth:560112116005",
+      "locator": "page 3, packaging specification"
+    },
+    "orientation": {
+      "status": "documented",
+      "description": "The resistor is non-polarized; either 180-degree placement orientation is electrically equivalent.",
+      "source_id": "source:wurth:560112116005",
+      "locator": "page 1, schematic and symmetric package drawing"
+    },
+    "notes": [
+      "Use the manufacturer derating curve and pulse-loading guidance for the actual ambient and duty cycle."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "thermal",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The 0.1 W rating applies at 70 °C and derates with temperature; pulse energy and limiting voltage can govern before nominal resistance tolerance does.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:wurth:560112116005"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-18",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Captured and hashed the official exact-order-code data sheet and recorded page locators.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared exact identity, series, size, value, and current family status against the official product catalog independently of land-pattern arithmetic.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "explicit land-pattern arithmetic",
+        "status": "pass",
+        "method": "Recomputed pad centers from manufacturer pad length and inter-pad gap and checked symmetry, size, and count.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "native CAD replay and geometry gate",
+        "status": "pass",
+        "method": "Replayed the KiCad 10 symbol and footprint from the record, parsed pin and pad semantics, checked silk and courtyard rules, reopened STEP, and measured seating and envelope.",
+        "date": "2026-07-18"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on linked official manufacturer sources.",
+    "source_rights_status": "linked-only"
+  }
+}

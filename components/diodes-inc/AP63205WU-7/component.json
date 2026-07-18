@@ -290,8 +290,8 @@
       "availability": "included",
       "path": "AP63205WU-7.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "6e578f1a4bf3e97312e489d5061af9790bc7b86303110752f399d8d6273ebe9a",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "7984c0167e3d47c11bf388783af9a4783ef6ae95b3065dfe68756141150c66f6",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -309,8 +309,8 @@
       "availability": "included",
       "path": "AP63205WU-7.pretty/AP63205WU-7.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "3b367a609b9b75c8fa400a223b5f519577fc5b049012840f6ca5ee6ba29d83b0",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "508f84ccfcd52da8855848ccc9e5c7646cb9a154a72e2fab8206f162fa2d9068",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

@@ -263,8 +263,8 @@
       "availability": "included",
       "path": "TLV9062IDR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "56b4d624cc026831e21646288e34e04b40af45e3002ec7250faba057e4146cd7",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "6d435f235bf47f43f0c03222c1abdb236eb5ccbff556c6c8be4238eb6b921b99",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -282,8 +282,8 @@
       "availability": "included",
       "path": "TLV9062IDR.pretty/TLV9062IDR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "c258501af2e96e7497587fbd0042fb0e4ca25861ab67c6978f3b863944ccd466",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "f9ccdd7db67b3be90ef72c1e9a2128548042a68d796badc9c4186417d2038621",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"

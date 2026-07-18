@@ -157,9 +157,9 @@
       ],
       "package": "SOT-23-8",
       "path": "candidates/ti/INA219AIDCNR/component.json",
-      "orderable": null,
-      "orderable_checked_on": null,
-      "reviewed_on": "2026-07-13",
+      "orderable": true,
+      "orderable_checked_on": "2026-07-18",
+      "reviewed_on": "2026-07-18",
       "rating_keys": [
         "bus-voltage",
         "shunt-full-scale-voltage",
@@ -173,7 +173,7 @@
         "step_verified": false,
         "physically_tested": false
       },
-      "active_findings": 1
+      "active_findings": 2
     },
     {
       "id": "component:ti:TPS62162DSGR",

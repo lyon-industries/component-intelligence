@@ -263,8 +263,8 @@
       "availability": "included",
       "path": "USBLC6-2SC6.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "3a0b78e326223a69577b0efad1f6518941a24baeeed16371a971eec9afdd0e40",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "0b6984eb829534b981c6bc9f49a8e501d2ff104252b841180c6c80c645634517",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -282,8 +282,8 @@
       "availability": "included",
       "path": "USBLC6-2SC6.pretty/USBLC6-2SC6.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "136731c493477188a8862816906338adb37680dcf805b39d9b0ea1693dc156f7",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "12d88cd01d3f7886351c6147a95499aa52cde85c3919d9d1d88e5d1bf565eccf",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -301,7 +301,7 @@
       "availability": "included",
       "path": "USBLC6-2SC6.3dshapes/USBLC6-2SC6.step",
       "format": "STEP AP214",
-      "sha256": "39ab11b3ed70502716232e96b008c896408837b01e05bd589a41544f6f9eccdb",
+      "sha256": "2b90d081e22b09740c8ff081d277f6ccdbeb0ba16e80887f1fa991a634d3a2f5",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
       "verified": true,
       "intended_use": [

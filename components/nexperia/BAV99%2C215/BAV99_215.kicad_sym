@@ -1,0 +1,53 @@
+(kicad_symbol_lib
+	(version 20251024)
+	(generator "component-intelligence")
+	(generator_version "2.0")
+	(symbol "BAV99_215"
+		(pin_names (offset 0.508))
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "D" (at 0 6.35 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Value" "BAV99,215" (at 0 -6.35 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27))))
+		(property "Footprint" "BAV99_215:BAV99_215" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAV99.pdf" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "Description" "dual series high-speed switching diode" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_keywords" "switching diode dual diode series SOT-23" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+		(property "ki_fp_filters" "BAV99?215:*" (at 0 0 0) (show_name no) (do_not_autoplace no) (hide yes) (effects (font (size 1.27 1.27))))
+		(symbol "BAV99_215_0_1"
+			(rectangle
+				(start -5.08 5.08)
+				(end 5.08 -5.08)
+				(stroke (width 0.254) (type default))
+				(fill (type background))
+			)
+			(text "DIODE"
+				(at 0 0 0)
+				(effects (font (size 1.016 1.016)))
+			)
+		)
+		(symbol "BAV99_215_1_1"
+			(pin passive line
+				(at -7.62 2.54 0)
+				(length 2.54)
+				(name "A1" (effects (font (size 1.27 1.27))))
+				(number "1" (effects (font (size 1.27 1.27))))
+			)
+			(pin passive line
+				(at -7.62 0 0)
+				(length 2.54)
+				(name "K2" (effects (font (size 1.27 1.27))))
+				(number "2" (effects (font (size 1.27 1.27))))
+			)
+			(pin passive line
+				(at -7.62 -2.54 0)
+				(length 2.54)
+				(name "K1,A2" (effects (font (size 1.27 1.27))))
+				(number "3" (effects (font (size 1.27 1.27))))
+			)
+		)
+		(embedded_fonts no)
+	)
+)

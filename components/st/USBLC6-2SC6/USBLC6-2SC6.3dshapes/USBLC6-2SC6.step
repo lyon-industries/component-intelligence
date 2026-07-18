@@ -15,8 +15,8 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('Open CASCADE STEP translator 7.9 3',
-  'Open CASCADE STEP translator 7.9 3','',(#8));
+#7 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#8));
 #8 = PRODUCT_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = SHAPE_REPRESENTATION('',(#11,#15,#19,#23,#27,#31,#35,#39),#43);
@@ -66,8 +66,8 @@ GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#47)) GLOBAL_UNIT_ASSIGNED_CONTEXT(
 #50 = PRODUCT_DEFINITION_SHAPE('','',#51);
 #51 = PRODUCT_DEFINITION('design','',#52,#55);
 #52 = PRODUCT_DEFINITION_FORMATION('','',#53);
-#53 = PRODUCT('Open CASCADE STEP translator 7.9 3.1',
-  'Open CASCADE STEP translator 7.9 3.1','',(#54));
+#53 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#54));
 #54 = PRODUCT_CONTEXT('',#2,'mechanical');
 #55 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #56 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#57),#485);
@@ -575,14 +575,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #492 = ITEM_DEFINED_TRANSFORMATION('','',#11,#15);
 #493 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',#494
   );
-#494 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('9','','',#5,#51,$);
+#494 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('1','','',#5,#51,$);
 #495 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#53));
 #496 = SHAPE_DEFINITION_REPRESENTATION(#497,#503);
 #497 = PRODUCT_DEFINITION_SHAPE('','',#498);
 #498 = PRODUCT_DEFINITION('design','',#499,#502);
 #499 = PRODUCT_DEFINITION_FORMATION('','',#500);
-#500 = PRODUCT('Open CASCADE STEP translator 7.9 3.2',
-  'Open CASCADE STEP translator 7.9 3.2','',(#501));
+#500 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#501));
 #501 = PRODUCT_CONTEXT('',#2,'mechanical');
 #502 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #503 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#504),#834);
@@ -980,14 +980,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #841 = ITEM_DEFINED_TRANSFORMATION('','',#11,#19);
 #842 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',#843
   );
-#843 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('10','','',#5,#498,$);
+#843 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('2','','',#5,#498,$);
 #844 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#500));
 #845 = SHAPE_DEFINITION_REPRESENTATION(#846,#852);
 #846 = PRODUCT_DEFINITION_SHAPE('','',#847);
 #847 = PRODUCT_DEFINITION('design','',#848,#851);
 #848 = PRODUCT_DEFINITION_FORMATION('','',#849);
-#849 = PRODUCT('Open CASCADE STEP translator 7.9 3.3',
-  'Open CASCADE STEP translator 7.9 3.3','',(#850));
+#849 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#850));
 #850 = PRODUCT_CONTEXT('',#2,'mechanical');
 #851 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #852 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#853),#1183);
@@ -1385,14 +1385,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #1190 = ITEM_DEFINED_TRANSFORMATION('','',#11,#23);
 #1191 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',
   #1192);
-#1192 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('11','','',#5,#847,$);
+#1192 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('3','','',#5,#847,$);
 #1193 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#849));
 #1194 = SHAPE_DEFINITION_REPRESENTATION(#1195,#1201);
 #1195 = PRODUCT_DEFINITION_SHAPE('','',#1196);
 #1196 = PRODUCT_DEFINITION('design','',#1197,#1200);
 #1197 = PRODUCT_DEFINITION_FORMATION('','',#1198);
-#1198 = PRODUCT('Open CASCADE STEP translator 7.9 3.4',
-  'Open CASCADE STEP translator 7.9 3.4','',(#1199));
+#1198 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#1199));
 #1199 = PRODUCT_CONTEXT('',#2,'mechanical');
 #1200 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #1201 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#1202),#1532);
@@ -1790,14 +1790,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #1539 = ITEM_DEFINED_TRANSFORMATION('','',#11,#27);
 #1540 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',
   #1541);
-#1541 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('12','','',#5,#1196,$);
+#1541 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('4','','',#5,#1196,$);
 #1542 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#1198));
 #1543 = SHAPE_DEFINITION_REPRESENTATION(#1544,#1550);
 #1544 = PRODUCT_DEFINITION_SHAPE('','',#1545);
 #1545 = PRODUCT_DEFINITION('design','',#1546,#1549);
 #1546 = PRODUCT_DEFINITION_FORMATION('','',#1547);
-#1547 = PRODUCT('Open CASCADE STEP translator 7.9 3.5',
-  'Open CASCADE STEP translator 7.9 3.5','',(#1548));
+#1547 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#1548));
 #1548 = PRODUCT_CONTEXT('',#2,'mechanical');
 #1549 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #1550 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#1551),#1881);
@@ -2195,14 +2195,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #1888 = ITEM_DEFINED_TRANSFORMATION('','',#11,#31);
 #1889 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',
   #1890);
-#1890 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('13','','',#5,#1545,$);
+#1890 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('5','','',#5,#1545,$);
 #1891 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#1547));
 #1892 = SHAPE_DEFINITION_REPRESENTATION(#1893,#1899);
 #1893 = PRODUCT_DEFINITION_SHAPE('','',#1894);
 #1894 = PRODUCT_DEFINITION('design','',#1895,#1898);
 #1895 = PRODUCT_DEFINITION_FORMATION('','',#1896);
-#1896 = PRODUCT('Open CASCADE STEP translator 7.9 3.6',
-  'Open CASCADE STEP translator 7.9 3.6','',(#1897));
+#1896 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#1897));
 #1897 = PRODUCT_CONTEXT('',#2,'mechanical');
 #1898 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #1899 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#1900),#2230);
@@ -2600,14 +2600,14 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #2237 = ITEM_DEFINED_TRANSFORMATION('','',#11,#35);
 #2238 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',
   #2239);
-#2239 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('14','','',#5,#1894,$);
+#2239 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('6','','',#5,#1894,$);
 #2240 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#1896));
 #2241 = SHAPE_DEFINITION_REPRESENTATION(#2242,#2248);
 #2242 = PRODUCT_DEFINITION_SHAPE('','',#2243);
 #2243 = PRODUCT_DEFINITION('design','',#2244,#2247);
 #2244 = PRODUCT_DEFINITION_FORMATION('','',#2245);
-#2245 = PRODUCT('Open CASCADE STEP translator 7.9 3.7',
-  'Open CASCADE STEP translator 7.9 3.7','',(#2246));
+#2245 = PRODUCT('Component Intelligence native CAD generator',
+  'Component Intelligence native CAD generator','',(#2246));
 #2246 = PRODUCT_CONTEXT('',#2,'mechanical');
 #2247 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #2248 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#2249),#2579);
@@ -3005,7 +3005,7 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #2586 = ITEM_DEFINED_TRANSFORMATION('','',#11,#39);
 #2587 = PRODUCT_DEFINITION_SHAPE('Placement','Placement of an item',
   #2588);
-#2588 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('15','','',#5,#2243,$);
+#2588 = NEXT_ASSEMBLY_USAGE_OCCURRENCE('7','','',#5,#2243,$);
 #2589 = PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#2245));
 ENDSEC;
 END-ISO-10303-21;

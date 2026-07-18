@@ -7,8 +7,8 @@
     "manufacturer_slug": "ti",
     "mpn": "INA219AIDCNR",
     "series": "INA219",
-    "orderable": null,
-    "orderable_checked_on": null
+    "orderable": true,
+    "orderable_checked_on": "2026-07-18"
   },
   "classification": {
     "category": "current-sensor",
@@ -43,16 +43,34 @@
           "label": "DCN pin configuration and functions"
         },
         {
-          "page": 4,
-          "label": "Recommended operating conditions"
+          "page": 6,
+          "label": "Operating supply range and electrical characteristics"
         },
         {
           "page": 25,
           "label": "Typical application"
-        },
+        }
+      ]
+    },
+    {
+      "id": "source:ti:product:INA219AIDCNR",
+      "kind": "product-page",
+      "publisher": "Texas Instruments",
+      "title": "INA219AIDCNR current exact-part status",
+      "url": "https://www.ti.com/product/INA219/part-details/INA219AIDCNR",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:39:00Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
         {
-          "page": 33,
-          "label": "DCN package drawing and land pattern"
+          "page": 1,
+          "label": "Active exact MPN, DCN package, eight pins, temperature range, MSL, and 3000-piece large tape-and-reel quantity"
         }
       ]
     }
@@ -171,25 +189,11 @@
     "manufacturer_code": "DCN",
     "mounting": "surface-mount",
     "pin_count": 8,
-    "pitch_mm": 0.65,
-    "body_dimensions_mm": {
-      "length": {
-        "typ": 2.9
-      },
-      "height": {
-        "max": 1.45
-      },
-      "overall_width": {
-        "typ": 2.8
-      },
-      "molded_width": {
-        "typ": 1.6
-      }
-    },
+    "body_dimensions_mm": {},
     "land_pattern": {
-      "status": "manufacturer-dimensioned",
-      "source_id": "source:ti:SBOS448G",
-      "locator": "DCN package drawing and land pattern",
+      "status": "unknown",
+      "source_id": null,
+      "locator": null,
       "pad_count": 8,
       "dimensions_mm": {},
       "coordinate_convention": null,
@@ -255,16 +259,16 @@
   "assembly": {
     "process": "surface-mount reflow",
     "packing": {
-      "method": null,
-      "quantity": null,
-      "source_id": null,
-      "locator": null
+      "method": "large tape and reel",
+      "quantity": 3000,
+      "source_id": "source:ti:product:INA219AIDCNR",
+      "locator": "exact-part packaging information"
     },
     "orientation": {
       "status": "partial",
       "description": "Pin-one or terminal orientation is documented; tape-pocket rotation and assembly-machine convention are not qualified here.",
       "source_id": "source:ti:SBOS448G",
-      "locator": "DCN package drawing and land pattern"
+      "locator": "page 3, DCN pin configuration"
     },
     "notes": [
       "Route IN+ and IN- as a Kelvin pair to the shunt.",
@@ -284,6 +288,19 @@
         "source_ids": [
           "source:ti:SBOS448G"
         ]
+      },
+      {
+        "id": "finding:dcn-land-pattern-source-gap",
+        "type": "source",
+        "severity": "fabrication-stop",
+        "status": "active",
+        "scope": "component",
+        "summary": "The captured INA219 data sheet includes only the D0008A SOIC package drawing and land pattern on pages 33-35; no source-bound DCN body dimensions or land pattern are recorded, so this exact MPN remains excluded from the default catalog.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:ti:SBOS448G",
+          "source:ti:product:INA219AIDCNR"
+        ]
       }
     ]
   },
@@ -294,7 +311,7 @@
     "footprint_verified": false,
     "step_verified": false,
     "physically_tested": false,
-    "reviewed_on": "2026-07-13",
+    "reviewed_on": "2026-07-18",
     "checks": [
       {
         "name": "official source identity",
@@ -303,10 +320,10 @@
         "date": "2026-07-13"
       },
       {
-        "name": "pin and package extraction",
+        "name": "pin extraction",
         "status": "pass",
-        "method": "Compared the package-specific pin map with the manufacturer pin table and package section.",
-        "date": "2026-07-13"
+        "method": "Compared the package-specific pin map with the manufacturer pin table; package geometry remains intentionally unqualified.",
+        "date": "2026-07-18"
       }
     ],
     "physical_test_evidence": []

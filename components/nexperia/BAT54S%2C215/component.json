@@ -185,10 +185,10 @@
   "cad": {
     "symbol": {
       "availability": "included",
-      "path": "BAT54S%2C215.kicad_sym",
+      "path": "BAT54S_215.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "f3294fa3414b57b9dc05fcc5c3dc71434562ff9d2493b2bcb79da168f35881f0",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "0e3e5730502b1883b78d6e2301147e94f5a74ef13380e99b2db6fec894aa1466",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -204,10 +204,10 @@
     },
     "footprint": {
       "availability": "included",
-      "path": "BAT54S%2C215.pretty/BAT54S%2C215.kicad_mod",
+      "path": "BAT54S_215.pretty/BAT54S_215.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "af64b976fd76a70b1ebc31a832c403ea445a7328b3543935cb5fa2bce13c2cc3",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "9f9af8bf36d89bb5d70c21f83f17397f43aaa89152de1f520bbe7fe0c714473b",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -223,7 +223,7 @@
     },
     "step_model": {
       "availability": "included",
-      "path": "BAT54S%2C215.3dshapes/BAT54S%2C215.step",
+      "path": "BAT54S_215.3dshapes/BAT54S_215.step",
       "format": "STEP AP214",
       "sha256": "7e18923d18d7a976583ae101c2b314d90465dd8d94d265c41ec034c999af67a2",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",

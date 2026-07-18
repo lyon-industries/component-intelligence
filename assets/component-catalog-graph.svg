@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="graph-title graph-desc">
+<title id="graph-title">Component Intelligence complete catalog graph</title>
+<desc id="graph-desc">The repository connects to five maintained presentation domains, 19 canonical categories, and all 46 complete exact-MPN component packages. Candidate devices are staged separately and are not shown as component nodes.</desc>
+<defs>
+<linearGradient id="background" x1="0" y1="1" x2="1" y2="0">
+<stop offset="0" stop-color="#05080B"/>
+<stop offset="0.62" stop-color="#05080B"/>
+<stop offset="1" stop-color="#0B2630"/>
+</linearGradient>
+<filter id="grain" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.86" numOctaves="2" seed="17" stitchTiles="stitch"/>
+<feColorMatrix type="saturate" values="0"/>
+</filter>
+<style>
+text { font-family: 'Helvetica Neue', Arial, system-ui, sans-serif; font-weight: 400; fill: #EAEEF0; }
+.header-label, .header-meta, .domain-count, .category, .category-count, .repo-label, .repo-detail, .candidate-note, .footer { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-variant-numeric: tabular-nums; }
+.header-label { font-size: 11px; font-weight: 500; letter-spacing: 1.5px; fill: #9FB9CC; }
+.headline { font-size: 37px; font-weight: 400; letter-spacing: -0.5px; }
+.header-meta { font-size: 10px; font-weight: 500; letter-spacing: 1.1px; fill: #9FB9CC; }
+.domain-title { font-size: 20px; font-weight: 500; }
+.domain-count { font-size: 11px; font-weight: 500; letter-spacing: 1px; fill: #9FB9CC; }
+.category { font-size: 11px; font-weight: 500; letter-spacing: 1.2px; fill: #9FB9CC; }
+.category-count { font-size: 11px; font-weight: 500; letter-spacing: 0.8px; fill: #9FB9CC; }
+.mpn { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-weight: 400; fill: #EAEEF0; }
+.repo-label { font-size: 11px; font-weight: 500; letter-spacing: 1.3px; fill: #9FB9CC; }
+.repo-name { font-size: 29px; font-weight: 400; letter-spacing: -0.35px; }
+.repo-count { font-size: 18px; font-weight: 400; fill: #EAEEF0; }
+.repo-detail { font-size: 10px; font-weight: 500; letter-spacing: 0.7px; fill: #9FB9CC; }
+.candidate-note { font-size: 10px; font-weight: 500; letter-spacing: 0.8px; fill: #9FB9CC; }
+.footer { font-size: 10px; font-weight: 500; letter-spacing: 1px; fill: #9FB9CC; }
+</style>
+</defs>
+<rect width="1600" height="900" fill="url(#background)"/>
+<rect width="1600" height="900" filter="url(#grain)" opacity="0.045"/>
+<text x="32" y="27" class="header-label">CATALOG MAP / COMPLETE TIER</text>
+<text x="32" y="66" class="headline">Component Intelligence</text>
+<text x="1568" y="22" class="header-meta" text-anchor="end">SOURCE / components/*/*/component.json</text>
+<text x="1568" y="42" class="header-meta" text-anchor="end">VIEW / REPOSITORY · DOMAIN · CATEGORY · EXACT MPN</text>
+<text x="1568" y="62" class="header-meta" text-anchor="end">STATE / 46 COMPLETE · 06 CANDIDATES STAGED</text>
+<g aria-hidden="true">
+<path d="M 600 430 H 552 V 261 H 532" fill="none" stroke="#9FB9CC" stroke-opacity="0.32" stroke-width="1"/>
+<path d="M 600 525 H 552 V 645 H 532" fill="none" stroke="#9FB9CC" stroke-opacity="0.32" stroke-width="1"/>
+<path d="M 800 352 V 327" fill="none" stroke="#9FB9CC" stroke-opacity="0.32" stroke-width="1"/>
+<path d="M 800 602 V 635" fill="none" stroke="#9FB9CC" stroke-opacity="0.32" stroke-width="1"/>
+<path d="M 1000 477 H 1036 V 456 H 1068" fill="none" stroke="#9FB9CC" stroke-opacity="0.32" stroke-width="1"/>
+</g>
+<g data-node-kind="domain" data-domain="analog-measurement" data-device-count="9">
+<line x1="32" y1="92" x2="532" y2="92" stroke="#9FB9CC" stroke-opacity="0.28" stroke-width="1"/>
+<text x="32" y="123" class="domain-title">Analog &amp; measurement</text>
+<text x="532" y="121" class="domain-count" text-anchor="end">09 DEVICES</text>
+<line x1="32" y1="136" x2="532" y2="136" stroke="#9FB9CC" stroke-opacity="0.12" stroke-width="1"/>
+<g data-node-kind="category" data-category="amplifier" data-device-count="4">
+<rect x="35.5" y="153.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="48.0" y="160.0" class="category">AMPLIFIER</text>
+<text x="270.0" y="160.0" class="category-count" text-anchor="end">04</text>
+<line x1="37.0" y1="160.0" x2="37.0" y2="290.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="37.0" y1="182.0" x2="50.0" y2="182.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="LM358DR" data-category="amplifier" data-record-path="components/ti/LM358DR">
+<circle cx="52.0" cy="182.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="187.5" class="mpn" font-size="16.0">LM358DR</text>
+</g>
+<line x1="37.0" y1="218.0" x2="50.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="LMV321IDBVR" data-category="amplifier" data-record-path="components/ti/LMV321IDBVR">
+<circle cx="52.0" cy="218.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="223.5" class="mpn" font-size="16.0">LMV321IDBVR</text>
+</g>
+<line x1="37.0" y1="254.0" x2="50.0" y2="254.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="OPA333AIDBVR" data-category="amplifier" data-record-path="components/ti/OPA333AIDBVR">
+<circle cx="52.0" cy="254.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="259.5" class="mpn" font-size="16.0">OPA333AIDBVR</text>
+</g>
+<line x1="37.0" y1="290.0" x2="50.0" y2="290.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="TLV9062IDR" data-category="amplifier" data-record-path="components/ti/TLV9062IDR">
+<circle cx="52.0" cy="290.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="295.5" class="mpn" font-size="16.0">TLV9062IDR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="timer" data-device-count="1">
+<rect x="35.5" y="320.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="48.0" y="327.0" class="category">TIMER</text>
+<text x="270.0" y="327.0" class="category-count" text-anchor="end">01</text>
+<line x1="37.0" y1="327.0" x2="37.0" y2="349.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="37.0" y1="349.0" x2="50.0" y2="349.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="NE555DR" data-category="timer" data-record-path="components/ti/NE555DR">
+<circle cx="52.0" cy="349.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="354.5" class="mpn" font-size="16.0">NE555DR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="comparator" data-device-count="2">
+<rect x="297.5" y="153.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="310.0" y="160.0" class="category">COMPARATOR</text>
+<text x="532.0" y="160.0" class="category-count" text-anchor="end">02</text>
+<line x1="299.0" y1="160.0" x2="299.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="299.0" y1="182.0" x2="312.0" y2="182.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="LM393DR" data-category="comparator" data-record-path="components/ti/LM393DR">
+<circle cx="314.0" cy="182.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="187.5" class="mpn" font-size="16.0">LM393DR</text>
+</g>
+<line x1="299.0" y1="218.0" x2="312.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="TLV7031DBVR" data-category="comparator" data-record-path="components/ti/TLV7031DBVR">
+<circle cx="314.0" cy="218.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="223.5" class="mpn" font-size="16.0">TLV7031DBVR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="current-sensor" data-device-count="1">
+<rect x="297.5" y="248.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="310.0" y="255.0" class="category">CURRENT SENSOR</text>
+<text x="532.0" y="255.0" class="category-count" text-anchor="end">01</text>
+<line x1="299.0" y1="255.0" x2="299.0" y2="277.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="299.0" y1="277.0" x2="312.0" y2="277.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="INA219AIDR" data-category="current-sensor" data-record-path="components/ti/INA219AIDR">
+<circle cx="314.0" cy="277.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="282.5" class="mpn" font-size="16.0">INA219AIDR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="data-converter" data-device-count="1">
+<rect x="297.5" y="307.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="310.0" y="314.0" class="category">DATA CONVERTER</text>
+<text x="532.0" y="314.0" class="category-count" text-anchor="end">01</text>
+<line x1="299.0" y1="314.0" x2="299.0" y2="336.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="299.0" y1="336.0" x2="312.0" y2="336.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="ADS1115IDGSR" data-category="data-converter" data-record-path="components/ti/ADS1115IDGSR">
+<circle cx="314.0" cy="336.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="341.5" class="mpn" font-size="16.0">ADS1115IDGSR</text>
+</g>
+</g>
+</g>
+<g data-node-kind="domain" data-domain="discretes-protection" data-device-count="12">
+<line x1="32" y1="470" x2="532" y2="470" stroke="#9FB9CC" stroke-opacity="0.28" stroke-width="1"/>
+<text x="32" y="501" class="domain-title">Discretes &amp; protection</text>
+<text x="532" y="499" class="domain-count" text-anchor="end">12 DEVICES</text>
+<line x1="32" y1="514" x2="532" y2="514" stroke="#9FB9CC" stroke-opacity="0.12" stroke-width="1"/>
+<g data-node-kind="category" data-category="transistor" data-device-count="6">
+<rect x="35.5" y="531.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="48.0" y="538.0" class="category">TRANSISTOR</text>
+<text x="270.0" y="538.0" class="category-count" text-anchor="end">06</text>
+<line x1="37.0" y1="538.0" x2="37.0" y2="740.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="37.0" y1="560.0" x2="50.0" y2="560.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="AO3400A" data-category="transistor" data-record-path="components/aos/AO3400A">
+<circle cx="52.0" cy="560.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="565.5" class="mpn" font-size="16.0">AO3400A</text>
+</g>
+<line x1="37.0" y1="596.0" x2="50.0" y2="596.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BC847B,215" data-category="transistor" data-record-path="components/nexperia/BC847B%2C215">
+<circle cx="52.0" cy="596.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="601.5" class="mpn" font-size="16.0">BC847B,215</text>
+</g>
+<line x1="37.0" y1="632.0" x2="50.0" y2="632.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BC857B,215" data-category="transistor" data-record-path="components/nexperia/BC857B%2C215">
+<circle cx="52.0" cy="632.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="637.5" class="mpn" font-size="16.0">BC857B,215</text>
+</g>
+<line x1="37.0" y1="668.0" x2="50.0" y2="668.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BSS138P,215" data-category="transistor" data-record-path="components/nexperia/BSS138P%2C215">
+<circle cx="52.0" cy="668.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="673.5" class="mpn" font-size="16.0">BSS138P,215</text>
+</g>
+<line x1="37.0" y1="704.0" x2="50.0" y2="704.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="PDTC114ET,215" data-category="transistor" data-record-path="components/nexperia/PDTC114ET%2C215">
+<circle cx="52.0" cy="704.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="709.5" class="mpn" font-size="16.0">PDTC114ET,215</text>
+</g>
+<line x1="37.0" y1="740.0" x2="50.0" y2="740.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="PMBT3904,215" data-category="transistor" data-record-path="components/nexperia/PMBT3904%2C215">
+<circle cx="52.0" cy="740.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="62.0" y="745.5" class="mpn" font-size="16.0">PMBT3904,215</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="diode" data-device-count="5">
+<rect x="297.5" y="531.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="310.0" y="538.0" class="category">DIODE</text>
+<text x="532.0" y="538.0" class="category-count" text-anchor="end">05</text>
+<line x1="299.0" y1="538.0" x2="299.0" y2="704.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="299.0" y1="560.0" x2="312.0" y2="560.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="150060RS75003" data-category="diode" data-record-path="components/wurth-elektronik/150060RS75003">
+<circle cx="314.0" cy="560.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="565.5" class="mpn" font-size="16.0">150060RS75003</text>
+</g>
+<line x1="299.0" y1="596.0" x2="312.0" y2="596.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BAT54C,215" data-category="diode" data-record-path="components/nexperia/BAT54C%2C215">
+<circle cx="314.0" cy="596.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="601.5" class="mpn" font-size="16.0">BAT54C,215</text>
+</g>
+<line x1="299.0" y1="632.0" x2="312.0" y2="632.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BAT54S,215" data-category="diode" data-record-path="components/nexperia/BAT54S%2C215">
+<circle cx="314.0" cy="632.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="637.5" class="mpn" font-size="16.0">BAT54S,215</text>
+</g>
+<line x1="299.0" y1="668.0" x2="312.0" y2="668.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BAV99,215" data-category="diode" data-record-path="components/nexperia/BAV99%2C215">
+<circle cx="314.0" cy="668.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="673.5" class="mpn" font-size="16.0">BAV99,215</text>
+</g>
+<line x1="299.0" y1="704.0" x2="312.0" y2="704.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="BZX84-C5V1,215" data-category="diode" data-record-path="components/nexperia/BZX84-C5V1%2C215">
+<circle cx="314.0" cy="704.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="709.5" class="mpn" font-size="16.0">BZX84-C5V1,215</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="protection" data-device-count="1">
+<rect x="297.5" y="734.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="310.0" y="741.0" class="category">PROTECTION</text>
+<text x="532.0" y="741.0" class="category-count" text-anchor="end">01</text>
+<line x1="299.0" y1="741.0" x2="299.0" y2="763.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="299.0" y1="763.0" x2="312.0" y2="763.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="USBLC6-2SC6" data-category="protection" data-record-path="components/st/USBLC6-2SC6">
+<circle cx="314.0" cy="763.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="324.0" y="768.5" class="mpn" font-size="16.0">USBLC6-2SC6</text>
+</g>
+</g>
+</g>
+<g data-node-kind="domain" data-domain="power-regulation" data-device-count="5">
+<line x1="560" y1="92" x2="1040" y2="92" stroke="#9FB9CC" stroke-opacity="0.28" stroke-width="1"/>
+<text x="560" y="123" class="domain-title">Power &amp; regulation</text>
+<text x="1040" y="121" class="domain-count" text-anchor="end">05 DEVICES</text>
+<line x1="560" y1="136" x2="1040" y2="136" stroke="#9FB9CC" stroke-opacity="0.12" stroke-width="1"/>
+<g data-node-kind="category" data-category="power" data-device-count="2">
+<rect x="563.5" y="153.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="576.0" y="160.0" class="category">POWER</text>
+<text x="788.0" y="160.0" class="category-count" text-anchor="end">02</text>
+<line x1="565.0" y1="160.0" x2="565.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="565.0" y1="182.0" x2="578.0" y2="182.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="LP2985-33DBVR" data-category="power" data-record-path="components/ti/LP2985-33DBVR">
+<circle cx="580.0" cy="182.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="590.0" y="187.5" class="mpn" font-size="16.0">LP2985-33DBVR</text>
+</g>
+<line x1="565.0" y1="218.0" x2="578.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="TPS7A2033PDBVR" data-category="power" data-record-path="components/ti/TPS7A2033PDBVR">
+<circle cx="580.0" cy="218.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="590.0" y="223.5" class="mpn" font-size="16.0">TPS7A2033PDBVR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="battery-management" data-device-count="1">
+<rect x="563.5" y="248.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="576.0" y="255.0" class="category">BATTERY MANAGEMENT</text>
+<text x="788.0" y="255.0" class="category-count" text-anchor="end">01</text>
+<line x1="565.0" y1="255.0" x2="565.0" y2="277.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="565.0" y1="277.0" x2="578.0" y2="277.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="MCP73831T-2ACI/OT" data-category="battery-management" data-record-path="components/microchip/MCP73831T-2ACI%2FOT">
+<circle cx="580.0" cy="277.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="590.0" y="282.5" class="mpn" font-size="16.0">MCP73831T-2ACI/OT</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="power-management" data-device-count="2">
+<rect x="815.5" y="153.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="828.0" y="160.0" class="category">POWER MANAGEMENT</text>
+<text x="1040.0" y="160.0" class="category-count" text-anchor="end">02</text>
+<line x1="817.0" y1="160.0" x2="817.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="817.0" y1="182.0" x2="830.0" y2="182.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="AP63205WU-7" data-category="power-management" data-record-path="components/diodes-inc/AP63205WU-7">
+<circle cx="832.0" cy="182.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="842.0" y="187.5" class="mpn" font-size="16.0">AP63205WU-7</text>
+</g>
+<line x1="817.0" y1="218.0" x2="830.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="TLV75533PDBVR" data-category="power-management" data-record-path="components/ti/TLV75533PDBVR">
+<circle cx="832.0" cy="218.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="842.0" y="223.5" class="mpn" font-size="16.0">TLV75533PDBVR</text>
+</g>
+</g>
+</g>
+<g data-node-kind="domain" data-domain="passives-electromechanical" data-device-count="4">
+<line x1="560" y1="635" x2="1040" y2="635" stroke="#9FB9CC" stroke-opacity="0.28" stroke-width="1"/>
+<text x="560" y="666" class="domain-title">Passives &amp; electromechanical</text>
+<text x="1040" y="664" class="domain-count" text-anchor="end">04 DEVICES</text>
+<line x1="560" y1="679" x2="1040" y2="679" stroke="#9FB9CC" stroke-opacity="0.12" stroke-width="1"/>
+<g data-node-kind="category" data-category="capacitor" data-device-count="1">
+<rect x="563.5" y="696.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="576.0" y="703.0" class="category">CAPACITOR</text>
+<text x="788.0" y="703.0" class="category-count" text-anchor="end">01</text>
+<line x1="565.0" y1="703.0" x2="565.0" y2="725.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="565.0" y1="725.0" x2="578.0" y2="725.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="885382206004" data-category="capacitor" data-record-path="components/wurth-elektronik/885382206004">
+<circle cx="580.0" cy="725.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="590.0" y="730.5" class="mpn" font-size="16.0">885382206004</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="resistor" data-device-count="1">
+<rect x="563.5" y="755.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="576.0" y="762.0" class="category">RESISTOR</text>
+<text x="788.0" y="762.0" class="category-count" text-anchor="end">01</text>
+<line x1="565.0" y1="762.0" x2="565.0" y2="784.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="565.0" y1="784.0" x2="578.0" y2="784.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="560112116005" data-category="resistor" data-record-path="components/wurth-elektronik/560112116005">
+<circle cx="580.0" cy="784.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="590.0" y="789.5" class="mpn" font-size="16.0">560112116005</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="inductor" data-device-count="1">
+<rect x="815.5" y="696.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="828.0" y="703.0" class="category">INDUCTOR</text>
+<text x="1040.0" y="703.0" class="category-count" text-anchor="end">01</text>
+<line x1="817.0" y1="703.0" x2="817.0" y2="725.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="817.0" y1="725.0" x2="830.0" y2="725.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="74404024100" data-category="inductor" data-record-path="components/wurth-elektronik/74404024100">
+<circle cx="832.0" cy="725.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="842.0" y="730.5" class="mpn" font-size="16.0">74404024100</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="switch" data-device-count="1">
+<rect x="815.5" y="755.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="828.0" y="762.0" class="category">SWITCH</text>
+<text x="1040.0" y="762.0" class="category-count" text-anchor="end">01</text>
+<line x1="817.0" y1="762.0" x2="817.0" y2="784.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="817.0" y1="784.0" x2="830.0" y2="784.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="PTS815SJM250SMTRLFS" data-category="switch" data-record-path="components/littelfuse/PTS815SJM250SMTRLFS">
+<circle cx="832.0" cy="784.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="842.0" y="789.5" class="mpn" font-size="16.0">PTS815SJM250SMTRLFS</text>
+</g>
+</g>
+</g>
+<g data-node-kind="domain" data-domain="digital-connectivity" data-device-count="16">
+<line x1="1068" y1="92" x2="1568" y2="92" stroke="#9FB9CC" stroke-opacity="0.28" stroke-width="1"/>
+<text x="1068" y="123" class="domain-title">Digital &amp; connectivity</text>
+<text x="1568" y="121" class="domain-count" text-anchor="end">16 DEVICES</text>
+<line x1="1068" y1="136" x2="1568" y2="136" stroke="#9FB9CC" stroke-opacity="0.12" stroke-width="1"/>
+<g data-node-kind="category" data-category="logic" data-device-count="10">
+<rect x="1071.5" y="153.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="1084.0" y="160.0" class="category">LOGIC</text>
+<text x="1306.0" y="160.0" class="category-count" text-anchor="end">10</text>
+<line x1="1073.0" y1="160.0" x2="1073.0" y2="506.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="1073.0" y1="182.0" x2="1086.0" y2="182.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74HC595DR" data-category="logic" data-record-path="components/ti/SN74HC595DR">
+<circle cx="1088.0" cy="182.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="187.5" class="mpn" font-size="16.0">SN74HC595DR</text>
+</g>
+<line x1="1073.0" y1="218.0" x2="1086.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G00DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G00DBVR">
+<circle cx="1088.0" cy="218.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="223.5" class="mpn" font-size="16.0">SN74LVC1G00DBVR</text>
+</g>
+<line x1="1073.0" y1="254.0" x2="1086.0" y2="254.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G04DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G04DBVR">
+<circle cx="1088.0" cy="254.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="259.5" class="mpn" font-size="16.0">SN74LVC1G04DBVR</text>
+</g>
+<line x1="1073.0" y1="290.0" x2="1086.0" y2="290.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G08DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G08DBVR">
+<circle cx="1088.0" cy="290.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="295.5" class="mpn" font-size="16.0">SN74LVC1G08DBVR</text>
+</g>
+<line x1="1073.0" y1="326.0" x2="1086.0" y2="326.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G125DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G125DBVR">
+<circle cx="1088.0" cy="326.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="331.5" class="mpn" font-size="16.0">SN74LVC1G125DBVR</text>
+</g>
+<line x1="1073.0" y1="362.0" x2="1086.0" y2="362.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G126DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G126DBVR">
+<circle cx="1088.0" cy="362.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="367.5" class="mpn" font-size="16.0">SN74LVC1G126DBVR</text>
+</g>
+<line x1="1073.0" y1="398.0" x2="1086.0" y2="398.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G14DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G14DBVR">
+<circle cx="1088.0" cy="398.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="403.5" class="mpn" font-size="16.0">SN74LVC1G14DBVR</text>
+</g>
+<line x1="1073.0" y1="434.0" x2="1086.0" y2="434.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G17DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G17DBVR">
+<circle cx="1088.0" cy="434.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="439.5" class="mpn" font-size="16.0">SN74LVC1G17DBVR</text>
+</g>
+<line x1="1073.0" y1="470.0" x2="1086.0" y2="470.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G32DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G32DBVR">
+<circle cx="1088.0" cy="470.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="475.5" class="mpn" font-size="16.0">SN74LVC1G32DBVR</text>
+</g>
+<line x1="1073.0" y1="506.0" x2="1086.0" y2="506.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN74LVC1G86DBVR" data-category="logic" data-record-path="components/ti/SN74LVC1G86DBVR">
+<circle cx="1088.0" cy="506.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1098.0" y="511.5" class="mpn" font-size="16.0">SN74LVC1G86DBVR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="interface" data-device-count="3">
+<rect x="1333.5" y="153.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="1346.0" y="160.0" class="category">INTERFACE</text>
+<text x="1568.0" y="160.0" class="category-count" text-anchor="end">03</text>
+<line x1="1335.0" y1="160.0" x2="1335.0" y2="254.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="1335.0" y1="182.0" x2="1348.0" y2="182.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="PCA9306DCTR" data-category="interface" data-record-path="components/ti/PCA9306DCTR">
+<circle cx="1350.0" cy="182.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1360.0" y="187.5" class="mpn" font-size="16.0">PCA9306DCTR</text>
+</g>
+<line x1="1335.0" y1="218.0" x2="1348.0" y2="218.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="SN65HVD75DR" data-category="interface" data-record-path="components/ti/SN65HVD75DR">
+<circle cx="1350.0" cy="218.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1360.0" y="223.5" class="mpn" font-size="16.0">SN65HVD75DR</text>
+</g>
+<line x1="1335.0" y1="254.0" x2="1348.0" y2="254.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="TCAN332DR" data-category="interface" data-record-path="components/ti/TCAN332DR">
+<circle cx="1350.0" cy="254.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1360.0" y="259.5" class="mpn" font-size="16.0">TCAN332DR</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="memory" data-device-count="2">
+<rect x="1333.5" y="284.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="1346.0" y="291.0" class="category">MEMORY</text>
+<text x="1568.0" y="291.0" class="category-count" text-anchor="end">02</text>
+<line x1="1335.0" y1="291.0" x2="1335.0" y2="349.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="1335.0" y1="313.0" x2="1348.0" y2="313.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="24LC256-I/SN" data-category="memory" data-record-path="components/microchip/24LC256-I%2FSN">
+<circle cx="1350.0" cy="313.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1360.0" y="318.5" class="mpn" font-size="16.0">24LC256-I/SN</text>
+</g>
+<line x1="1335.0" y1="349.0" x2="1348.0" y2="349.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="25LC256-I/SN" data-category="memory" data-record-path="components/microchip/25LC256-I%2FSN">
+<circle cx="1350.0" cy="349.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1360.0" y="354.5" class="mpn" font-size="16.0">25LC256-I/SN</text>
+</g>
+</g>
+<g data-node-kind="category" data-category="microcontroller" data-device-count="1">
+<rect x="1333.5" y="379.5" width="3" height="3" fill="#9FB9CC" opacity="0.82"/>
+<text x="1346.0" y="386.0" class="category">MICROCONTROLLER</text>
+<text x="1568.0" y="386.0" class="category-count" text-anchor="end">01</text>
+<line x1="1335.0" y1="386.0" x2="1335.0" y2="408.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<line x1="1335.0" y1="408.0" x2="1348.0" y2="408.0" stroke="#9FB9CC" stroke-opacity="0.24" stroke-width="1"/>
+<g data-node-kind="device" data-mpn="STM32C011F6P6TR" data-category="microcontroller" data-record-path="components/st/STM32C011F6P6TR">
+<circle cx="1350.0" cy="408.0" r="1.75" fill="#9FB9CC" opacity="0.72"/>
+<text x="1360.0" y="413.5" class="mpn" font-size="16.0">STM32C011F6P6TR</text>
+</g>
+</g>
+</g>
+<g data-node-kind="repository" data-repository="component-intelligence">
+<rect x="600" y="352" width="400" height="250" rx="8" fill="#0B2630" fill-opacity="0.94" stroke="#9FB9CC" stroke-opacity="0.34" stroke-width="1"/>
+<rect x="600" y="352" width="64" height="3" fill="#EA5C22"/>
+<text x="632" y="388" class="repo-label">REPOSITORY / COMPLETE TIER</text>
+<text x="632" y="430" class="repo-name">component-intelligence</text>
+<text x="632" y="465" class="repo-count">46 exact-MPN packages</text>
+<line x1="632" y1="484" x2="968" y2="484" stroke="#9FB9CC" stroke-opacity="0.18" stroke-width="1"/>
+<text x="632" y="511" class="repo-detail">SOURCE / component.json</text>
+<text x="632" y="536" class="repo-detail">EDA / KiCad 10 symbol + footprint</text>
+<text x="632" y="561" class="repo-detail">MECHANICAL / nominal STEP envelope</text>
+<text x="632" y="587" class="candidate-note">06 CANDIDATES / STAGED OUTSIDE GRAPH</text>
+</g>
+<line x1="32" y1="852" x2="1568" y2="852" stroke="#9FB9CC" stroke-opacity="0.18" stroke-width="1"/>
+<text x="32" y="878" class="footer">TRUST BOUNDARY / CANDIDATE DEVICES EXCLUDED</text>
+<text x="1568" y="878" class="footer" text-anchor="end">GENERATED FILE / scripts/build_catalog.py</text>
+</svg>

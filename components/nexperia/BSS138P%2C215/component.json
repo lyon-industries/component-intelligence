@@ -196,10 +196,10 @@
   "cad": {
     "symbol": {
       "availability": "included",
-      "path": "BSS138P%2C215.kicad_sym",
+      "path": "BSS138P_215.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "3dcc082570b815ff58b59c8fcd27ee63278db1a3b4394cb13c1edae7235bda57",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "b5f6953a50990c51f4b9ecea3e3101e81019c1b41fba19b59afac7c299a35f95",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -215,10 +215,10 @@
     },
     "footprint": {
       "availability": "included",
-      "path": "BSS138P%2C215.pretty/BSS138P%2C215.kicad_mod",
+      "path": "BSS138P_215.pretty/BSS138P_215.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "7bc68057f2cf7839a839f5b11bfc8d790f2b1eb4834a05420044b1edf101d5c9",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "ad6733f26c79a0c22bb9e512e1d12329dc5237de0ccfa41945e7f983c8e38140",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
@@ -234,7 +234,7 @@
     },
     "step_model": {
       "availability": "included",
-      "path": "BSS138P%2C215.3dshapes/BSS138P%2C215.step",
+      "path": "BSS138P_215.3dshapes/BSS138P_215.step",
       "format": "STEP AP214",
       "sha256": "7e18923d18d7a976583ae101c2b314d90465dd8d94d265c41ec034c999af67a2",
       "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",

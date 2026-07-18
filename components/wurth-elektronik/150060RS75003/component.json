@@ -1,0 +1,342 @@
+{
+  "$schema": "../../../schema/component.schema.json",
+  "schema_version": "1.0.0",
+  "id": "component:wurth-elektronik:150060RS75003",
+  "identity": {
+    "manufacturer": "Würth Elektronik eiSos",
+    "manufacturer_slug": "wurth-elektronik",
+    "mpn": "150060RS75003",
+    "series": "WL-SMCW",
+    "orderable": true,
+    "orderable_checked_on": "2026-07-18"
+  },
+  "classification": {
+    "category": "diode",
+    "function": "red water-clear 0603 light-emitting diode",
+    "keywords": [
+      "LED",
+      "red",
+      "625 nm",
+      "0603",
+      "water-clear"
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:wurth:150060RS75003",
+      "kind": "datasheet",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "150060RS75003 WL-SMCW technical data sheet",
+      "url": "https://www.we-online.com/components/products/datasheet/150060RS75003.pdf",
+      "document_number": null,
+      "revision": "002.001",
+      "published_date": "2025-10-20",
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "captured-and-hashed",
+      "sha256": "773144f3ed2da79f70028a8ed2af667cbee5df2df81b2b1491fc6feb094e1043",
+      "byte_size": 1262302,
+      "page_count": 10,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Exact order code, polarity, absolute limits, body dimensions, and recommended land pattern"
+        },
+        {
+          "page": 2,
+          "label": "Electrical and optical characteristics at 20 mA"
+        },
+        {
+          "page": 5,
+          "label": "Tape polarity and 4000-piece reel packaging"
+        }
+      ]
+    },
+    {
+      "id": "source:wurth:product:WL-SMCW",
+      "kind": "product-page",
+      "publisher": "Würth Elektronik eiSos",
+      "title": "WL-SMCW current product family",
+      "url": "https://www.we-online.com/en/components/products/led/leds",
+      "document_number": null,
+      "revision": null,
+      "published_date": null,
+      "retrieved_at": "2026-07-18T10:23:54Z",
+      "retrieval_status": "browser-reviewed-byte-capture-blocked",
+      "sha256": null,
+      "byte_size": null,
+      "page_count": 1,
+      "redistributed": false,
+      "locators": [
+        {
+          "page": 1,
+          "label": "Current active family status and exact order-code listing"
+        }
+      ]
+    }
+  ],
+  "electrical": {
+    "pins": [
+      {
+        "number": "1",
+        "name": "A",
+        "function": "Anode, marked positive in the package schematic.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:150060RS75003",
+        "locator": "page 1, package schematic"
+      },
+      {
+        "number": "2",
+        "name": "K",
+        "function": "Cathode, marked negative and identified by the package polarity mark.",
+        "electrical_type": "passive",
+        "source_id": "source:wurth:150060RS75003",
+        "locator": "page 1, package schematic"
+      }
+    ],
+    "ratings": [
+      {
+        "key": "continuous-forward-current",
+        "name": "continuous forward current",
+        "value": {
+          "max": 30
+        },
+        "unit": "mA",
+        "boundary": "absolute-maximum",
+        "qualifier": "At 25 °C ambient; thermal design and derating remain required.",
+        "source_id": "source:wurth:150060RS75003",
+        "locator": "page 1, absolute maximum ratings"
+      },
+      {
+        "key": "forward-voltage",
+        "name": "forward voltage",
+        "value": {
+          "min": 1.8,
+          "typ": 2.0,
+          "max": 2.6
+        },
+        "unit": "V",
+        "boundary": "characteristic",
+        "qualifier": "At 20 mA.",
+        "source_id": "source:wurth:150060RS75003",
+        "locator": "page 2, electrical and optical properties"
+      },
+      {
+        "key": "dominant-wavelength",
+        "name": "dominant wavelength",
+        "value": {
+          "min": 615,
+          "typ": 625,
+          "max": 635
+        },
+        "unit": "nm",
+        "boundary": "characteristic",
+        "qualifier": "At 20 mA.",
+        "source_id": "source:wurth:150060RS75003",
+        "locator": "page 2, electrical and optical properties"
+      },
+      {
+        "key": "luminous-intensity",
+        "name": "luminous intensity",
+        "value": {
+          "min": 230,
+          "typ": 530,
+          "max": 800
+        },
+        "unit": "mcd",
+        "boundary": "characteristic",
+        "qualifier": "At 20 mA; optical distribution and production variation apply.",
+        "source_id": "source:wurth:150060RS75003",
+        "locator": "page 2, electrical and optical properties"
+      }
+    ],
+    "internally_common_terminal_groups": []
+  },
+  "package": {
+    "name": "0603 (1608 metric)",
+    "manufacturer_code": "0603",
+    "mounting": "surface-mount",
+    "pin_count": 2,
+    "pitch_mm": null,
+    "body_dimensions_mm": {
+      "length": {
+        "typ": 1.6,
+        "tolerance": 0.1
+      },
+      "width": {
+        "typ": 0.8,
+        "tolerance": 0.1
+      },
+      "height": {
+        "typ": 0.7,
+        "tolerance": 0.1
+      },
+      "end_termination": {
+        "typ": 0.3,
+        "tolerance": 0.1
+      }
+    },
+    "land_pattern": {
+      "status": "cross-checked",
+      "source_id": "source:wurth:150060RS75003",
+      "locator": "page 1, recommended land pattern; 0.80 x 0.80 mm pads and 0.80 mm gap independently recomputed to ±0.80 mm pad centers",
+      "pad_count": 2,
+      "dimensions_mm": {
+        "pad_length": 0.8,
+        "pad_width": 0.8,
+        "gap": 0.8,
+        "overall_span": 2.4
+      },
+      "pads": [
+        {
+          "number": "1",
+          "x_mm": -0.8,
+          "y_mm": 0,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        },
+        {
+          "number": "2",
+          "x_mm": 0.8,
+          "y_mm": 0,
+          "width_mm": 0.8,
+          "height_mm": 0.8
+        }
+      ],
+      "coordinate_convention": "Component centroid is (0,0); +x is right and +y is down in the top view; pin 1 anode is left and pin 2 cathode/polarity-mark side is right."
+    }
+  },
+  "cad": {
+    "symbol": {
+      "availability": "included",
+      "path": "150060RS75003.kicad_sym",
+      "format": "KiCad symbol library",
+      "sha256": "0100a440f09fa74da774fd4348d30b6c376d8c60dc570306dbede4edab896526",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "schematic"
+      ],
+      "provenance": "Original Lyon Industries conventional LED symbol serialized from the reviewed exact-MPN pin map.",
+      "source_ids": [
+        "source:wurth:150060RS75003",
+        "source:wurth:product:WL-SMCW"
+      ],
+      "limitations": [
+        "The schematic symbol does not encode current, voltage, optical bin, or thermal limits; read the record before use."
+      ]
+    },
+    "footprint": {
+      "availability": "included",
+      "path": "150060RS75003.pretty/150060RS75003.kicad_mod",
+      "format": "KiCad footprint",
+      "sha256": "b66c72411b64d1c64d3c9088bb2ac7ed5375a670467d504bc51577ccf70685db",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
+      "verified": true,
+      "intended_use": [
+        "pcb-layout"
+      ],
+      "provenance": "Original Lyon Industries footprint serialized from the manufacturer-recommended land pattern and polarity drawing.",
+      "source_ids": [
+        "source:wurth:150060RS75003"
+      ],
+      "limitations": [
+        "Stencil, solder volume, optical shadowing, and process-specific land adjustments remain the responsibility of the consuming PCB design."
+      ]
+    },
+    "step_model": {
+      "availability": "included",
+      "path": "150060RS75003.3dshapes/150060RS75003.step",
+      "format": "STEP AP214",
+      "sha256": "8dcbc014cd942d0b47bc58ca7b3248cba42c0faf703cd1d0c3d5fcd20ce6d78c",
+      "tool_version": "CadQuery 2.8.0 / Open CASCADE 7.9.3",
+      "verified": true,
+      "intended_use": [
+        "mechanical-clearance"
+      ],
+      "provenance": "Original Lyon Industries nominal chip-envelope model generated from manufacturer dimensions.",
+      "source_ids": [
+        "source:wurth:150060RS75003"
+      ],
+      "limitations": [
+        "Nominal seating and clearance envelope only; lens optics, emission, polarity mark appearance, tolerances, and internal construction are omitted."
+      ]
+    }
+  },
+  "assembly": {
+    "process": "surface-mount reflow",
+    "packing": {
+      "method": "8 mm embossed tape on 178 mm reel",
+      "quantity": 4000,
+      "source_id": "source:wurth:150060RS75003",
+      "locator": "page 5, tape-and-reel packaging specification"
+    },
+    "orientation": {
+      "status": "documented",
+      "description": "Pin 1 is the anode; pin 2 is the cathode and package polarity-mark side. Tape feeding direction and polarity mark are shown in the packaging drawing.",
+      "source_id": "source:wurth:150060RS75003",
+      "locator": "pages 1 and 5, package and tape polarity drawings"
+    },
+    "notes": [
+      "Use a current-limiting element and verify optical output and thermal limits at the actual duty cycle and ambient."
+    ]
+  },
+  "integration": {
+    "findings": [
+      {
+        "id": "finding:01",
+        "type": "electrical",
+        "severity": "design-risk",
+        "status": "active",
+        "scope": "component",
+        "summary": "The LED requires external current limiting; the 30 mA continuous value is an absolute maximum, not a recommended design current, and forward voltage spans 1.8 V to 2.6 V at 20 mA.",
+        "observed_on": "2026-07-18",
+        "source_ids": [
+          "source:wurth:150060RS75003"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "identity_verified": true,
+    "data_cross_checked": true,
+    "symbol_verified": true,
+    "footprint_verified": true,
+    "step_verified": true,
+    "physically_tested": false,
+    "reviewed_on": "2026-07-18",
+    "checks": [
+      {
+        "name": "official source identity",
+        "status": "pass",
+        "method": "Captured and hashed the official exact-order-code data sheet and recorded page locators.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "independent product and package cross-check",
+        "status": "pass",
+        "method": "Compared exact identity, package, color, optical values, and current active family status against the official product catalog.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "explicit land-pattern and polarity arithmetic",
+        "status": "pass",
+        "method": "Recomputed pad centers from manufacturer pad length and gap, then cross-checked pin-one anode and cathode polarity against the package and tape drawings.",
+        "date": "2026-07-18"
+      },
+      {
+        "name": "native CAD replay and geometry gate",
+        "status": "pass",
+        "method": "Replayed the KiCad 10 symbol and footprint from the record, parsed pin and pad semantics, checked silk and courtyard rules, reopened STEP, and measured seating and envelope.",
+        "date": "2026-07-18"
+      }
+    ],
+    "physical_test_evidence": []
+  },
+  "rights": {
+    "repository_content_license": "Apache-2.0",
+    "source_files_redistributed": false,
+    "normalized_record_origin": "Original Lyon Industries normalization based on linked official manufacturer sources.",
+    "source_rights_status": "linked-only"
+  }
+}

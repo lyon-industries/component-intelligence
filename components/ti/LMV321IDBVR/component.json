@@ -205,8 +205,8 @@
       "availability": "included",
       "path": "LMV321IDBVR.kicad_sym",
       "format": "KiCad symbol library",
-      "sha256": "4fc1a450f952330289007deff7234144379d0457df0cb5a966ec0f422b0597b7",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "1be7795fa3d3b01614269002709050c01a69ce00da3537b9486bf14771fdd5ff",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "schematic"
@@ -224,8 +224,8 @@
       "availability": "included",
       "path": "LMV321IDBVR.pretty/LMV321IDBVR.kicad_mod",
       "format": "KiCad footprint",
-      "sha256": "93262f5f7161379d3ff2bcefb0b495f3424918a6672dc488d683620c9423b7e0",
-      "tool_version": "Component Intelligence native CAD generator 1.0 / KiCad 8 syntax",
+      "sha256": "ab191167eb7e8e6edafbf07f7c25abc3557b286bf624004904a09179507c8a06",
+      "tool_version": "Component Intelligence native CAD generator 2.0 / KiCad 10 syntax",
       "verified": true,
       "intended_use": [
         "pcb-layout"
