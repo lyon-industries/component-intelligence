@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/lyon-industries/.github/main/profile/lyon-industries-banner.svg" alt="Lyon Industries" width="100%">
+</p>
+
 # Component Intelligence
 
 Component Intelligence is an open collection of complete electronic-component
