@@ -101,8 +101,8 @@ KiCad's official `${KICAD10_3DMODEL_DIR}` tree.
 This is an explicit portability tradeoff, not a blanket KLC-compliance claim.
 The repository validator requires the custom path to resolve to the exact
 hashed local STEP file. A read-only KiCad 10.0.4 CLI smoke test also opened and
-exported all 46 symbols and all 46 footprints successfully. See
-[`docs/KICAD.md`](docs/KICAD.md) and `scripts/audit_kicad_native.py`.
+exported all 46 symbols and all 46 footprints successfully.
+`scripts/audit_kicad_native.py` reproduces that test on a host with KiCad 10.
 
 ## Findings
 

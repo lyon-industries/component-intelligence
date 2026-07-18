@@ -29,8 +29,6 @@ As of 2026-07-18:
 
 The browsable [`CATALOG.md`](CATALOG.md) shows every exact MPN, manufacturer,
 function, package, review date, and physical-evidence state.
-The dated [`launch-readiness audit`](docs/LAUNCH-AUDIT-2026-07-18.md) records
-the adversarial findings, corrections, residual limits, and channel decision.
 
 The catalog now includes exact-MPN examples across passives, discrete devices,
 power, interfaces, logic, sensing, memory, protection, switches, and
@@ -71,8 +69,9 @@ The generated project-local library tables expose only complete packages.
 5. Inspect the exact package suffix, pin map, pad geometry, orientation, and
    process assumptions before fabrication.
 
-See [`docs/KICAD.md`](docs/KICAD.md) for native-name handling, the current KLC
-audit, the deliberate 3D-path deviation, and a pre-fabrication checklist.
+See [`QUALITY.md`](QUALITY.md) for the current KLC audit and deliberate 3D-path
+deviation. `scripts/audit_kicad_native.py` reproduces the native KiCad smoke
+test.
 
 ## Remote agent workflow
 
